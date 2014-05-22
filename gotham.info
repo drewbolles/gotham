@@ -4,9 +4,9 @@ core = 7.x
 engine = phptemplate
 
 regions[navigation] = Navigation
-regions[top_content] = Top Content
+regions[content_top] = Top Content
 regions[content] = Content
-regions[bottom_content] = Bottom Content
+regions[content_bottom] = Bottom Content
 regions[footer] = Footer
 
 scripts[] = assets/js/scripts.min.js
