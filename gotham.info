@@ -1,0 +1,15 @@
+name = Gotham
+description = Default starter theme by Drew Bolles
+core = 7.x
+engine = phptemplate
+
+regions[navigation] = Navigation
+regions[top_content] = Top Content
+regions[content] = Content
+regions[bottom_content] = Bottom Content
+regions[footer] = Footer
+
+scripts[] = assets/js/scripts.min.js
+
+stylesheets[screen][] = assets/css/screen.min.css
+; stylesheets[print][] = assets/css/print.css
