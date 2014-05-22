@@ -56,12 +56,10 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - $page['help']: Dynamic help text, mostly for admin pages.
- * - $page['highlighted']: Items for the highlighted content region.
  * - $page['content']: The main content of the current page.
- * - $page['sidebar_first']: Items for the first sidebar.
- * - $page['sidebar_second']: Items for the second sidebar.
- * - $page['header']: Items for the header region.
+ * - $page['content_top']: Items above the main content.
+ * - $page['content_bottom']: Items below the main content.
+ * - $page['navigation']: Items for the navigation region.
  * - $page['footer']: Items for the footer region.
  *
  * @see template_preprocess()
@@ -72,85 +70,61 @@
  * @ingroup themeable
  */
 ?>
-
-  <div id="page-wrapper"><div id="page">
-
-    <div id="header"><div class="section clearfix">
-
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-        </a>
-      <?php endif; ?>
-
-      <?php if ($site_name || $site_slogan): ?>
-        <div id="name-and-slogan">
-          <?php if ($site_name): ?>
-            <?php if ($title): ?>
-              <div id="site-name"><strong>
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </strong></div>
-            <?php else: /* Use h1 when the content title is empty */ ?>
-              <h1 id="site-name">
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </h1>
+<div class="site">
+  <header id="site-header" class="site-section site-header">
+    <div class="c">
+      <div class="grid">
+        <div class="grid__item lap-one-third">
+          <?php if ($logo): ?>
+            <div class="site-logo">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+              </a>
+            </div>
+          <?php endif; ?>
+        </div>
+        <div class="grid__item lap-two-thirds">
+          <nav id="site-nav" class="site-nav" role="navigation">
+            <?php if($page['navigation']): ?>
+              <?php print render($page['navigation']); ?>
             <?php endif; ?>
-          <?php endif; ?>
-
-          <?php if ($site_slogan): ?>
-            <div id="site-slogan"><?php print $site_slogan; ?></div>
-          <?php endif; ?>
-        </div> <!-- /#name-and-slogan -->
-      <?php endif; ?>
-
-      <?php print render($page['header']); ?>
-
-    </div></div> <!-- /.section, /#header -->
-
-    <?php if ($main_menu || $secondary_menu): ?>
-      <div id="navigation"><div class="section">
-        <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>
-        <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Secondary menu'))); ?>
-      </div></div> <!-- /.section, /#navigation -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="site-main" class="site-section site-main">
+    <?php if($page['content_top']): ?>
+      <section id="content-top" class="content-section content-top">
+        <div class="c">
+          <?php print render($page['content_top']); ?>
+        </div>
+      </section>
     <?php endif; ?>
-
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+    <?php if($page['content']): ?>
+      <section id="content-main" class="content-section content-main">
+        <div class="c">
+          <?php print render($title_prefix); ?>
+          <?php if ($title): ?><h1 class="page-title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
+          <?php print render($title_suffix); ?>
+          <?php if ($tabs = render($tabs)): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+          <?php print render($page['content']); ?>
+        </div>
+      </section>
     <?php endif; ?>
-
-    <?php print $messages; ?>
-
-    <div id="main-wrapper"><div id="main" class="clearfix">
-
-      <div id="content" class="column"><div class="section">
-        <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-        <?php print render($title_suffix); ?>
-        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-        <?php print render($page['help']); ?>
-        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-        <?php print render($page['content']); ?>
-        <?php print $feed_icons; ?>
-      </div></div> <!-- /.section, /#content -->
-
-      <?php if ($page['sidebar_first']): ?>
-        <div id="sidebar-first" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_first']); ?>
-        </div></div> <!-- /.section, /#sidebar-first -->
-      <?php endif; ?>
-
-      <?php if ($page['sidebar_second']): ?>
-        <div id="sidebar-second" class="column sidebar"><div class="section">
-          <?php print render($page['sidebar_second']); ?>
-        </div></div> <!-- /.section, /#sidebar-second -->
-      <?php endif; ?>
-
-    </div></div> <!-- /#main, /#main-wrapper -->
-
-    <div id="footer"><div class="section">
+    <?php if($page['content_bottom']): ?>
+      <section id="content-bottom" class="content-section content-bottom">
+        <div class="c">
+          <?php print render($page['content_bottom']); ?>
+        </div>
+      </section>
+    <?php endif; ?>
+  </main>
+</div>
+<footer id="footer" class="footer">
+  <div class="c">
+    <?php if($page['footer']): ?>
       <?php print render($page['footer']); ?>
-    </div></div> <!-- /.section, /#footer -->
-
-  </div></div> <!-- /#page, /#page-wrapper -->
+    <?php endif; ?>
+  </div>
+</footer>
