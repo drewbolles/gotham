@@ -95,36 +95,46 @@
     </div>
   </header>
 
-  <main id="site-main" class="site-section site-main">
+  <main id="site-main" class="site-main site-section" role="main">
+    <div class="container">
 
-    <?php if($page['content_top']): ?>
-      <section id="content-top" class="content-top content-section">
-        <div class="container">
-          <?php print render($page['content_top']); ?>
+      <?php if($messages):?><?php print render($messages); ?><?php endif; ?>
+
+      <div class="grid">
+        <div class="grid__item<?php if($page['sidebar_first']&&$page['sidebar_second']):?> lap-one-third push--lap-one-third<?php elseif ($page['sidebar_first']||$page['sidebar_second']):?> lap-two-thirds<?php if($page['sidebar_first']){ echo ' push--lap-one-third';}?><?php endif;?>">
+          <section id="main-content" class="main-content">
+            <?php if($title):?>
+              <h1 id="page-title" class="page-title"><?php print $title; ?></h1>
+            <?php endif;?>
+
+            <?php if($tabs = render($tabs)):?>
+              <div id="tabs">
+                <?php print render($tabs); ?>
+              </div>
+            <?php endif;?>
+
+            <?php print render($page['content']); ?>
+          </section>
         </div>
-      </section>
-    <?php endif; ?>
 
-    <?php if($page['content']): ?>
-      <section id="content-main" class="content-main content-section">
-        <div class="container">
-          <?php print render($title_prefix); ?>
-          <?php if ($title): ?><h1 class="page-title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
-          <?php print render($title_suffix); ?>
-          <?php if ($tabs = render($tabs)): ?><div class="tabs" class="tabs-wrap"><?php print render($tabs); ?></div><?php endif; ?>
-          <?php print render($page['content']); ?>
-        </div>
-      </section>
-    <?php endif; ?>
+        <?php if($page['sidebar_first']):?>
+          <div class="grid__item lap-one-third <?php if($page['sidebar_second']){ echo 'pull--lap-one-third';} else { echo 'pull--lap-two-thirds';} ?> ">
+            <aside id="sidebar-first" class="sidebar sidebar-first">
+              <?php print render($page['sidebar_first']);?>
+            </aside>
+          </div>
+        <?php endif;?>
 
-    <?php if($page['content_bottom']): ?>
-      <section id="content-bottom" class="content-bottom content-section ">
-        <div class="container">
-          <?php print render($page['content_bottom']); ?>
-        </div>
-      </section>
-    <?php endif; ?>
+        <?php if($page['sidebar_second']): ?>
+          <div class="grid__item lap-one-third">
+            <aside id="sidebar-second" class="sidebar sidebar-second">
+              <?php print render($page['sidebar_second']); ?>
+            </aside>
+          </div>
+        <?php endif;?>
 
+      </div>
+    </div>
   </main>
 
 </div>
