@@ -42,14 +42,23 @@
  *
  * @ingroup themeable
  */
-?><!doctype html>
-<html lang="en">
+?><!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="lt-ie9" > <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
 
-<head profile="<?php print $grddl_profile; ?>">
-  <?php print $head; ?>
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title><?php print $head_title; ?></title>
-  <meta name="viewport" content="width=device-width">
+  
+  <?php print $head; ?>
   <?php print $styles; ?>
+
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
