@@ -72,7 +72,7 @@
 ?>
 <div class="site">
 
-  <header id="site-header" class="site-section site-header">
+  <header id="site-header" class="site-header site-section">
     <div class="container">
       <div class="grid is-inline">
         <div class="grid__item lap-one-third">
@@ -98,7 +98,7 @@
   <main id="site-main" class="site-section site-main">
 
     <?php if($page['content_top']): ?>
-      <section id="content-top" class="content-section content-top">
+      <section id="content-top" class="content-top content-section">
         <div class="container">
           <?php print render($page['content_top']); ?>
         </div>
@@ -106,7 +106,7 @@
     <?php endif; ?>
 
     <?php if($page['content']): ?>
-      <section id="content-main" class="content-section content-main">
+      <section id="content-main" class="content-main content-section">
         <div class="container">
           <?php print render($title_prefix); ?>
           <?php if ($title): ?><h1 class="page-title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
@@ -118,7 +118,7 @@
     <?php endif; ?>
 
     <?php if($page['content_bottom']): ?>
-      <section id="content-bottom" class="content-section content-bottom">
+      <section id="content-bottom" class="content-bottom content-section ">
         <div class="container">
           <?php print render($page['content_bottom']); ?>
         </div>
@@ -139,9 +139,20 @@
     </section>
   <?php endif; ?>
 
-  <div class="container">
-    <?php if($page['footer']): ?>
-      <?php print render($page['footer']); ?>
-    <?php endif; ?>
-  </div>
+  <?php if($page['footer']): ?>
+    <section id="main-footer" class="main-footer footer-section">
+      <div class="container">
+          <?php print render($page['footer']); ?>
+      </div>
+    </section>
+  <?php endif; ?>
+
+  <?php if($page['footer_bottom']):?>
+    <section id="footer-bottom" class="footer-bottom footer-section">
+      <div class="container">
+        <?php print render($page['footer_bottom']); ?>
+      </div>
+    </section>
+  <?php endif; ?>
+
 </footer>
