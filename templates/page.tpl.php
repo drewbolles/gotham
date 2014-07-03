@@ -71,9 +71,10 @@
  */
 ?>
 <div class="site">
+
   <header id="site-header" class="site-section site-header">
-    <div class="c">
-      <div class="grid">
+    <div class="container">
+      <div class="grid is-inline">
         <div class="grid__item lap-one-third">
           <?php if ($logo): ?>
             <div class="site-logo">
@@ -82,28 +83,31 @@
               </a>
             </div>
           <?php endif; ?>
-        </div>
-        <div class="grid__item lap-two-thirds">
+        </div><!--
+        --><div class="grid__item lap-two-thirds">
           <nav id="site-nav" class="site-nav" role="navigation">
-            <?php if($page['navigation']): ?>
-              <?php print render($page['navigation']); ?>
+            <?php if($main_menu):?>
+              <?php print theme('links__system_main_menu',array('links' => $main_menu,'attributes' => array('id' => 'main-nav','class'=>'main-nav nav-list nav-list--main'),'heading' => array('text' => t('Main menu'),'level' => 'h2','class' => array('element-invisible')),));?>
             <?php endif; ?>
           </nav>
         </div>
       </div>
     </div>
   </header>
+
   <main id="site-main" class="site-section site-main">
+
     <?php if($page['content_top']): ?>
       <section id="content-top" class="content-section content-top">
-        <div class="c">
+        <div class="container">
           <?php print render($page['content_top']); ?>
         </div>
       </section>
     <?php endif; ?>
+
     <?php if($page['content']): ?>
       <section id="content-main" class="content-section content-main">
-        <div class="c">
+        <div class="container">
           <?php print render($title_prefix); ?>
           <?php if ($title): ?><h1 class="page-title" id="page-title"><?php print $title; ?></h1><?php endif; ?>
           <?php print render($title_suffix); ?>
@@ -112,17 +116,30 @@
         </div>
       </section>
     <?php endif; ?>
+
     <?php if($page['content_bottom']): ?>
       <section id="content-bottom" class="content-section content-bottom">
-        <div class="c">
+        <div class="container">
           <?php print render($page['content_bottom']); ?>
         </div>
       </section>
     <?php endif; ?>
+
   </main>
+
 </div>
+
 <footer id="footer" class="footer">
-  <div class="c">
+
+  <?php if($page['footer_top']):?>
+    <section id="footer-top" class="footer-top footer-section">
+      <div class="container">
+        <?php print render($page['footer_top']); ?>
+      </div>
+    </section>
+  <?php endif; ?>
+
+  <div class="container">
     <?php if($page['footer']): ?>
       <?php print render($page['footer']); ?>
     <?php endif; ?>
