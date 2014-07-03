@@ -29,6 +29,15 @@ module.exports = function(grunt) {
         }
       }
     },
+    compass: {
+      dist: {                   // Target
+        options: {              // Target options
+          sassDir: 'sass',
+          cssDir: 'css',
+          outputStyle: 'compressed',
+        }
+      }
+    },
     uglify: {
       dist: {
         files: {
