@@ -3,13 +3,17 @@ description = Default starter theme by Drew Bolles
 core = 7.x
 engine = phptemplate
 
-regions[navigation] = Navigation
 regions[content_top] = Top Content
 regions[content] = Content
 regions[content_bottom] = Bottom Content
+regions[left_sidebar] = Left Sidebar
+regions[right_sidebar] = Right Sidebar
+regions[footer_top] = Footer Top
 regions[footer] = Footer
-
-scripts[] = assets/js/scripts.min.js
+regions[footer_bottom] = Footer Bottom
 
 stylesheets[screen][] = assets/css/screen.css
 ; stylesheets[print][] = assets/css/print.css
+
+scripts[] = assets/js/scripts.min.js
+
