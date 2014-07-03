@@ -11,5 +11,5 @@ regions[footer] = Footer
 
 scripts[] = assets/js/scripts.min.js
 
-stylesheets[screen][] = assets/css/screen.min.css
+stylesheets[screen][] = assets/css/screen.css
 ; stylesheets[print][] = assets/css/print.css
