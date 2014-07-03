@@ -15,28 +15,21 @@ module.exports = function(grunt) {
     autoprefixer: {
       dist: {
         files: {
-          'css/screen.min.css': 'css/screen.css'
+          'css/screen.css': 'css/screen.css'
         }
       }
     },
     uglify: {
       dist: {
         files: {
-          'js/scripts.min.js': ['js/fastclick.js', 'js/scripts.js']
+          'js/scripts.min.js': ['js/scripts.js']
         }
       }
     },
     watch: {
       sass: {
         files: ['**/*.sass'],
-        tasks: ['compass'],
-      },
-      autoprefixer: {
-        files: ['css/screen.css'],
-        tasks: ['autoprefixer'],
-        options: {
-            spawn: false
-        }
+        tasks: ['compass', 'autoprefixer'],
       },
       uglify: {
         files: ['js/scripts.js'],
