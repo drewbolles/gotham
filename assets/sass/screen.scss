@@ -1,0 +1,28 @@
+/*
+
+Table of Contents for Sass partials
+
+*/
+
+/**
+ * if you want to use compass in your theme, comment out the line below
+ */
+
+/* @import "compass"; */
+
+@import "vars";
+
+/** 
+ * by default, gotham is designed to use the responsive framework Ark.
+ * you can find ark at https://github.com/drewbolles/ark
+ * clone or download ark and place it in the 'sass' directory along side your UI folder
+ */
+
+@import "ark/ark";
+
+/**
+ * import your custom UI Sass partials below
+ */
+
+@import "ui/elements";
+@import "ui/layout";

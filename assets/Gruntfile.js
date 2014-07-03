@@ -5,10 +5,13 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    compass: {
+    sass: {
       dist: {
         options: {
-          config: 'config.rb'
+          style: 'compressed',
+        },
+        files: {
+          'css/screen.css': 'sass/screen.scss',
         }
       }
     },
@@ -16,6 +19,13 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'css/screen.css': 'css/screen.css'
+        }
+      }
+    },
+    cssmin: {
+      combine: {
+        files: {
+          'css/screen.css': ['css/screen.css']
         }
       }
     },
@@ -29,7 +39,7 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: ['**/*.sass'],
-        tasks: ['compass', 'autoprefixer'],
+        tasks: ['sass', 'autoprefixer', 'cssmin'],
       },
       uglify: {
         files: ['js/scripts.js'],
@@ -41,6 +51,6 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
 
   // Default task(s).
-  grunt.registerTask('default', ['compass', 'autoprefixer', 'uglify', 'watch']);
+  grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'uglify', 'watch']);
 
 };

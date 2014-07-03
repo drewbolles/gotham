@@ -2,9 +2,9 @@
 // layout partial
 /////////////////////////////////////////////////////////////////////
 
-.container,
-.c,
-%c
-	max-width: $site-width
-	width: 90%
-	margin: auto
+.container {
+	max-width: $site-width;
+	width: 90%;
+	margin: auto;
+}
+	
