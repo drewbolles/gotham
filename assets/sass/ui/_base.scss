@@ -8,7 +8,7 @@
 
 body {
 	font: {
-		family: Georgia, serif;
+		family: $font-family-serif;
 	}
 }
 
@@ -18,6 +18,6 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
 	font: {
-		family: Helvetica Neue, Helvetica, sans-serif;
+		family: $font-family-base;
 	}
 }
