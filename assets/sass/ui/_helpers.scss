@@ -6,5 +6,4 @@
  * drupal uses the element-invisible class to hide things visually, but available to screen readers
  */
 
-.element-invisible
-	@extend %visuallyhidden
+.element-invisible { @extend %visuallyhidden; }
