@@ -1,0 +1,27 @@
+//////////////////////////////////////////////////////////////////
+// messages partial
+//////////////////////////////////////////////////////////////////
+
+/**
+ * basic message styles
+ */
+
+.messages {
+	padding: 24px;
+	margin-bottom: 24px;
+	border: 0 solid #ccc;
+	border-width: 1px;
+
+	&.error {
+		border-color: $messages-error;
+	}
+
+	&.status {
+		border-color: $messages-success;
+	}
+
+	&.warning {
+		border-color: $messages-warning;
+	}
+
+}
