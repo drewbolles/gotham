@@ -1,57 +1,68 @@
 ///////////////////////////////////////////////////////
-// Default gotham variables - overriding ark
+// Default ark variable
 ///////////////////////////////////////////////////////
 
-/////////////////////////////////////////
-// responsive
-/////////////////////////////////////////
+///////////////////////////////
+// normalize
+///////////////////////////////
+
+$use-normalize: true;
+
+///////////////////////////////
+// responsive variables
+///////////////////////////////
 
 // breakpoints
 $bp-names: lap desk;
 $bp-sizes: 768px 1024px;
 
-/////////////////////////////////////////
-// layout
-/////////////////////////////////////////
-
-// global site layout
-$site-width: 1180px;
-$global-box-sizing: true;
-
 // push & pull
 $use-push: true;
 $use-pull: true;
 
-// vertical spacing rhythm
-$base-spacing-unit: 24px;
+///////////////////////////////
+// layout variables
+///////////////////////////////
 
-// sticky footer
-$use-sticky-footer: true;
-$footer-height: 200px;
+// global site layout
+$site-width: 1180px;
+$use-shared: true;
 
-/////////////////////////////////////////
-// typography
-/////////////////////////////////////////
+// ark sticky footer
+$use-sticky-footer: false;
+$footer-height: 150px;
 
-// base sizes
-$base-font-size: 16px;
-$base-line-height: 24px;
+///////////////////////////////
+// typography & vertical rhythm
+///////////////////////////////
+
+// base size and line height
+$font-size-base: 16px;
+$line-height-base: 24px;
 
 // headings
-$h1-size: 42px;
-$h2-size: 38px;
-$h3-size: 32px;
-$h4-size: 28px;
-$h5-size: 24px;
-$h6-size: 20px;
+$h1-size: 36px;
+$h2-size: 30px;
+$h3-size: 24px;
+$h4-size: 20px;
+$h5-size: $font-size-base;
+$h6-size: 12px;
 
 // font weights
-$weight-light: 300;
-$weight-normal: 400;
-$weight-semibold: 600;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+
+// font families
+$font-family-serif: Georgia, serif;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+// vertical rhythm
+$spacing-unit-base: $line-height-base;
 
 /////////////////////////////////////////
-// ark objects
+// turn objects off by default
 /////////////////////////////////////////
 
 $use-media: false;
