@@ -74,6 +74,11 @@ $use-mast: false;
 // ui colors
 ///////////////////////////////
 
-$messages-success: #72d572;
-$messages-warning: #fff59d;
-$messages-error: #f69988;
+$msg-status-bg: #42bd41;
+$msg-status-border: #259b24;
+
+$msg-error-bg: #f36c60;
+$msg-error-border: #e51c23;
+
+$msg-warning-bg: #fff59d;
+$msg-warning-border: #ffeb3b;

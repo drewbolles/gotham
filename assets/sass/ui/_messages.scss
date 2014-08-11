@@ -1,27 +1,27 @@
 //////////////////////////////////////////////////////////////////
-// messages partial
+// drupal messages
 //////////////////////////////////////////////////////////////////
 
-/**
- * basic message styles
- */
-
 .messages {
-	padding: 24px;
-	margin-bottom: 24px;
+	@extend %margin--bottom;
+	padding: $sub;
 	border: 0 solid #ccc;
-	border-width: 1px;
+	border-width: 3px;
+	border-radius: 3px;
+	color: #fff;
 
 	&.error {
-		border-color: $messages-error;
+		background-color: $msg-error-bg;
+		border-color: $msg-error-border;
 	}
-
 	&.status {
-		border-color: $messages-success;
+		background-color: $msg-status-bg;
+		border-color: $msg-status-border;
 	}
-
 	&.warning {
-		border-color: $messages-warning;
+		background-color: $msg-warning-bg;
+		border-color: $msg-warning-border;
+		color: #616161;
 	}
-
+	
 }
