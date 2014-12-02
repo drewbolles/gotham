@@ -1,14 +1,18 @@
 <?php
+/**
+ * Implements hook_preprocess_page().
+ */
+function gotham_preprocess_page(&$vars) {}
 
-function gotham_preprocess_page(&$vars){
+/**
+ * Implements hook_preprocess_html().
+ */
+function gotham_preprocess_html(&$vars) {}
 
-}
-
-function gotham_preprocess_html(&$vars){
-
-}
-
-function gotham_css_alter(&$css){
+/**
+ * Implements hook_css_alter().
+ */
+function gotham_css_alter(&$css) {
   $exclude = array(
     'modules/system/system.css' => FALSE,
     'modules/system/system.admin.css' => FALSE,
@@ -20,5 +24,4 @@ function gotham_css_alter(&$css){
   );
   
   $css = array_diff_key($css, $exclude);
-  
 }
