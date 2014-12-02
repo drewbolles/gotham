@@ -70,70 +70,64 @@
  * @ingroup themeable
  */
 ?>
+<!-- BEGIN page.tpl.php -->
 <div class="site">
 
   <header id="site-header" class="site-header site-section">
     <div class="container">
-      <div class="grid is-inline">
-        <div class="grid__item lap-one-third">
-          <?php if ($logo): ?>
-            <div class="site-logo">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
-              </a>
-            </div>
-          <?php endif; ?>
-        </div><!--
-        --><div class="grid__item lap-two-thirds">
-          <nav id="site-nav" class="site-nav" role="navigation">
-            <?php if($main_menu):?>
-              <?php print theme('links__system_main_menu',array('links' => $main_menu,'attributes' => array('id' => 'main-nav','class'=>'main-nav nav-list nav-list--main'),'heading' => array('text' => t('Main menu'),'level' => 'h2','class' => array('element-invisible')),));?>
-            <?php endif; ?>
-          </nav>
+      <?php if ($logo): ?>
+        <div class="site-logo">
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" style="width: 120px; height: auto;">
+          </a>
         </div>
-      </div>
+      <?php endif; ?>
+        
+      <nav id="site-nav" class="site-nav" role="navigation">
+        <?php if($main_menu):?>
+          <?php print theme('links__system_main_menu',array('links' => $main_menu,'attributes' => array('id' => 'main-nav','class'=>'main-nav nav-list nav-list--main'),'heading' => array('text' => t('Main menu'),'level' => 'h2','class' => array('element-invisible')),));?>
+        <?php endif; ?>
+      </nav>
     </div>
   </header>
+
+  <?php if($page['hero']): ?>
+    <section id="site-hero" class="site-hero site-section"><div class="container">
+      <?php print render($page['hero']); ?>
+    </div></section>
+  <?php endif; ?>
 
   <main id="site-main" class="site-main site-section" role="main">
     <div class="container">
 
       <?php if($messages):?><?php print render($messages); ?><?php endif; ?>
 
-      <div class="grid">
-        <div class="grid__item<?php if($page['sidebar_first']&&$page['sidebar_second']):?> lap-one-third push--lap-one-third<?php elseif ($page['sidebar_first']||$page['sidebar_second']):?> lap-two-thirds<?php if($page['sidebar_first']){ echo ' push--lap-one-third';}?><?php endif;?>">
-          <section id="main-content" class="main-content">
-            <?php if($title):?>
-              <h1 id="page-title" class="page-title"><?php print $title; ?></h1>
-            <?php endif;?>
+      <section id="main-content" class="main-content">
+        <?php if($title):?>
+          <h1 id="page-title" class="page-title"><?php print $title; ?></h1>
+        <?php endif;?>
 
-            <?php if($tabs = render($tabs)):?>
-              <div id="tabs">
-                <?php print render($tabs); ?>
-              </div>
-            <?php endif;?>
-
-            <?php print render($page['content']); ?>
-          </section>
-        </div>
-
-        <?php if($page['sidebar_first']):?>
-          <div class="grid__item lap-one-third <?php if($page['sidebar_second']){ echo 'pull--lap-one-third';} else { echo 'pull--lap-two-thirds';} ?> ">
-            <aside id="sidebar-first" class="sidebar sidebar-first">
-              <?php print render($page['sidebar_first']);?>
-            </aside>
+        <?php if($tabs = render($tabs)):?>
+          <div id="tabs">
+            <?php print render($tabs); ?>
           </div>
         <?php endif;?>
 
-        <?php if($page['sidebar_second']): ?>
-          <div class="grid__item lap-one-third">
-            <aside id="sidebar-second" class="sidebar sidebar-second">
-              <?php print render($page['sidebar_second']); ?>
-            </aside>
-          </div>
-        <?php endif;?>
+        <?php print render($page['content']); ?>
+      </section>
 
-      </div>
+      <?php if($page['sidebar_first']):?>
+        <aside id="sidebar-first" class="sidebar sidebar-first">
+          <?php print render($page['sidebar_first']);?>
+        </aside>
+      <?php endif;?>
+
+      <?php if($page['sidebar_second']): ?>
+        <aside id="sidebar-second" class="sidebar sidebar-second">
+          <?php print render($page['sidebar_second']); ?>
+        </aside>
+      <?php endif;?>
+
     </div>
   </main>
 
@@ -166,3 +160,4 @@
   <?php endif; ?>
 
 </footer>
+<!-- END page.tpl.php -->
