@@ -3,6 +3,7 @@ description = Default starter theme by Drew Bolles
 core = 7.x
 engine = phptemplate
 
+regions[hero] = Hero
 regions[content_top] = Top Content
 regions[content] = Content
 regions[content_bottom] = Bottom Content
@@ -14,6 +15,3 @@ regions[footer_bottom] = Footer Bottom
 
 stylesheets[screen][] = assets/css/screen.css
 ; stylesheets[print][] = assets/css/print.css
-
-scripts[] = assets/js/scripts.min.js
-
