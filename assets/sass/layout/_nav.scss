@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Navigation styles
+   ========================================================================== */
+
+/**
+ * holds the main nav styles, as well as any global navigation throughout
+ * the site. more specific nav patterns can be their own components
+ */
+/* nav element */
+.site-nav {
+  @include mq(lap) {
+    float: right;
+  }
+}
+
+/* main nav */
+.main-nav {
+  padding: 0;
+  list-style: none;
+
+  li {
+    @include mq(lap) {
+      display: inline-block;
+    }
+  }
+  a {
+    display: block;
+    padding: 5px 10px;
+  }
+}

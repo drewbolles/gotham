@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Gotham Sass variabes
+   ========================================================================== */
+
+/**
+ * changing values and settings here will impact your CSS output. use this
+ * file to house any variables that are globally necessary. if you have
+ * variables specific to certain partials, place them in those partials.
+ */   
+
+/* Vendor
+   ========================================================================== */
+
+/* normalize */   
+$use-normalize: true;
+
+
+
+/* Responsive
+   ========================================================================== */
+
+/* breakpoints */
+$breakpoints: (lap: 768px, desk: 1024px);
+
+
+
+/* Layout
+   ========================================================================== */
+
+/* global layout */
+$site-width: 1180px;
+
+/* sticky footer */
+$use-sticky-footer: false;
+$footer-height: 150px;
+
+
+
+/* Typography
+   ========================================================================== */
+
+/* base size and line height */
+$font-size-base: 16px;
+$line-height-base: 24px;
+
+/* headings */
+$h1-size: 36px;
+$h2-size: 30px;
+$h3-size: 24px;
+$h4-size: 20px;
+$h5-size: $font-size-base;
+$h6-size: 12px;
+
+/* font weights */
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+
+/* font families */
+$font-family-serif: Georgia, serif;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+/* vertical rhythm */
+$spacing-unit-base: $line-height-base;
+
+
+
+/* Gotham components
+   ========================================================================== */
+
+/**
+ * enable or disable components here
+ * @TODO provide link to examples
+ */
+/* media object */
+$use-media: false;
+
+/* flag object */
+$use-flag: false;
+
+/* flex object */
+$use-flex: false;
+
+
+
+/* Susy variables
+   ========================================================================== */
+
+$susy: (
+  columns: 12,
+);

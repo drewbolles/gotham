@@ -1,6 +1,6 @@
-//////////////////////////////////////////////////////////////////
-// table of contents sass file
-//////////////////////////////////////////////////////////////////
+/* ==========================================================================
+   Sass table of contents
+   ========================================================================== */
 
 /**
  * if you want to use compass in your theme, comment out the line below
@@ -9,30 +9,31 @@
 // @import "compass";
 
 /**
- * import custom Sass variables
- * You can adjust this file to alter the output of the default Sass
- * By default, it has Variables from the Ark framework. Read more about ark at http://arksass.github.io
+ * import custom Sass variables. You can adjust this file to alter the 
+ * output of the default Sass
  */
-
-@import "vars";
-
-/** 
- * by default, gotham is designed to use the responsive framework Ark.
- * you can find ark at https://github.com/drewbolles/ark
- * clone or download ark and place it in the 'sass' directory along side your UI folder.
- *
- * you are able to include any framework you'd like, but gotham works best with Sass based ones like Ark
- * or Inuit CSS. Popular frameworks like Bootstrap or Foundation also have Sass versions.
- */
-
-@import "ark/ark";
+@import "base/vars";
 
 /**
- * import your custom UI Sass partials below
+ * susy grids
+ *
+ * we're manually importing susy grids, which is the default grid
+ * framework for the theme.
+ * @TODO link to susy docs
  */
+@import "base/susy/language/susy"; 
 
-@import "ui/base";
-@import "ui/layout";
-@import "ui/helpers";
-@import "ui/tabs";
-@import "ui/messages";
+/* base styles */
+@import "base/mixins";
+@import "base/normalize";
+@import "base/elements";
+@import "base/typography";
+@import "base/helpers";
+
+/* layout styles */
+@import "layout/global";
+@import "layout/nav";
+
+/* component styles */
+@import "components/tabs";
+@import "components/messages";

@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Global layout
+   ========================================================================== */
+
+/* site container */
+.container {
+  @extend %clearfix;
+  margin: auto;
+  max-width: $site-width;
+  width: 90%;
+}
+
+/* site logo */
+.site-logo {
+  @include mq(lap) {
+    float: left;
+  }
+}
+
+/* site content + sidebar layout */
+@include with-layout(12 isolate) {
+  @include mq(lap) {
+    .main-content {
+      .sidebar-first & {
+        @include span(8 at 5);
+      }
+
+      .sidebar-second & {
+        @include span(8 first);
+      }
+
+      .two-sidebars & {
+        @include span(6 at 4);
+      }
+    }
+
+    .sidebar-first {
+      .one-sidebar & {
+        @include span(4 first);
+      }
+      .two-sidebars & {
+        @include span (3 first);
+      }
+    }
+
+    .sidebar-second {
+      .one-sidebar & {
+        @include span(4 last);
+      }
+      .two-sidebars & {
+        @include span(3 last);
+      }
+    }
+  }
+}

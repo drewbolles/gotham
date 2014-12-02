@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/**
+ * generic, global mixins
+ *
+ * these are basic mixins that power the stylesheets by default. feel free
+ * to add / remove any as needed. more specific mixins can go in the
+ * partials they effect
+ */
+
+/**
+ * media query
+ *
+ * coincides with the breakpoint map in the base/_vars file
+ * to use, simply include in your stylesheets
+ * @EX
+ *  @include mq(lap) { styles.... }
+ */
+@mixin mq($point) {
+	@each $name, $size in $breakpoints {
+		@if $point == $name {
+			@media all and (min-width: $size) {
+				@content;
+			}
+		}
+	}
+}

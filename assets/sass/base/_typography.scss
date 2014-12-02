@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * any naked typography elements, and their modifying / state class names
+ */   
+
+/* headings */
+h1,h2,h3,h4,h5,h6 {
+	font: {
+		family: $font-family-base;
+	}
+}
+
+/* paragraphs */
+p {
+	font-size: $font-size-base;
+}
