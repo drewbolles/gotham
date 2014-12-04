@@ -2,6 +2,9 @@
    Element styles
    ========================================================================== */
 
+/* box sizing ftw */
+*, *:after, *:before { box-sizing: border-box; }
+
 /**
  * mini reset
  *
@@ -17,7 +20,9 @@ h1,h2,h3,h4,h5,h6,p,ol,ul {
 body {
 	font: {
 		family: $font-family-serif;
+    size: $font-size-base;
 	}
+  line-height: $line-height-ratio;
 }
 
 /* links */
