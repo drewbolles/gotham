@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Footer layout styles
+   ========================================================================== */
+
+
+/* Sticky footer
+   ========================================================================== */
+@if $use-sticky-footer == true {
+  @include mq(lap) {
+    .site {
+      min-height: 100%;
+      margin-bottom: -$footer-height;
+
+      &:after {
+        content: "";
+        display: block;
+      }     
+    }
+    
+    .footer, .site:after { height: $footer-height; }
+  }
+}   
