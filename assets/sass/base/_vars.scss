@@ -42,6 +42,7 @@ $footer-height: 150px;
 /* base size and line height */
 $font-size-base: 16px;
 $line-height-base: 24px;
+$line-height-ratio: $line-height-base / $font-size-base;
 
 /* headings */
 $h1-size: 36px;
@@ -66,27 +67,10 @@ $spacing-unit-base: $line-height-base;
 
 
 
-/* Gotham components
-   ========================================================================== */
-
-/**
- * enable or disable components here
- * @TODO provide link to examples
- */
-/* media object */
-$use-media: false;
-
-/* flag object */
-$use-flag: false;
-
-/* flex object */
-$use-flex: false;
-
-
-
 /* Susy variables
    ========================================================================== */
 
 $susy: (
   columns: 12,
+  gutters: 1/4,
 );
