@@ -138,7 +138,7 @@
   </main>
 
   <?php if($page['content_bottom']): ?>
-    <section id="site-top-content" class="site-top-content site-section"><div class="container">
+    <section id="site-bottom-content" class="site-bottom-content site-section"><div class="container">
       <?php print render($page['content_bottom']); ?>
     </div></section>
   <?php endif; ?>
