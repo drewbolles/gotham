@@ -97,6 +97,12 @@
     </div></section>
   <?php endif; ?>
 
+  <?php if($page['content_top']): ?>
+    <section id="site-top-content" class="site-top-content site-section"><div class="container">
+      <?php print render($page['content_top']); ?>
+    </div></section>
+  <?php endif; ?>
+
   <main id="site-main" class="site-main site-section" role="main">
     <div class="container">
 
@@ -130,6 +136,12 @@
 
     </div>
   </main>
+
+  <?php if($page['content_bottom']): ?>
+    <section id="site-top-content" class="site-top-content site-section"><div class="container">
+      <?php print render($page['content_bottom']); ?>
+    </div></section>
+  <?php endif; ?>
 
 </div>
 
