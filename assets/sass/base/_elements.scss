@@ -37,10 +37,16 @@ a {
 
 /**
  * lists 
- * neuter lists globally, and reapply styles to body area if needed.
+ * neuter lists globally, and re-apply styles to body area if needed.
  * this keeps menus clean
  */
 ol, ul {
   padding: 0;
   list-style: none;
+}
+
+/* media */
+img {
+  max-width: 100%;
+  vertical-align: middle;
 }
