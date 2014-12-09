@@ -18,7 +18,7 @@
 }
 
 /* site content + sidebar layout */
-@include with-layout(12 isolate) {
+@include with-layout($main-layout) {
   @include mq(lap) {
     .main-content {
       .sidebar-first & {
