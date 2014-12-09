@@ -70,7 +70,11 @@ $spacing-unit-base: $line-height-base;
 /* Susy variables
    ========================================================================== */
 
+/* global susy variables */
 $susy: (
   columns: 12,
   gutters: 1/4,
 );
+
+/* different susy layouts */
+$main-layout: layout(12 1/4 fluid isolate);
