@@ -84,7 +84,9 @@
       <?php endif; ?>
         
       <nav id="site-nav" class="site-nav" role="navigation">
-        <?php if($main_menu):?>
+        <?php if($page['navigation']): ?>
+          <?php print render($page['navigation']); ?>
+        <?php else if($main_menu):?>
           <?php print theme('links__system_main_menu',array('links' => $main_menu,'attributes' => array('id' => 'main-nav','class'=>'main-nav nav-list nav-list--main'),'heading' => array('text' => t('Main menu'),'level' => 'h2','class' => array('element-invisible')),));?>
         <?php endif; ?>
       </nav>
