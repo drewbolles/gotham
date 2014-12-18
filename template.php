@@ -10,6 +10,14 @@ function gotham_preprocess_page(&$vars) {}
 function gotham_preprocess_html(&$vars) {}
 
 /**
+ * Implements hook_preprocess_node().
+ */
+function gotham_preprocess_node(&$vars) {
+  // Make "node--NODETYPE--VIEWMODE.tpl.php" templates available for nodes 
+  $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__' . $vars['view_mode'];
+}
+
+/**
  * Implements hook_css_alter().
  */
 function gotham_css_alter(&$css) {
