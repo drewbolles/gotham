@@ -4,7 +4,7 @@
 
 /* site container */
 .container {
-  @extend %clearfix;
+  @include clearfix;
   margin: auto;
   max-width: $site-width;
   width: 90%;

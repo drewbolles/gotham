@@ -26,8 +26,8 @@ $msg-warning-border: #ffeb3b;
    ========================================================================== */
 
 .messages {
+	@include vr();
 	/* box model */
-	margin-bottom: $spacing-unit-base;
 	padding: $spacing-unit-base;
 	/* presentation */
 	border: 0 solid #ccc;

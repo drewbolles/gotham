@@ -19,11 +19,36 @@
  *  @include mq(lap) { styles.... }
  */
 @mixin mq($point) {
-	@each $name, $size in $breakpoints {
-		@if $point == $name {
-			@media all and (min-width: $size) {
-				@content;
-			}
-		}
-	}
+  $size: map-get($breakpoints, $point);
+  @media all and (min-width: $size) {
+    @content;
+  }
 }
+
+/**
+ * vertical rhythm
+ *
+ * we define this as a mixin so we avoid using @extends on unrelated 
+ * elements.
+ */
+@mixin vr($size: $spacing-unit-base) {
+  @if $size == $spacing-unit-base {
+    margin-bottom: $spacing-unit-base;
+  } @else {
+    margin-bottom: $size * $spacing-unit-base;
+  }
+}
+
+/**
+ * clearfix
+ */
+@mixin clearfix() {
+  &:after,
+  &:before {
+    content: " ";
+    display: table;
+  },
+  &:after {
+    clear: both;
+  }
+} 
