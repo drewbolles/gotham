@@ -15,6 +15,7 @@
 
 /* main nav */
 .main-nav {
+  margin: 0;
   padding: 0;
   list-style: none;
 
@@ -26,6 +27,6 @@
   
   a {
     display: block;
-    padding: 5px 10px;
+    padding: spacing-unit(1/4) spacing-unit(1/2);
   }
 }

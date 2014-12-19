@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Functions
+   ========================================================================== */
+
+/**
+ * spacing unit
+ *
+ * interact with the spacing unit
+ * @param
+ *  $size: either empty, or a fraction
+ */
+@function spacing-unit($size: $spacing-unit-base) {
+  @if $size == $spacing-unit-base {
+    @return $size;
+  } @else {
+    @return $size * $spacing-unit-base;
+  }
+}

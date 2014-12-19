@@ -6,7 +6,7 @@
  * styling of default drupal tabs
  */
 .tabs { /* the class on the ul */
-  padding: 0 10px;
+  padding: 0 spacing-unit(1/2);
 	border-bottom: 1px solid #ccc;
 	
 	li {
@@ -14,14 +14,16 @@
     border-width: 1px 1px 0;
     border-radius: 3px 3px 0 0;
 
-    @include mq(lap) { display: inline-block; }
+    @include mq(lap) { 
+      display: inline-block; 
+    }
   }
 
   a {
     display: block;
-    padding: 5px 10px;
+    padding: spacing-unit(1/4) spacing-unit(1/2);
 
     &.active { background: #eee;}
-    &:hover { background-color: #ccc; }
+    &:hover  { background-color: #ccc; }
   }
 }
