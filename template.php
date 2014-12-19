@@ -1,8 +1,4 @@
 <?php
-/**
- * Implements hook_preprocess_page().
- */
-function gotham_preprocess_page(&$vars) {}
 
 /**
  * Implements hook_preprocess_html().
@@ -10,11 +6,30 @@ function gotham_preprocess_page(&$vars) {}
 function gotham_preprocess_html(&$vars) {}
 
 /**
+ * Implements hook_preprocess_page().
+ */
+function gotham_preprocess_page(&$vars) {}
+
+/**
  * Implements hook_preprocess_node().
  */
 function gotham_preprocess_node(&$vars) {
   // Make "node--NODETYPE--VIEWMODE.tpl.php" templates available for nodes 
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__' . $vars['view_mode'];
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function sparkpost_preprocess_block(&$vars) {
+  // apply the block bare tpl to certain blocks
+  $bare_blocks = array(
+    'block-system-main',
+  );
+  
+  if(in_array($vars['block_html_id'], $bare_blocks)) {
+    $vars['theme_hook_suggestions'][] = 'block__bare';
+  }
 }
 
 /**
