@@ -12,16 +12,14 @@
  * unit. this creates a shared vertical rhythm. adjust as needed.
  */
 h1,h2,h3,h4,h5,h6,p,ol,ul {
+  @include vr;
   margin-top: 0;
-  margin-bottom: $spacing-unit-base;
 }    
 
 /* html and body */
 body {
-	font: {
-		family: $font-family-serif;
-    size: $font-size-base;
-	}
+	font-family: $font-family-serif;
+  font-size: $font-size-base;
   line-height: $line-height-ratio;
 }
 
