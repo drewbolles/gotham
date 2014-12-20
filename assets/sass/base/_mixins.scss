@@ -81,7 +81,7 @@
   &:before {
     content: " ";
     display: table;
-  },
+  }
   &:after {
     clear: both;
   }
@@ -101,4 +101,25 @@
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+/**
+ * placeholder text
+ */
+@mixin placeholder() {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    @content;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    @content;
+  }
+
+  :-ms-input-placeholder {  
+    @content;
+  }
 }
