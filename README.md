@@ -1,4 +1,4 @@
-# Gotham starter Drupal theme
+# Gotham starter Drupal theme`
 
 A bare-bones Drupal 8 starter theme. Built with [Sass](http://sass-lang.com) and [Susy](http://susy.oddbird.net). Meant to be a bare theme that developers can build off. Applies the [SMACSS](http://smacss.com) architecture and tries to adhear to Drupal's new CSS best practices.
 
@@ -27,3 +27,14 @@ $main-layout: layout(12 1/2 fluid isolate);
 ```
 
 So by default, any use of Susy's span mixin will base it's math off 12 columns with 1/4 of a column as a gutter. The main layout variable defines a slightly different grid we use for the sidebar and content regions of the site. Change these variables, or create new layout variables, as you see fit. [Read more about Susy](http://susydocs.oddbird.net/en/latest/)
+
+## Recommended starting modules
+
+These are the modules I recommend as an extended core for site development.
+
+* Views
+* Entity View Mode
+* Metatag
+* Google Analytics
+* Entity
+* Token
