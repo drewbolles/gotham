@@ -42,16 +42,16 @@ $footer-height: 150px;
    ========================================================================== */
 
 /* base size and line height */
-$font-size-base: 16px;
-$line-height-base: 24px;
-$line-height-ratio: $line-height-base / $font-size-base;
+$base-font-size: 16px;
+$base-line-height: 24px;
+$line-height-ratio: $base-line-height / $base-font-size;
 
 /* headings */
 $h1-size: 36px;
 $h2-size: 30px;
 $h3-size: 24px;
 $h4-size: 20px;
-$h5-size: $font-size-base;
+$h5-size: $base-font-size;
 $h6-size: 12px;
 
 /* font weights */
@@ -62,10 +62,10 @@ $font-weight-semibold: 600;
 /* font families */
 $font-family-serif: Georgia, serif;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
-$font-family-base: $font-family-sans-serif;
+$base-font-family: $font-family-sans-serif;
 
 /* vertical rhythm */
-$spacing-unit-base: $line-height-base;
+$base-spacing-unit: $base-line-height;
 
 
 
@@ -79,4 +79,4 @@ $susy: (
 );
 
 /* different susy layouts */
-$main-layout: layout(12 1/4 fluid isolate);
+$main-layout: layout(12 1/4 isolate);

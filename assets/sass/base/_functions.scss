@@ -9,10 +9,10 @@
  * @param
  *  $size: either empty, or a fraction
  */
-@function spacing-unit($size: $spacing-unit-base) {
-  @if $size == $spacing-unit-base {
+@function spacing-unit($size: $base-spacing-unit) {
+  @if $size == $base-spacing-unit {
     @return $size;
   } @else {
-    @return $size * $spacing-unit-base;
+    @return $size * $base-spacing-unit;
   }
 }

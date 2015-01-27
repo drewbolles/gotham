@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /**
- * generic, global mixins
+ * Generic Mixins
  *
  * these are basic mixins that power the stylesheets by default. feel free
  * to add / remove any as needed. more specific mixins can go in the
@@ -11,7 +11,7 @@
  */
 
 /**
- * media query
+ * Media Query
  *
  * coincides with the breakpoint map in the base/_vars file
  * to use, simply include in your stylesheets
@@ -19,10 +19,16 @@
  *  @include mq(lap) { styles.... }
  */
 @mixin mq($point) {
-  $size: map-get($breakpoints, $point);
+  @if type-of($point) == number {
+    @media screen and (min-width: $point) {
+      @content;
+    }
+  } @else {
+    $size: map-get($breakpoints, $point);
 
-  @media all and (min-width: $size) {
-    @content;
+    @media all and (min-width: $size) {
+      @content;
+    }
   }
 }
 
@@ -31,9 +37,9 @@
  *
  * pass in a font size and convert to REM unit
  */
-@mixin font-size($size: $font-size-base) {
+@mixin font-size($size: $base-font-size) {
   font-size: $size;
-  font-size: $size/$font-size-base * 1rem;
+  font-size: $size/$base-font-size * 1rem;
 }
 
 /**
@@ -64,11 +70,11 @@
  * we define this as a mixin so we avoid using @extends on unrelated 
  * elements.
  */
-@mixin vr($size: $spacing-unit-base) {
-  @if $size == $spacing-unit-base {
-    margin-bottom: $spacing-unit-base;
+@mixin vr($size: $base-spacing-unit) {
+  @if $size == $base-spacing-unit {
+    margin-bottom: $base-spacing-unit;
   } @else {
-    margin-bottom: $size * $spacing-unit-base;
+    margin-bottom: $size * $base-spacing-unit;
   }
 }
 
