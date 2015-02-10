@@ -1,52 +1,58 @@
-/* ==========================================================================
-   Gotham Sass variabes
-   ========================================================================== */
-
 /**
- * changing values and settings here will impact your CSS output. use this
- * file to house any variables that are globally necessary. if you have
+ * @file
+ * Gotham Sass variables
+ *
+ * Changing values and settings here will impact your CSS output. Use this
+ * file to house any variables that are globally necessary. If you have
  * variables specific to certain partials, place them in those partials.
  */   
 
 
 
-/* Vendor
-   ========================================================================== */
+/**
+ * Vendor
+ */
 
-/* normalize */   
+// Normalize
 $use-normalize: true;
 
 
 
-/* Responsive
-   ========================================================================== */
+/**
+ * Responsive
+ */
 
-/* breakpoints */
-$breakpoints: (lap: 768px, desk: 1024px);
+// Breakpoints
+$breakpoints: (
+  lap: 768px, 
+  desk: 1024px,
+);
 
 
 
-/* Layout
-   ========================================================================== */
+/**
+ * Layout
+ */
 
-/* global layout */
+// Global
 $site-width: 1200px;
 
-/* sticky footer */
+// Sticky Footer
 $use-sticky-footer: false;
 $footer-height: 150px;
 
 
 
-/* Typography
-   ========================================================================== */
+/**
+ * Typography
+ */
 
-/* base size and line height */
+// Base size and line height
 $base-font-size: 16px;
 $base-line-height: 24px;
 $line-height-ratio: $base-line-height / $base-font-size;
 
-/* headings */
+// Headings
 $h1-size: 36px;
 $h2-size: 30px;
 $h3-size: 24px;
@@ -54,29 +60,40 @@ $h4-size: 20px;
 $h5-size: $base-font-size;
 $h6-size: 12px;
 
-/* font weights */
+// Font weights
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
 
-/* font families */
+// Font families */
 $font-family-serif: Georgia, serif;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
 $base-font-family: $font-family-sans-serif;
 
-/* vertical rhythm */
+// Vertical rhythm */
 $base-spacing-unit: $base-line-height;
 
 
 
-/* Susy variables
-   ========================================================================== */
+/**
+ * Colors
+ */
+$colors: (
+  grey: #ccc,
+);
 
-/* global susy variables */
+
+
+/**
+ * Susy variables
+ */
+
+// Global
 $susy: (
   columns: 12,
   gutters: 1/4,
 );
 
-/* different susy layouts */
-$main-layout: layout(12 1/4 isolate);
+// Custom layouts
+$base-layout: layout(12 1/4);
+$main-layout: layout($base-layout isolate);

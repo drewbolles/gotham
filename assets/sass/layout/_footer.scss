@@ -1,8 +1,9 @@
-/* ==========================================================================
-   Footer layout styles
-   ========================================================================== */
+/**
+ * @file
+ * Footer layout styles
+ */
 
-/* sticky footer */
+// Sticky footer
 @if $use-sticky-footer == true {
   @include mq(lap) {
     .site {

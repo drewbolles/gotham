@@ -1,29 +1,33 @@
-/* ==========================================================================
-   Element styles
-   ========================================================================== */
+/**
+ * @file
+ * Base element styles
+ */
 
-/* box sizing ftw */
+/**
+ * Box Sizing FTW
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
 *, *:after, *:before { box-sizing: border-box; }
 
 /**
- * mini reset
+ * Mini Reset
  *
- * this reset removes top margins, and adds a bottom of the base spacing
- * unit. this creates a shared vertical rhythm. adjust as needed.
+ * This reset removes top margins, and adds a bottom of the base spacing
+ * unit. This creates a shared vertical rhythm. Adjust as needed.
  */
 h1,h2,h3,h4,h5,h6,p,ol,ul {
   @include vr;
   margin-top: 0;
 }    
 
-/* html and body */
+// Html and Body 
 body {
 	font-family: $font-family-serif;
   font-size: $base-font-size;
   line-height: $line-height-ratio;
 }
 
-/* links */
+// Links 
 a {
 	text-decoration: none;
   transition: .2s ease background-color;
@@ -34,16 +38,16 @@ a {
 }
 
 /**
- * lists 
- * neuter lists globally, and re-apply styles to body area if needed.
- * this keeps menus clean
+ * Lists 
+ * Neuter lists globally, and re-apply styles to body area if needed.
+ * This keeps menus clean
  */
 ol, ul {
   padding: 0;
   list-style: none;
 }
 
-/* media */
+// Media 
 img {
   height: auto;
   max-width: 100%;

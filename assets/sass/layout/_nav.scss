@@ -1,19 +1,19 @@
-/* ==========================================================================
-   Navigation styles
-   ========================================================================== */
-
 /**
- * holds the main nav styles, as well as any global navigation throughout
- * the site. more specific nav patterns can be their own components
+ * @file
+ * Navigation styles
+ *
+ * Holds the main nav styles, as well as any global navigation throughout
+ * the site. more specific nav patterns can be their own components.
  */
-/* nav element */
+
+// Nav element
 .site-nav {
   @include mq(lap) {
     float: right;
   }
 }
 
-/* main nav */
+// Main nav
 .main-nav {
   margin: 0;
   padding: 0;

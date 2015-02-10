@@ -1,8 +1,9 @@
-/* ==========================================================================
-   Global layout
-   ========================================================================== */
+/**
+ * @file
+ * Global layout
+ */
 
-/* site container */
+// Site container
 .container {
   @include clearfix;
   margin: auto;
@@ -10,14 +11,14 @@
   width: 90%;
 }
 
-/* site logo */
+// Site logo 
 .site-logo {
   @include mq(lap) {
     float: left;
   }
 }
 
-/* site content + sidebar layout */
+// Site content + sidebar layout 
 @include with-layout($main-layout) {
   @include mq(lap) {
     .main-content {

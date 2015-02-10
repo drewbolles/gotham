@@ -1,17 +1,14 @@
-/* ==========================================================================
-   Placeholders & helper classes
-   ========================================================================== */
-
 /**
- * drupal uses element-invisible
+ * @file
+ * Helper classes
  */
+
+// Drupal uses element-invisible
 .element-invisible { 
 	@include visuallyhidden;
 }
 
-/**
- * clearfix
- */
+// Clearfix
 .clearfix {
 	@include clearfix;
 } 

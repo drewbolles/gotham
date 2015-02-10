@@ -1,21 +1,19 @@
-/* ==========================================================================
-   Mixins
-   ========================================================================== */
-
 /**
- * Generic Mixins
+ * @file
+ * Theme mixins
  *
- * these are basic mixins that power the stylesheets by default. feel free
- * to add / remove any as needed. more specific mixins can go in the
- * partials they effect
+ *
+ * These are basic mixins that power the stylesheets by default. Feel free
+ * to add / remove any as needed. More specific mixins can go in the
+ * partials they effect.
  */
 
 /**
  * Media Query
  *
- * coincides with the breakpoint map in the base/_vars file
- * to use, simply include in your stylesheets
- * @EX
+ * Can take a pixel value or coincides with the breakpoint map.
+ * To use, simply include in your stylesheets...
+ * @example
  *  @include mq(lap) { styles.... }
  */
 @mixin mq($point) {
@@ -33,9 +31,9 @@
 }
 
 /**
- * font size
+ * Font Size
  *
- * pass in a font size and convert to REM unit
+ * Pass in a font size and convert to REM unit.
  */
 @mixin font-size($size: $base-font-size) {
   font-size: $size;
@@ -43,11 +41,11 @@
 }
 
 /**
- * hover
+ * Hover
  *
- * apply hover & focus at same time.
+ * Apply hover & focus at same time.
  * @param
- *   active - whether to also use active class
+ *  - $active: whether to also use active class
  */
 @mixin hover($active: false) {
   @if($active == true) {
@@ -65,9 +63,9 @@
 }
 
 /**
- * vertical rhythm
+ * Vertical Rhythm
  *
- * we define this as a mixin so we avoid using @extends on unrelated 
+ * We define this as a mixin so we avoid using @extends on unrelated 
  * elements.
  */
 @mixin vr($size: $base-spacing-unit) {
@@ -79,7 +77,7 @@
 }
 
 /**
- * clearfix
+ * Clearfix
  */
 @mixin clearfix() {
   &:after,
@@ -93,23 +91,23 @@
 } 
 
 /**
- * visually hidden
+ * Visually Hidden
  *
- * invisible from screen but visible to screen readers
+ * Invisible from screen but visible to screen readers
  */
 @mixin visuallyhidden() {
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  position: absolute;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
+  width: 1px !imporant;
+  height: 1px !imporant;
+  padding: 0 !imporant;
+  margin: -1px !imporant;
+  position: absolute !imporant;
+  overflow: hidden !imporant;
+  border: 0 !imporant;
+  clip: rect(0 0 0 0) !imporant;
 }
 
 /**
- * placeholder text
+ * Placeholder text
  */
 @mixin placeholder() {
   ::-webkit-input-placeholder {

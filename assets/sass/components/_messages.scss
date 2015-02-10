@@ -1,16 +1,15 @@
-/* ==========================================================================
-   Drupal messages
-   ========================================================================== */
-
 /**
- * styling of default drupal messages
+ * @file
+ * Drupal Messages
+ *
+ * Styling of default drupal messages.
  *
  * @TODO rework names w/ preprocess function
  */
 
-/* Config
-   ========================================================================== */
-
+/**
+ * Config
+ */
 $msg-status-bg: #42bd41;
 $msg-status-border: #259b24;
 
@@ -22,14 +21,14 @@ $msg-warning-border: #ffeb3b;
 
 
 
-/* Message Styles
-   ========================================================================== */
-
+/**
+ * Message Styles
+ */
 .messages {
-	@include vr();
-	/* box model */
+	@include vr;
+	// Box model
 	padding: spacing-unit();
-	/* presentation */
+	// Presentation
 	border: 0 solid #ccc;
 	border-width: 3px;
 	border-radius: 3px;
