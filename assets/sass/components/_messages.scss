@@ -7,9 +7,11 @@
  * @TODO rework names w/ preprocess function
  */
 
-/**
- * Config
- */
+
+///
+// Config
+///
+
 $msg-status-bg: #42bd41;
 $msg-status-border: #259b24;
 
@@ -26,9 +28,9 @@ $msg-warning-border: #ffeb3b;
  */
 .messages {
 	@include vr;
-	// Box model
+	/* Box model */
 	padding: spacing-unit();
-	// Presentation
+	/* Presentation */
 	border: 0 solid #ccc;
 	border-width: 3px;
 	border-radius: 3px;

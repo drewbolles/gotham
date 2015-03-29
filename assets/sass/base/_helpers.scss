@@ -3,12 +3,13 @@
  * Helper classes
  */
 
-// Drupal uses element-invisible
+
+/* Drupal uses element-invisible */
 .element-invisible { 
 	@include visuallyhidden;
 }
 
-// Clearfix
+/* Clearfix */
 .clearfix {
 	@include clearfix;
 } 

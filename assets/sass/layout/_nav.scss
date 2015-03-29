@@ -6,14 +6,16 @@
  * the site. more specific nav patterns can be their own components.
  */
 
-// Nav element
+
+/* Nav element */
 .site-nav {
   @include mq(lap) {
     float: right;
   }
 }
 
-// Main nav
+
+/* Main nav */
 .main-nav {
   margin: 0;
   padding: 0;

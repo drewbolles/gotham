@@ -1,52 +1,53 @@
-/**
- * @file
- * Theme mixins
- *
- *
- * These are basic mixins that power the stylesheets by default. Feel free
- * to add / remove any as needed. More specific mixins can go in the
- * partials they effect.
- */
+///
+// @file
+// Theme mixins
+//
+// These are basic mixins that power the stylesheets by default. Feel free
+// to add / remove any as needed. More specific mixins can go in the
+// partials they effect.
+///
 
-/**
- * Media Query
- *
- * Can take a pixel value or coincides with the breakpoint map.
- * To use, simply include in your stylesheets...
- * @example
- *  @include mq(lap) { styles.... }
- */
+///
+// Media Query
+//
+// Can take a pixel value or coincides with the breakpoint map.
+// To use, simply include in your stylesheets.
+//
+// @example
+//  @include mq(lap) { styles.... }
+///
 @mixin mq($point) {
   @if type-of($point) == number {
-    @media screen and (min-width: $point) {
+    @media (min-width: $point) {
       @content;
     }
-  } @else {
+  } @elseif map-has-key($breakpoints, $point) {
     $size: map-get($breakpoints, $point);
 
-    @media all and (min-width: $size) {
+    @media #{inspect($size)} {
       @content;
     }
   }
 }
 
-/**
- * Font Size
- *
- * Pass in a font size and convert to REM unit.
- */
+
+///
+// Font Size
+//
+// Pass in a font size and convert to REM unit.
+///
 @mixin font-size($size: $base-font-size) {
   font-size: $size;
-  font-size: $size/$base-font-size * 1rem;
+  font-size: $size/$base-font-size// 1rem;
 }
 
-/**
- * Hover
- *
- * Apply hover & focus at same time.
- * @param
- *  - $active: whether to also use active class
- */
+///
+// Hover
+//
+// Apply hover & focus at same time.
+//
+// @param $active
+///
 @mixin hover($active: false) {
   @if($active == true) {
     &:hover,
@@ -62,12 +63,13 @@
   }
 }
 
-/**
- * Vertical Rhythm
- *
- * We define this as a mixin so we avoid using @extends on unrelated 
- * elements.
- */
+
+///
+// Vertical Rhythm
+//
+// We define this as a mixin so we avoid using @extends on unrelated 
+// elements.
+///
 @mixin vr($size: $base-spacing-unit) {
   @if $size == $base-spacing-unit {
     margin-bottom: $base-spacing-unit;
@@ -76,9 +78,10 @@
   }
 }
 
-/**
- * Clearfix
- */
+
+///
+// Clearfix
+///
 @mixin clearfix() {
   &:after,
   &:before {
@@ -90,11 +93,12 @@
   }
 } 
 
-/**
- * Visually Hidden
- *
- * Invisible from screen but visible to screen readers
- */
+
+///
+// Visually Hidden
+//
+// Invisible from screen but visible to screen readers
+///
 @mixin visuallyhidden() {
   width: 1px !important;
   height: 1px !important;
@@ -106,23 +110,31 @@
   clip: rect(0 0 0 0) !important;
 }
 
-/**
- * Placeholder text
- */
+
+///
+// Placeholder text
+///
 @mixin placeholder() {
   ::-webkit-input-placeholder {
     @content;
   }
-
   :-moz-placeholder { /* Firefox 18- */
     @content;
   }
-
   ::-moz-placeholder {  /* Firefox 19+ */
     @content;
   }
-
   :-ms-input-placeholder {  
     @content;
   }
+}
+
+///
+// Container
+///
+@mixin container() {
+  @include clearfix;
+  max-width: $site-width;
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,17 +1,16 @@
-/**
- * @file
- * Theme functions
- */
+///
+// @file
+// Theme functions
+///
 
-/**
- * Spacing Unit
- *
- * Interact with the spacing unit
- * @param 
- *  - $size: either empty, or a fraction
- * @return 
- *  - pixel value
- */
+///
+// Spacing Unit
+//
+// Interact with the spacing unit
+//
+// @param $size
+// @return px value
+///
 @function spacing-unit($size: $base-spacing-unit) {
   @if $size == $base-spacing-unit {
     @return $size;
@@ -20,15 +19,19 @@
   }
 }
 
-/**
- * Color
- *
- * Interact with the color map
- * @param
- *  - $key: color map key
- * @return
- *  - color hex
- */
+// Shortcut
+@function su($size: $base-spacing-unit) {
+  @return spacing-unit($size);
+}
+
+///
+// Color
+//
+// Interact with the color map
+//
+// @param $key
+// @return color hex
+///
 @function color($key) {
   @return map-get($colors, $key);
 }

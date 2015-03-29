@@ -1,38 +1,24 @@
-/**
- * @file
- * Gotham Sass variables
- *
- * Changing values and settings here will impact your CSS output. Use this
- * file to house any variables that are globally necessary. If you have
- * variables specific to certain partials, place them in those partials.
- */   
+///
+// @file
+// Gotham Sass variables
+//
+// Changing values and settings here will impact your CSS output. Use this
+// file to house any variables that are globally necessary. If you have
+// variables specific to certain partials, place them in those partials.
+///
 
 
-
-/**
- * Vendor
- */
+///
+// Vendor
+///
 
 // Normalize
 $use-normalize: true;
 
 
-
-/**
- * Responsive
- */
-
-// Breakpoints
-$breakpoints: (
-  lap: 768px, 
-  desk: 1024px,
-);
-
-
-
-/**
- * Layout
- */
+///
+// Layout
+///
 
 // Global
 $site-width: 1200px;
@@ -42,10 +28,28 @@ $use-sticky-footer: false;
 $footer-height: 150px;
 
 
+///
+// Responsive
+///
 
-/**
- * Typography
- */
+// Breakpoints
+$bp-lap:  768px;
+$bp-desk: 1024px;
+$bp-full: $site-width;
+
+$breakpoints: (
+  // Primary
+  lap:  (min-width: $bp-lap), 
+  desk: (min-width: $bp-desk),
+
+  // Tween
+  lap-to-desk: (min-width: $bp-lap) and (max-width: $bp-desk),
+);
+
+
+///
+// Typography
+///
 
 // Base size and line height
 $base-font-size: 16px;
@@ -65,28 +69,28 @@ $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
 
-// Font families */
+// Font families
 $font-family-serif: Georgia, serif;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
 $base-font-family: $font-family-sans-serif;
 
-// Vertical rhythm */
+// Vertical rhythm
 $base-spacing-unit: $base-line-height;
 
 
 
-/**
- * Colors
- */
+///
+// Colors
+///
 $colors: (
   grey: #ccc,
 );
 
 
 
-/**
- * Susy variables
- */
+///
+// Susy variables
+///
 
 // Global
 $susy: (

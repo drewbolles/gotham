@@ -3,8 +3,8 @@
  * Footer layout styles
  */
 
-// Sticky footer
 @if $use-sticky-footer == true {
+  /* Sticky footer */
   @include mq(lap) {
     .site {
       min-height: 100%;
