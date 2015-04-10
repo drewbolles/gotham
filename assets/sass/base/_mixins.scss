@@ -1,29 +1,29 @@
-///
+//
 // @file
 // Theme mixins
 //
 // These are basic mixins that power the stylesheets by default. Feel free
 // to add / remove any as needed. More specific mixins can go in the
 // partials they effect.
-///
-
-///
-// Font Size
 //
-// Pass in a font size and convert to REM unit.
+
+/// Font Size
 ///
+/// @access public
+///
+/// @param {int} $size - Size of font being passed in
 @mixin font-size($size: $base-font-size) {
   font-size: $size;
   font-size: $size/$base-font-size// 1rem;
 }
 
+
+/// Hover
+/// Apply hover & focus at same time.
 ///
-// Hover
-//
-// Apply hover & focus at same time.
-//
-// @param $active
+/// @access public
 ///
+/// @param {boolean} $active
 @mixin hover($active: false) {
   @if($active == true) {
     &:hover,
@@ -40,24 +40,23 @@
 }
 
 
+/// Vertical Rhythm
+/// We define this as a mixin so we avoid using @extends on unrelated 
+/// elements.
 ///
-// Vertical Rhythm
-//
-// We define this as a mixin so we avoid using @extends on unrelated 
-// elements.
+/// @access public
 ///
-@mixin vr($size: $base-spacing-unit) {
-  @if $size == $base-spacing-unit {
-    margin-bottom: $base-spacing-unit;
-  } @else {
-    margin-bottom: $size * $base-spacing-unit;
-  }
+/// @param {int} $multiplier - Integer to multiply base spacing unit by
+@mixin vr($multiplier: 1) {
+  margin-bottom: $multiplier * $base-spacing-unit;
 }
 
 
+
+/// Clearfix
+/// Applis micro clearfix to elements
 ///
-// Clearfix
-///
+/// @access public
 @mixin clearfix() {
   &:after,
   &:before {
@@ -70,11 +69,10 @@
 } 
 
 
+/// Visually Hidden
+/// Invisible from screen but visible to screen readers
 ///
-// Visually Hidden
-//
-// Invisible from screen but visible to screen readers
-///
+/// @access public
 @mixin visuallyhidden() {
   width: 1px !important;
   height: 1px !important;
@@ -87,9 +85,10 @@
 }
 
 
+
+/// Placeholder text
 ///
-// Placeholder text
-///
+/// @access public
 @mixin placeholder() {
   ::-webkit-input-placeholder {
     @content;
@@ -105,9 +104,9 @@
   }
 }
 
+/// Container
 ///
-// Container
-///
+/// @access public
 @mixin container() {
   @include clearfix;
   max-width: $site-width;
