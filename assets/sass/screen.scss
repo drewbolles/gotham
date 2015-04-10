@@ -1,36 +1,50 @@
-/**
- * @file
- * Sass table of contents
- */
+///
+// @file
+// Sass table of contents
+///
 
-// --
+///
 // If you want to use compass in your theme, install the gem
 // and comment out the line below.
-// --
+///
+
 // @import "compass";
 
-// Variables
+// Theme variables
 @import "base/vars";
 
-// Susy - http://susydocs.oddbird.net/en/latest/
-@import "base/susy/language/susy"; 
-
-// Sass MQ
-@import "base/mq";
+// Vendor
+// Susy: http://susydocs.oddbird.net/en/latest/
+// Sass MQ: https://github.com/sass-mq/sass-mq
+@import 
+  "vendor/susy/language/susy",
+  "vendor/mq"
+; 
 
 // Base
-@import "base/functions";
-@import "base/mixins";
-@import "base/normalize";
-@import "base/elements";
-@import "base/typography";
-@import "base/helpers";
+@import 
+  "base/functions",
+  "base/mixins",
+  "base/normalize",
+  "base/elements",
+  "base/typography",
+  "base/helpers"
+;
 
 // Layout
-@import "layout/global";
-@import "layout/nav";
-@import "layout/footer";
+@import 
+  "layout/global",
+  "layout/nav",
+  "layout/footer"
+;
 
 // Components
-@import "components/tabs";
-@import "components/messages";
+@import 
+  "components/tabs",
+  "components/messages"
+;
+
+// Pages
+@import
+  "pages/front"
+;
