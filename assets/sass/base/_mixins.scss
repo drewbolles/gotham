@@ -7,7 +7,7 @@
 // partials they effect.
 //
 
-/// Font Size - Spit out 'rem' and 'px' font size in one go
+/// Spit out 'rem' and 'px' font size in one go
 ///
 /// @access public
 ///
@@ -18,7 +18,7 @@
 }
 
 
-/// Hover - Apply hover & focus at same time.
+/// Apply hover & focus at same time.
 ///
 /// @access public
 ///
@@ -40,7 +40,7 @@
 }
 
 
-/// Vertical Rhythm - Set bottom margin based on spacing unit
+/// Set bottom margin based on spacing unit
 ///
 /// @access public
 ///
@@ -51,7 +51,7 @@
 
 
 
-/// Clearfix - Applies micro clearfix to elements
+/// Applies micro clearfix to elements
 ///
 /// @access public
 @mixin clearfix() {
@@ -66,7 +66,7 @@
 } 
 
 
-/// Visually Hidden - Invisible from screen but visible to screen readers
+/// Invisible from screen but visible to screen readers
 ///
 /// @access public
 @mixin visuallyhidden() {
@@ -82,7 +82,7 @@
 
 
 
-/// Placeholder - Style placeholder text in one swoop
+/// Style placeholder text in one swoop
 ///
 /// @access public
 @mixin placeholder() {
@@ -98,14 +98,4 @@
   :-ms-input-placeholder {  
     @content;
   }
-}
-
-/// Container - Apply generic container styles
-///
-/// @access public
-@mixin container() {
-  @include clearfix;
-  max-width: $site-width;
-  margin-left: auto;
-  margin-right: auto;
 }
