@@ -15,6 +15,9 @@
 // Susy - http://susydocs.oddbird.net/en/latest/
 @import "base/susy/language/susy"; 
 
+// Sass MQ
+@import "base/mq";
+
 // Base
 @import "base/functions";
 @import "base/mixins";
