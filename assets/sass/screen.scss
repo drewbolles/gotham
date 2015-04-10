@@ -18,14 +18,14 @@
 // Sass MQ: http://sass-mq.github.io/sass-mq/
 @import 
   "vendor/susy/language/susy",
-  "vendor/mq"
+  "vendor/mq",
+  "vendor/normalize"
 ; 
 
 // Base
 @import 
   "base/functions",
   "base/mixins",
-  "base/normalize",
   "base/elements",
   "base/typography",
   "base/helpers"
