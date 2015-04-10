@@ -7,7 +7,7 @@
 // partials they effect.
 //
 
-/// Font Size
+/// Font Size - Spit out 'rem' and 'px' font size in one go
 ///
 /// @access public
 ///
@@ -18,12 +18,12 @@
 }
 
 
-/// Hover
-/// Apply hover & focus at same time.
+/// Hover - Apply hover & focus at same time.
 ///
 /// @access public
 ///
-/// @param {boolean} $active
+/// @param {boolean} $active - Whether or not to apply to styles to an '.active'
+///                            class.
 @mixin hover($active: false) {
   @if($active == true) {
     &:hover,
@@ -40,9 +40,7 @@
 }
 
 
-/// Vertical Rhythm
-/// We define this as a mixin so we avoid using @extends on unrelated 
-/// elements.
+/// Vertical Rhythm - Set bottom margin based on spacing unit
 ///
 /// @access public
 ///
@@ -53,8 +51,7 @@
 
 
 
-/// Clearfix
-/// Applis micro clearfix to elements
+/// Clearfix - Applies micro clearfix to elements
 ///
 /// @access public
 @mixin clearfix() {
@@ -69,8 +66,7 @@
 } 
 
 
-/// Visually Hidden
-/// Invisible from screen but visible to screen readers
+/// Visually Hidden - Invisible from screen but visible to screen readers
 ///
 /// @access public
 @mixin visuallyhidden() {
@@ -86,7 +82,7 @@
 
 
 
-/// Placeholder text
+/// Placeholder - Style placeholder text in one swoop
 ///
 /// @access public
 @mixin placeholder() {
@@ -104,7 +100,7 @@
   }
 }
 
-/// Container
+/// Container - Apply generic container styles
 ///
 /// @access public
 @mixin container() {
