@@ -1,37 +1,25 @@
-///
-// @file
-// Theme functions
-///
+////
+/// Theme functions
+/// @author Drew Bolles
+////
 
+/// Interact with the spacing unit
 ///
-// Spacing Unit
-//
-// Interact with the spacing unit
-//
-// @param $size
-// @return px value
-///
-@function spacing-unit($size: $base-spacing-unit) {
-  @if $size == $base-spacing-unit {
-    @return $size;
-  } @else {
-    @return $size * $base-spacing-unit;
-  }
+/// @access public
+/// @param {int} $mult - Spacing unit multiplier
+@function spacing-unit($mult: 1) {
+  @return $mult * $base-spacing-unit;
 }
 
-// Shortcut
-@function su($size: $base-spacing-unit) {
-  @return spacing-unit($size);
+/// Spacing unit shortcut
+@function su($mult) {
+  @return spacing-unit($mult);
 }
 
+/// Interact with the color map
 ///
-// Color
-//
-// Interact with the color map
-//
-// @param $key
-// @return color hex
-///
+/// @access public
+/// @param {string} $key
 @function color($key) {
   @return map-get($colors, $key);
 }

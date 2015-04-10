@@ -1,63 +1,80 @@
+////
+/// Theme Sass variables
+/// @author Drew Bolles
 ///
-// @file
-// Gotham Sass variables
-//
-// Changing values and settings here will impact your CSS output. Use this
-// file to house any variables that are globally necessary. If you have
-// variables specific to certain partials, place them in those partials.
-///
+/// Changing values and settings here will impact your CSS output. Use this
+/// file to house any variables that are globally necessary. If you have
+/// variables specific to certain partials, place them in those partials.
+////
 
 
-///
-// Vendor
-///
+/// Vendor
 
-// Normalize
+/// Normalize
+/// @type Bool
+/// @group Vendor
 $use-normalize: true;
 
 
-///
-// Layout
-///
+/// Layout
 
-// Global
+/// Global
+/// @type Int
+/// @group Layout
 $site-width: 1200px;
 
-// Sticky Footer
+/// Sticky Footer
+/// @type Bool
+/// @group Layout
 $use-sticky-footer: false;
+
+/// Sticky Footer Height
+/// @type Int
+/// @group Layout
 $footer-height: 150px;
 
 
-///
-// Responsive
-///
+/// Responsive
 
-// Sass mq
+/// Sass mq
+/// @type Bool
+/// @group Responsive
 $mq-responsive: true;
 
-// Breakpoints
+/// Breakpoints
+/// @group Responsive
 $bp-lap:  600px;
 $bp-desktop: 950px;
 $bp-wide: 1050px;
 $bp-full: $site-width;
 
+/// MQ breakpoints map
+/// @type Map
+/// @group Responsive
 $mq-breakpoints: (
-    lap:  $bp-lap,
-    desktop:  $bp-desktop,
-    wide: $bp-wide,
-    full: $site-width,
+  lap:  $bp-lap,
+  desktop:  $bp-desktop,
+  wide: $bp-wide,
+  full: $site-width,
 );
 
-///
-// Typography
-///
 
-// Base size and line height
+/// Typography
+
+/// Base font size
+/// @group Typography
 $base-font-size: 16px;
+
+/// Base line height
+/// @group Typography
 $base-line-height: 24px;
+
+/// Line height ratio
+/// @group Typography
 $line-height-ratio: $base-line-height / $base-font-size;
 
-// Headings
+/// Headings
+/// @group Typography
 $h1-size: 36px;
 $h2-size: 30px;
 $h3-size: 24px;
@@ -65,37 +82,39 @@ $h4-size: 20px;
 $h5-size: $base-font-size;
 $h6-size: 12px;
 
-// Font weights
+/// Font weights
+/// @group Typography
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
 
-// Font families
+/// Font families
+/// @group Typography
 $font-family-serif: Georgia, serif;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
 $base-font-family: $font-family-sans-serif;
 
 /// Vertical rhythm
+/// @group Typography | Layout
 $base-spacing-unit: $base-line-height;
 
 
-/// Color - map of theme colors
+/// Map of theme colors
+/// @type Map
+/// @group Typography
 $colors: (
   grey: #ccc,
 );
 
 
-
-///
-// Susy variables
-///
-
-// Global
+/// Susy variables
+/// @group Susy
 $susy: (
   columns: 12,
   gutters: .25,
   container: $site-width,
 );
 
-// Custom layouts
+/// Main layout
+/// @group Susy
 $main-layout: layout(12 .25 isolate);

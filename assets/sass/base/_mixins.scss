@@ -1,11 +1,11 @@
-//
-// @file
-// Theme mixins
-//
-// These are basic mixins that power the stylesheets by default. Feel free
-// to add / remove any as needed. More specific mixins can go in the
-// partials they effect.
-//
+////
+/// Theme mixins
+/// These are basic mixins that power the stylesheets by default. Feel free
+/// to add / remove any as needed. More specific mixins can go in the
+/// partials they effect.
+///
+/// @author Drew Bolles
+////
 
 /// Spit out 'rem' and 'px' font size in one go
 ///
@@ -24,6 +24,8 @@
 ///
 /// @param {boolean} $active - Whether or not to apply to styles to an '.active'
 ///                            class.
+///
+/// @content [Hover styles]
 @mixin hover($active: false) {
   @if($active == true) {
     &:hover,
@@ -85,6 +87,7 @@
 /// Style placeholder text in one swoop
 ///
 /// @access public
+/// @content [Placeholder styles]
 @mixin placeholder() {
   ::-webkit-input-placeholder {
     @content;
