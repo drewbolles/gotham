@@ -11,7 +11,9 @@
 /// Vendor
 
 /// Normalize
+///
 /// @type Bool
+///
 /// @group Vendor
 $use-normalize: true;
 
@@ -19,17 +21,23 @@ $use-normalize: true;
 /// Layout
 
 /// Global
+///
 /// @type Int
+///
 /// @group Layout
 $site-width: 1200px;
 
 /// Sticky Footer
+///
 /// @type Bool
+///
 /// @group Layout
 $use-sticky-footer: false;
 
 /// Sticky Footer Height
+///
 /// @type Int
+///
 /// @group Layout
 $footer-height: 150px;
 
@@ -37,11 +45,14 @@ $footer-height: 150px;
 /// Responsive
 
 /// Sass mq
+///
 /// @type Bool
+///
 /// @group Responsive
 $mq-responsive: true;
 
 /// Breakpoints
+///
 /// @group Responsive
 $bp-lap:  600px;
 $bp-desktop: 950px;
@@ -49,7 +60,9 @@ $bp-wide: 1050px;
 $bp-full: $site-width;
 
 /// MQ breakpoints map
+///
 /// @type Map
+///
 /// @group Responsive
 $mq-breakpoints: (
   lap:  $bp-lap,
@@ -62,18 +75,22 @@ $mq-breakpoints: (
 /// Typography
 
 /// Base font size
+///
 /// @group Typography
 $base-font-size: 16px;
 
 /// Base line height
+///
 /// @group Typography
 $base-line-height: 24px;
 
 /// Line height ratio
+///
 /// @group Typography
 $line-height-ratio: $base-line-height / $base-font-size;
 
 /// Headings
+///
 /// @group Typography
 $h1-size: 36px;
 $h2-size: 30px;
@@ -83,24 +100,29 @@ $h5-size: $base-font-size;
 $h6-size: 12px;
 
 /// Font weights
+///
 /// @group Typography
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-semibold: 600;
 
 /// Font families
+///
 /// @group Typography
 $font-family-serif: Georgia, serif;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
 $base-font-family: $font-family-sans-serif;
 
 /// Vertical rhythm
+///
 /// @group Typography | Layout
 $base-spacing-unit: $base-line-height;
 
 
 /// Map of theme colors
+///
 /// @type Map
+///
 /// @group Typography
 $colors: (
   grey: #ccc,
@@ -108,6 +130,7 @@ $colors: (
 
 
 /// Susy variables
+///
 /// @group Susy
 $susy: (
   columns: 12,
@@ -116,5 +139,6 @@ $susy: (
 );
 
 /// Main layout
+///
 /// @group Susy
 $main-layout: layout(12 .25 isolate);

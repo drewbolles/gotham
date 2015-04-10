@@ -11,6 +11,7 @@
 /// Spit out 'rem' and 'px' font size in one go
 ///
 /// @access public
+///
 /// @param {int} $size - Size of font being passed in
 @mixin font-size($size: $base-font-size) {
   font-size: $size;
@@ -21,6 +22,7 @@
 /// Apply hover & focus at same time.
 ///
 /// @access public
+///
 /// @param {boolean} $active - Whether or not to apply styles to '.active'
 ///
 /// @content [Hover styles]
@@ -43,6 +45,7 @@
 /// Set bottom margin based on spacing unit
 ///
 /// @access public
+///
 /// @param {int} $multiplier - Integer to multiply base spacing unit by
 @mixin vr($multiplier: 1) {
   margin-bottom: $multiplier * $base-spacing-unit;
