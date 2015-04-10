@@ -32,20 +32,21 @@ $footer-height: 150px;
 // Responsive
 ///
 
+// Sass mq
+$mq-responsive: true;
+
 // Breakpoints
-$bp-lap:  768px;
-$bp-desk: 1024px;
+$bp-lap:  600px;
+$bp-desktop: 950px;
+$bp-wide: 1050px;
 $bp-full: $site-width;
 
-$breakpoints: (
-  // Primary
-  lap:  (min-width: $bp-lap), 
-  desk: (min-width: $bp-desk),
-
-  // Tween
-  lap-to-desk: (min-width: $bp-lap) and (max-width: $bp-desk),
+$mq-breakpoints: (
+    lap:  $bp-lap,
+    desktop:  $bp-desktop,
+    wide: $bp-wide,
+    full: $site-width,
 );
-
 
 ///
 // Typography

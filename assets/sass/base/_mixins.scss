@@ -8,30 +8,6 @@
 ///
 
 ///
-// Media Query
-//
-// Can take a pixel value or coincides with the breakpoint map.
-// To use, simply include in your stylesheets.
-//
-// @example
-//  @include mq(lap) { styles.... }
-///
-@mixin mq($point) {
-  @if type-of($point) == number {
-    @media (min-width: $point) {
-      @content;
-    }
-  } @elseif map-has-key($breakpoints, $point) {
-    $size: map-get($breakpoints, $point);
-
-    @media #{inspect($size)} {
-      @content;
-    }
-  }
-}
-
-
-///
 // Font Size
 //
 // Pass in a font size and convert to REM unit.
