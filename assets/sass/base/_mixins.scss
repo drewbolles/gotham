@@ -14,7 +14,7 @@
 /// @param {int} $size - Size of font being passed in
 @mixin font-size($size: $base-font-size) {
   font-size: $size;
-  font-size: $size/$base-font-size// 1rem;
+  font-size: $size / $base-font-size * 1rem; // 1rem;
 }
 
 

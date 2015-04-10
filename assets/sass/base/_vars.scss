@@ -75,14 +75,11 @@ $font-family-serif: Georgia, serif;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
 $base-font-family: $font-family-sans-serif;
 
-// Vertical rhythm
+/// Vertical rhythm
 $base-spacing-unit: $base-line-height;
 
 
-
-///
-// Colors
-///
+/// Color - map of theme colors
 $colors: (
   grey: #ccc,
 );
@@ -96,9 +93,9 @@ $colors: (
 // Global
 $susy: (
   columns: 12,
-  gutters: 1/4,
+  gutters: .25,
+  container: $site-width,
 );
 
 // Custom layouts
-$base-layout: layout(12 1/4);
-$main-layout: layout($base-layout isolate);
+$main-layout: layout(12 .25 isolate);
