@@ -1,21 +1,21 @@
-# Gotham starter Drupal theme`
+# Gotham starter Drupal theme
 
-A bare-bones Drupal 8 starter theme. Built with [Sass](http://sass-lang.com) and [Susy](http://susy.oddbird.net). Meant to be a bare theme that developers can build off. Applies the [SMACSS](http://smacss.com) architecture and tries to adhear to Drupal's new CSS best practices.
+A modern Drupal 7 starter theme. Built with [Sass](http://sass-lang.com) and [Susy](http://susy.oddbird.net). Meant to be a starting point that developers can build off. Applies the [SMACSS](http://smacss.com) architecture and tries to adhear to Drupal's new CSS best practices.
 
 ## Requirements 
 
-* Drupal 8
+* Drupal 7
 * Sass >= 3.3
 * Gulp (you may use another method to compile Sass)
 * Bower (you may download dependencies manually, as well)
 
 ## Install
 
-1. Download Gotham, place in 'sites/all/themes' of a Drupal 7 site
-2. Navigate to the asset folder `cd ~/path/to/drupal/sites/all/themes/gotham/assets`
-3. Run NPM install for gulp packages `npm i`
-4. Run bower install for bower packages `bower install`
-5. Run Gulp to ensure process are working `gulp`
+1. Download Gotham, place in `sites/all/themes` of a Drupal 7 site
+2. Navigate to the asset folder `$ cd ~/path/to/drupal/sites/all/themes/gotham/assets`
+3. Run NPM install for gulp packages `$ npm i`
+4. Run bower install for bower packages `$ bower install`
+5. Run Gulp to ensure process are working `$ gulp`
 6. Happy buildling!
 
 
