@@ -110,7 +110,7 @@
 
       <?php if($messages):?><?php print render($messages); ?><?php endif; ?>
 
-      <section id="main-content" class="main-content">
+      <section id="main-content" class="layout-main-content">
         <?php if($title):?>
           <h1 id="page-title" class="page-title"><?php print $title; ?></h1>
         <?php endif;?>
@@ -125,13 +125,13 @@
       </section>
 
       <?php if($page['sidebar_first']):?>
-        <aside id="sidebar-first" class="sidebar sidebar-first">
+        <aside id="sidebar-first" class="layout-sidebar layout-sidebar-first">
           <?php print render($page['sidebar_first']);?>
         </aside>
       <?php endif;?>
 
       <?php if($page['sidebar_second']): ?>
-        <aside id="sidebar-second" class="sidebar sidebar-second">
+        <aside id="sidebar-second" class="layout-sidebar layout-sidebar-second">
           <?php print render($page['sidebar_second']); ?>
         </aside>
       <?php endif;?>
