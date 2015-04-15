@@ -42,14 +42,17 @@ $main-layout: layout(12 .25 isolate);
 
 So by default, any use of Susy's span mixin will base it's math off 12 columns with 1/4 of a column as a gutter. The main layout variable defines a slightly different grid we use for the sidebar and content regions of the site. Change these variables, or create new layout variables, as you see fit. [Read more about Susy](http://susydocs.oddbird.net/en/latest/)
 
+## SassDoc
+
+The Sass architecture has been commented to integreate with SassDocs. Once Gulp has been run, SassDoc will generate a documentation of the Sass archtiecture on the fly. Please visit `/path/to/drupal/sites/all/themes/gotham/assets/sassdoc` in a browser.
+
 ## Recommended starting modules
 
 These are the modules I recommend as an extended core for site development.
 
 * Views
-* Entity View Mode
-* Metatag
-* Google Analytics
 * Entity
+* Entitycache
+* Entity View Mode
 * Token
 * Bean
