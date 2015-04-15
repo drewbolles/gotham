@@ -9,6 +9,6 @@
     "gulp-sass": "^1.3.3",
     "gulp-sourcemaps": "^1.5.1",
     "gulp-watch": "^4.2.4",
-    "sassdoc": "~2.1.8"
+    "sassdoc": "~2.1.9"
   }
 }
