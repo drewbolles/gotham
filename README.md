@@ -6,8 +6,8 @@ A modern Drupal 7 starter theme. Built with [Sass](http://sass-lang.com) and [Su
 
 * Drupal 7
 * Sass >= 3.3
-* Gulp (you may use another method to compile Sass)
-* Bower (you may download dependencies manually, as well)
+* [Node.js](https://nodejs.org) (For Gulp, you may use another method to compile Sass)
+* [Bower](http://bower.io/#install-bower) (For Susy & Sass MQ, you may download dependencies manually)
 
 ## Install
 
