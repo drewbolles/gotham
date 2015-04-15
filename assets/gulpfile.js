@@ -12,10 +12,11 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init()) // Initializes sourcemaps
     .pipe(sassdoc())
     .pipe(sass({
-      errLogToConsole: true
+      errLogToConsole: true,
+      outputStyle: "compressed",
       }))
     .pipe(prefix('last 2 versions', '> 1%', 'ie 8'))
-    .pipe(sourcemaps.write()) // Writes sourcemaps into the CSS file
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('css'));
 })
 
