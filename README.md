@@ -23,7 +23,7 @@ A modern Drupal 7 starter theme. Built with [Sass](http://sass-lang.com) and [Su
 
 Susy is a layout toolset that will provide you with the ability to create your own grids - symmetric, asymmetric, and isolation out of the box. It's incredibly powerful and useful. You can create multiple grids, have nested grids, or no grids and Susy will do all the math for you.
 
-In Gotham, there's a Susy section in the /base/_vars.scss file. It reads:
+In Gotham, there's a Susy section in the `/base/_vars.scss` file. It reads:
 
 ```
 /// Base Susy variables for theme
@@ -56,3 +56,14 @@ These are the modules I recommend as an extended core for site development.
 * Entity View Mode
 * Token
 * Bean
+* Admin menu
+* CTools
+* Rules
+* Devel
+* Webform
+* Pathauto
+* Globalredirect
+* Admin views
+* Imageapi Optimize
+
+`drush dl views entity entitycache entity_view_mode token bean admin_menu ctools rules devel webform pathauto globalredirect admin_views imageapi_optimize`
