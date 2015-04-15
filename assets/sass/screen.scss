@@ -10,22 +10,22 @@
 
 // @import "compass";
 
-// Theme variables
-@import "base/vars";
-
 // Vendor
 // Susy: http://susydocs.oddbird.net/en/latest/
 // Sass MQ: http://sass-mq.github.io/sass-mq/
 @import 
-  "vendor/susy/language/susy",
-  "vendor/mq",
-  "vendor/normalize"
+  "../bower_components/susy/sass/susy",
+  "../bower_components/sass-mq/mq"
 ; 
+
+// Theme variables
+@import "base/vars";
 
 // Base
 @import 
   "base/functions",
   "base/mixins",
+  "base/normalize",
   "base/elements",
   "base/typography",
   "base/helpers"

@@ -1,13 +1,12 @@
-/**
- * @file
- * Global layout
- */
+//
+// @file
+// Global layout
+//
 
 
 /* Site container */
 .container {
   @include container;
-  width: 90%;
 }
 
 
@@ -22,7 +21,7 @@
 /* Site content + sidebar layout */
 @include with-layout($main-layout) {
   @include mq(lap) {
-    .main-content {
+    .layout-main-content {
       .sidebar-first & {
         @include span(8 at 5);
       }
@@ -36,7 +35,7 @@
       }
     }
 
-    .sidebar-first {
+    .layout-sidebar-first {
       .one-sidebar & {
         @include span(4 first);
       }
@@ -45,7 +44,7 @@
       }
     }
 
-    .sidebar-second {
+    .layout-sidebar-second {
       .one-sidebar & {
         @include span(4 last);
       }

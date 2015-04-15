@@ -1,25 +1,45 @@
-////
-/// Theme functions
-/// @author Drew Bolles
-////
+//
+// @file
+// Theme functions
+//
+
+
+/// Interact with the color map
+///
+/// @access public
+///
+/// @param {string} $key - Name of the color
+///
+/// @example scss
+///   .block {
+///     color: color(grey);
+///   }
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
 
 /// Interact with the spacing unit
 ///
 /// @access public
-/// @param {int} $mult - Spacing unit multiplier
+///
+/// @param {int} $mult [1] - Spacing unit multiplier
+///
+/// @example scss
+///   .block {
+///     padding-left: su();
+///   }
+///
+///   .block-2 {
+///     padding-left: su(2); // multiplies spacing unit by two
+///   }
 @function spacing-unit($mult: 1) {
   @return $mult * $base-spacing-unit;
 }
 
 /// Spacing unit shortcut
-@function su($mult) {
-  @return spacing-unit($mult);
-}
-
-/// Interact with the color map
 ///
-/// @access public
-/// @param {string} $key
-@function color($key) {
-  @return map-get($colors, $key);
+/// @param {int} $mult [1] - Spacing unit multiplier
+@function su($mult: 1) {
+  @return spacing-unit($mult);
 }
