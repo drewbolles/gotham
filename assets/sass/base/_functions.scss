@@ -15,7 +15,11 @@
 ///     color: color(grey);
 ///   }
 @function color($key) {
-  @return map-get($colors, $key);
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  } @else {
+    @warn "Error: There is no color #{$key} associated";
+  }
 }
 
 
@@ -34,7 +38,11 @@
 ///     padding-left: su(2); // multiplies spacing unit by two
 ///   }
 @function spacing-unit($mult: 1) {
-  @return $mult * $base-spacing-unit;
+  @if unitless($mult) {
+    @return $mult * $base-spacing-unit;
+  } @else {
+    @warn "Error: must pass a unitless value, was #{$mult}";
+  }
 }
 
 /// Spacing unit shortcut

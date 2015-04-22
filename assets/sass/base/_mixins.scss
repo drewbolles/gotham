@@ -51,7 +51,7 @@
 ///     @include vr(2);
 ///   }
 @mixin vr($mult: 1) {
-  margin-bottom: $mult * $base-spacing-unit;
+  margin-bottom: su($mult);
 }
 
 
