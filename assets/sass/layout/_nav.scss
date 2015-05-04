@@ -12,16 +12,28 @@
   clear: both;
 
   .js & {
-    display: none;
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    right: 100%;
+    width: 82.5%;
+    width: calc(100% - 56px);
+    background-color: palette(Grey, 900);
     transition: .2s ease all;
 
     @include mq(lap) {
-      display: block;
+      position: static;
+      width: auto;
+      transform: translate(0, 0);
     }
   }
 
   .js .menu-open & {
-    display: block;
+    transform: translate(100%, 0);
+
+    @include mq(lap) {
+     transform: translate(0, 0); 
+    }
   }
 
   @include mq(lap) {
@@ -48,7 +60,7 @@
 /* Main nav */
 .main-nav {
   margin: 0;
-  padding: 0 12px;
+  padding: 0 16px;
   list-style: none;
 
   @include mq(lap) {

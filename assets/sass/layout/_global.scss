@@ -9,6 +9,15 @@ $logo-width: 931.48547;
 
 $logo-ratio: $logo-height/$logo-width;
 
+/* Site wrap */
+.site-wrap {
+  position: relative;
+  
+  @include mq(lap) {
+    height: 100%;
+  }
+}
+
 /* Site container */
 .container {
   @include container;
@@ -24,14 +33,12 @@ $logo-ratio: $logo-height/$logo-width;
  */
 .site-header {
   @include vr;
-  padding: 4px 0;
   background-color: palette(Grey, 900);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
 
   .container {
-    position: relative;
-
     @include mq($until: lap) {
-      padding: 0 4px;
+      padding: 4px;
     }
   }
 
