@@ -51,6 +51,11 @@
   margin-right: 20px;
   padding: 12px;
   text-align: center;
+  transition: .2s ease all;
+
+  .menu-open & {
+    transform: rotate(90deg);
+  }
 
   @include mq(lap) {
     display: none;
