@@ -75,10 +75,19 @@
 
   <header id="site-header" class="site-header site-section">
     <div class="container">
+      <a href="#main-nav" id="menu-toggle" class="menu-toggle">
+        <svg class="icon icon-menu">
+          <use xlink:href="#icon-menu"></use>
+        </svg>
+      </a>
+
       <?php if ($logo): ?>
         <div class="site-logo">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" style="width: 120px; height: auto;">
+            <!-- <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" style="width: 120px; height: auto;"> -->
+            <svg class="icon icon-logo">
+              <use xlink:href="#logo"></use>
+            </svg>
           </a>
         </div>
       <?php endif; ?>
