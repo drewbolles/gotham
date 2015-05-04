@@ -10,6 +10,14 @@
 /* Nav element */
 .site-nav {
   clear: both;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.14), 2px 4px 8px rgba(0, 0, 0, 0.28);
+
+  @include mq(lap) {
+    padding: 23px 0;
+    float: right;
+    clear: none;
+    box-shadow: none;
+  }
 
   .js & {
     position: absolute;
@@ -18,12 +26,16 @@
     right: 100%;
     width: 82.5%;
     width: calc(100% - 56px);
-    background-color: palette(Grey, 900);
-    transition: .2s ease all;
+    max-width: 320px;
+    //background-color: #fff;
+    background-color: palette(Grey, 300);
+    transition: .2s ease transform;
 
     @include mq(lap) {
       position: static;
       width: auto;
+      max-width: none;
+      background-color: transparent;
       transform: translate(0, 0);
     }
   }
@@ -32,14 +44,9 @@
     transform: translate(100%, 0);
 
     @include mq(lap) {
-     transform: translate(0, 0); 
+      max-width: none;
+      transform: translate(0, 0); 
     }
-  }
-
-  @include mq(lap) {
-    padding: 23px 0;
-    float: right;
-    clear: none;
   }
 }
 
@@ -80,11 +87,12 @@
   
   a {
     display: block;
-    color: #fff;
+    color: palette(Grey, 900);
     line-height: 48px;
 
     @include mq(lap) {
       padding: 0 su(.5);
+      color: #fff;
       line-height: 1;
     }
   }
