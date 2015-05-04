@@ -1,0 +1,17 @@
+//
+// @file
+// Button styles
+//
+
+/**
+ * Button styles
+ *
+ * You can pass in two colors to the button mixin, the
+ * default background color, and the hover color. It defaults
+ * to the primary and primary-hover color.
+ */
+
+.btn,
+.button {
+  @include btn;
+}

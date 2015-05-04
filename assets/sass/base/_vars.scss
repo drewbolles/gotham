@@ -85,11 +85,17 @@ $base-font-family: $font-family-sans-serif;
 /// Defines vertical rhythm
 $base-spacing-unit: $base-line-height;
 
-
 /// Map of theme colors
 $colors: (
+  // theme colors
+  primary: palette(Blue),
+  primary-hover: palette(Blue, 600),
+  primary-selected: palette(Blue, 700),
+
+  // misc colors
   grey: #ccc,
 );
+
 
 
 // Susy

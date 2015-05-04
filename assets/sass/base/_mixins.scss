@@ -111,3 +111,29 @@
     @content;
   }
 }
+
+
+/// Applies button styles
+///
+/// @param {String} $bg [color(primary)] - Background color of button, defaults to primary theme color
+/// @param {String} $hover [color(primary-hover)] - Hover color of button, defaults to primary-hover theme color
+@mixin btn($bg: color(primary), $hover: color(primary-hover)) {
+  $base-button-height: 36px;
+  $base-button-width: 88px;
+
+  display: inline-block;
+  min-width: $base-button-width;
+  min-height: $base-button-height;
+  background-color: $bg;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  line-height: $base-button-height / $base-font-size;
+  text-align: center;
+  transition: .2s ease background-color, .2s ease color;
+
+  &:hover {
+    background-color: $hover;
+  }
+}
