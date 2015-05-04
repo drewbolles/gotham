@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "susy": "~2.2.2",
-    "sass-mq": "~3.1.2"
+    "sass-mq": "~3.1.2",
+    "google-material-color": "~1.2.2"
   }
 }
