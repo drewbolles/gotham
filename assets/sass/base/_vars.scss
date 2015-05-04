@@ -7,13 +7,13 @@
 // ==========================================================================
 
 /// Max site width
-$site-width: 1200px;
+$site-width: 1230px;
 
 /// Use the sticky footer component
-$use-sticky-footer: false;
+$use-sticky-footer: true;
 
 /// The height of the sticky footer, if used
-$footer-height: 150px;
+$footer-height: 100px;
 
 
 // Responsive
@@ -23,23 +23,23 @@ $footer-height: 150px;
 $mq-responsive: true;
 
 /// Lap breakpoint size
-$bp-lap: 600px;
-
+$bp-lap:   600px;
+/// Lap medium bp
+$bp-lap-m: 750px;
 /// Desktop breakpoint size
-$bp-desktop: 950px;
-
+$bp-desk:  900px;
 /// Wide breakpoint size
-$bp-wide: 1050px;
-
+$bp-wide:  1100px;
 /// Full breakpoint size
-$bp-full: $site-width;
+$bp-full:  $site-width;
 
 /// MQ breakpoints map
 $mq-breakpoints: (
-  lap:      $bp-lap,
-  desktop:  $bp-desktop,
-  wide:     $bp-wide,
-  full:     $site-width,
+  lap:   $bp-lap,
+  lap-m: $bp-lap-m, 
+  desk:  $bp-desk,
+  wide:  $bp-wide,
+  full:  $site-width,
 );
 
 

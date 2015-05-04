@@ -3,24 +3,78 @@
 // Global layout
 //
 
+// config
+$logo-height: 370.93994;
+$logo-width: 931.48547;
+
+$logo-ratio: $logo-height/$logo-width;
 
 /* Site container */
 .container {
   @include container;
+  padding: 0 15px;
+
+  @include mq(lap) {
+    padding: 0 30px;
+  }
 }
 
+/**
+ * Site header
+ */
+.site-header {
+  @include vr;
+  padding: 4px 0;
+  background-color: palette(Grey, 900);
+
+  .container {
+    position: relative;
+
+    @include mq($until: lap) {
+      padding: 0 4px;
+    }
+  }
+
+  /**
+   * Logo
+   */
+  .icon-logo {
+    width: 24px * ($logo-width/$logo-height);
+    height: 24px;
+    fill: #fff;
+
+    @include mq(lap) {
+      width: 100px;
+      height: 100px * $logo-ratio;
+    }
+  }
+
+  /**
+   * Menu
+   */
+  .icon-menu {
+    fill: #fff;
+  } 
+}
 
 /* Site logo */
 .site-logo {
+  padding: 12px 0;
+  float: left;
+
   @include mq(lap) {
-    float: left;
+    padding: 15px 0;
+  }
+
+  a {
+    display: block;
   }
 }
 
 
 /* Site content + sidebar layout */
 @include with-layout($main-layout) {
-  @include mq(lap) {
+  @include mq(lap-m) {
     .layout-main-content {
       .sidebar-first & {
         @include span(8 at 5);

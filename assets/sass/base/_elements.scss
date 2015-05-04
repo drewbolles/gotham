@@ -22,8 +22,12 @@ h1,h2,h3,h4,h5,h6,p,ol,ul {
 
 
 /* Html and Body */
+html, body {
+  height: 100%;
+}
+
 body {
-	font-family: $font-family-serif;
+	font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $line-height-ratio;
 }
@@ -50,9 +54,41 @@ ol, ul {
 }
 
 
-/* Media */
+/**
+ * 
+ * Media 
+ */
+
+/* Images */  
 img {
   height: auto;
   max-width: 100%;
   vertical-align: middle;
+}
+
+/**
+ * Forms
+ */
+
+/* Base form */
+form {
+  @include clearfix;
+
+  .site-main & {
+    @include vr;
+  }
+}
+
+/* Base inputs */
+input,
+button,
+textarea {
+  max-width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 5px;
+  border: 1px solid palette(Grey, 300);
 }

@@ -18,4 +18,9 @@
     
     .footer, .site:after { height: $footer-height; }
   }
-}   
+}
+
+.footer {
+  padding: su() 0;
+  background-color: palette(Grey, 300);
+}

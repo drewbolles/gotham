@@ -15,7 +15,8 @@
 // Sass MQ: http://sass-mq.github.io/sass-mq/
 @import 
   "../bower_components/susy/sass/susy",
-  "../bower_components/sass-mq/mq"
+  "../bower_components/sass-mq/mq",
+  "../bower_components/google-material-color/dist/palette"
 ; 
 
 // Theme variables
@@ -41,7 +42,8 @@
 // Components
 @import 
   "components/tabs",
-  "components/messages"
+  "components/messages",
+  "components/icons"
 ;
 
 // Pages

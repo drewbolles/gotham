@@ -9,17 +9,51 @@
 
 /* Nav element */
 .site-nav {
+  clear: both;
+
+  .js & {
+    display: none;
+    transition: .2s ease all;
+
+    @include mq(lap) {
+      display: block;
+    }
+  }
+
+  .js .menu-open & {
+    display: block;
+  }
+
   @include mq(lap) {
+    padding: 23px 0;
     float: right;
+    clear: none;
   }
 }
 
+/* menu toggle */
+.menu-toggle {
+  float: left;
+  width: 48px;
+  height: 48px;
+  margin-right: 20px;
+  padding: 12px;
+  text-align: center;
+
+  @include mq(lap) {
+    display: none;
+  }
+}
 
 /* Main nav */
 .main-nav {
   margin: 0;
-  padding: 0;
+  padding: 0 12px;
   list-style: none;
+
+  @include mq(lap) {
+    padding: 0;
+  }
 
   li {
     @include mq(lap) {
@@ -29,6 +63,12 @@
   
   a {
     display: block;
-    padding: spacing-unit(1/4) spacing-unit(1/2);
+    color: #fff;
+    line-height: 48px;
+
+    @include mq(lap) {
+      padding: 0 su(.5);
+      line-height: 1;
+    }
   }
 }
