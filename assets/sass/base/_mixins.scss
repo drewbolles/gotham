@@ -137,3 +137,21 @@
     background-color: $hover;
   }
 }
+
+/// Apply different font families
+///
+/// @param {String} $key [roboto] - Key value of the `$fonts` var
+/// @param {String} $type [regular] - The type of font, either regular, light, or bold
+@mixin font($key: roboto, $type: regular) {
+  @if map-has-key($fonts, $key) {
+    $index: map-get($fonts, $key);
+    $output: unquote(map-get($index, $type));
+
+    .fonts-loaded & {
+      font-family: $output;
+      font-weight: normal;
+    }
+  } @else {
+    @warn "There is no font #{$key}";
+  }
+}

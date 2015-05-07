@@ -81,6 +81,13 @@ $font-family-serif: Georgia, serif;
 $font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
 /// Base theme font
 $base-font-family: $font-family-sans-serif;
+/// Font map
+$fonts: (
+  roboto: (
+    regular: "\"Roboto\", Arial, sans-serif",
+    bold: "\Roboto Bold\", Arial, sans-serif",
+  ),
+);
 
 /// Defines vertical rhythm
 $base-spacing-unit: $base-line-height;
