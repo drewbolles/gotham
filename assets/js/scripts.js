@@ -3,7 +3,7 @@
  */
 var roboto = new FontFaceObserver( "Roboto" );
 
-Promise.([
+Promise.all([
 	roboto.check()
 ]).then(function() {
 	document.documentElement.className += " fonts-loaded";
