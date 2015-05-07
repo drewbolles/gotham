@@ -16,7 +16,7 @@
  * unit. This creates a shared vertical rhythm. Adjust as needed.
  */
 h1,h2,h3,h4,h5,h6,p,ol,ul {
-  @include vr;
+  @include vr(.5);
   margin-top: 0;
 }    
 
@@ -27,7 +27,8 @@ html, body {
 }
 
 body {
-	font-family: $base-font-family;
+  @include font;
+  font-family: sans-serf;
   font-size: $base-font-size;
   line-height: $line-height-ratio;
 }

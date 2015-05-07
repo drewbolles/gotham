@@ -21,10 +21,12 @@ $logo-ratio: $logo-height/$logo-width;
 /* Site container */
 .container {
   @include container;
-  padding: 0 15px;
-
+  padding-right: $site-gutter--small;
+  padding-left: $site-gutter--small;
+  
   @include mq(lap) {
-    padding: 0 30px;
+    padding-right: $site-gutter;
+    padding-left: $site-gutter;
   }
 }
 

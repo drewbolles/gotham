@@ -3,7 +3,7 @@
 // Navigation styles
 //
 // Holds the main nav styles, as well as any global navigation throughout
-// the site. more specific nav patterns can be their own components.
+// the site. More specific nav patterns can be their own components.
 //
 
 
@@ -27,7 +27,6 @@
     width: 82.5%;
     width: calc(100% - 56px);
     max-width: 320px;
-    //background-color: #fff;
     background-color: palette(Grey, 300);
     transition: .2s ease transform;
 

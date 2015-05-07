@@ -6,8 +6,14 @@
 // Layout
 // ==========================================================================
 
-/// Max site width
-$site-width: 1230px;
+/// Content width
+$site-content: 1200px;
+/// Site gutter, defined from material design specs
+$site-gutter: 24px;
+/// Small site gutter
+$site-gutter--small: 16px;
+/// Site width
+$site-width: $site-content + ($site-gutter * 2);
 
 /// Use the sticky footer component
 $use-sticky-footer: true;
@@ -69,9 +75,9 @@ $h5-size: $base-font-size;
 $h6-size: 12px;
 
 /// Light font weight
-$font-weight-light: 300;
+$font-weight-light:    300;
 /// Normal font weight
-$font-weight-normal: 400;
+$font-weight-normal:   400;
 /// Bold font weight
 $font-weight-semibold: 600;
 
