@@ -18,4 +18,5 @@ stylesheets[screen][] = assets/css/screen.css
 ; stylesheets[print][] = assets/css/print.css
 
 scripts[] = assets/js/vendor/fontfaceobserver.standalone.js
+scripts[] = assets/js/vendor/tappy.js
 scripts[] = assets/js/scripts.js
