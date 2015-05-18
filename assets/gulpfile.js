@@ -20,7 +20,7 @@ gulp.task('sass', function() {
     .pipe(prefix('last 2 versions', '> 1%', 'ie 8'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('css'));
-})
+});
 
 gulp.task('svg', function() {
   return gulp
@@ -30,11 +30,11 @@ gulp.task('svg', function() {
       inlineSvg: true
       }))
     .pipe(gulp.dest('images/icons'));
-})
+});
 
 gulp.task('watch', function() {
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch(['images/icons/*.svg', '!images/icons/icons.svg'], ['svg']);
-})
+});
 
 gulp.task('default', ['sass', 'watch']);
