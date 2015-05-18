@@ -59,10 +59,14 @@
   <?php print $head; ?>
   <?php print $styles; ?>
 
+  <!--[if let IE 9]>
+    <script src="<?php path_to_theme() . '/assets/js/respond.min.js'); ?>" type="text/javascript">
+  <![endif]-->
+
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div style="display: none;">
-    <?php include_once(drupal_get_path('theme', 'gotham') . '/assets/images/icons/icons.svg'); ?>
+    <?php include_once(path_to_theme() . '/assets/images/icons/icons.svg'); ?>
   </div>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
