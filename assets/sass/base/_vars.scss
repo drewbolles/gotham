@@ -54,12 +54,12 @@ $mq-breakpoints: (
 
 /// Base font size
 $base-font-size: 16px;
-
 /// Base line height
 $base-line-height: 24px;
-
 /// Line height ratio
 $line-height-ratio: $base-line-height / $base-font-size;
+/// Defines vertical rhythm
+$base-spacing-unit: $base-line-height;
 
 /// H1 size
 $h1-size: 36px;
@@ -81,12 +81,6 @@ $font-weight-normal:   400;
 /// Bold font weight
 $font-weight-semibold: 600;
 
-/// Theme serif font
-$font-family-serif: Georgia, serif;
-/// Theme sans serif font
-$font-family-sans-serif: "Helvetica Neue", Helvetica, sans-serif;
-/// Base theme font
-$base-font-family: $font-family-sans-serif;
 /// Font map
 $fonts: (
   roboto: (
@@ -95,8 +89,8 @@ $fonts: (
   ),
 );
 
-/// Defines vertical rhythm
-$base-spacing-unit: $base-line-height;
+/// Base web-safe font family
+$base-font-family: Arial, sans-serif;
 
 /// Map of theme colors
 $colors: (
@@ -114,10 +108,13 @@ $colors: (
 // Susy
 // ==========================================================================
 
+/// Gutter math
+$susy-gutter: (30px/70px);
+
 /// Base Susy variables for theme
 $susy: (
   columns: 12,
-  gutters: .25,
+  gutters: $susy-gutter,
   container: $site-width,
   use-custom: (
     clearfix: true,
@@ -125,4 +122,4 @@ $susy: (
 );
 
 /// The layout for the primary columns. Uses isolate to push / pull
-$main-layout: layout(12 .25 isolate);
+$main-layout: layout(12 $susy-gutter isolate);

@@ -28,7 +28,7 @@ html, body {
 
 body {
   @include font;
-  font-family: sans-serf;
+  font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $line-height-ratio;
 }
