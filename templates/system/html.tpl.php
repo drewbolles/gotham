@@ -60,7 +60,7 @@
   <?php print $styles; ?>
 
   <!--[if let IE 9]>
-    <script src="<?php path_to_theme() . '/assets/js/respond.min.js'; ?>" type="text/javascript">
+    <script src="<?php path_to_theme() . '/assets/js/vendor/respond.min.js'; ?>" type="text/javascript">
   <![endif]-->
 
 </head>
