@@ -53,9 +53,9 @@ These are the modules I recommend as an extended core for site development.
 * Views
 * Entity
 * Entitycache
-* Entity View Mode
+* Display Suite
 * Token
-* Bean
+* ECK
 * Admin menu
 * CTools
 * Rules
@@ -66,4 +66,4 @@ These are the modules I recommend as an extended core for site development.
 * Admin views
 * Imageapi Optimize
 
-`drush dl views entity entitycache entity_view_mode token bean admin_menu ctools rules devel webform pathauto globalredirect admin_views imageapi_optimize`
+`drush dl views entity entitycache ds token eck admin_menu ctools rules devel webform pathauto globalredirect admin_views imageapi_optimize`
