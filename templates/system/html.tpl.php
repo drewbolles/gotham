@@ -66,7 +66,7 @@
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div style="display: none;">
-    <?php include_once(path_to_theme() . '/assets/images/icons/icons.svg'); ?>
+    <?php include_once(path_to_theme() . '/assets/images/icons.svg'); ?>
   </div>
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>

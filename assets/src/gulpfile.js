@@ -36,4 +36,4 @@ gulp.task('watch', function() {
   gulp.watch(['icons/*.svg'], ['svg']);
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['sass', 'svg', 'watch']);
