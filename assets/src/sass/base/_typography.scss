@@ -1,0 +1,39 @@
+//
+// @file
+// Typography styles
+//
+// Any naked typography elements, and their modifying / state class names.
+//
+
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {}
+
+h1 { @include font-size($h1-size); }
+h2 { @include font-size($h2-size); }
+h3 { @include font-size($h3-size); }
+h4 { @include font-size($h4-size); }
+h5 { @include font-size($h5-size); }
+h6 { @include font-size($h6-size); }
+
+
+/* Paragraphs */
+p {}
+
+/**
+ * Inline font elements
+ */
+
+/**
+ * Strong
+ *
+ * 1. To avoid overstyling, scope strongs that have a parent <p> to the
+ * primary font, but bolded.
+ */ 
+strong {
+  font-weight: 700;
+}
+
+p strong {
+  @include font(roboto, bold); /* 1 */
+}

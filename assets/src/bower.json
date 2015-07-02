@@ -1,0 +1,22 @@
+{
+  "name": "Gotham Drupal Theme",
+  "version": "1.0.0",
+  "homepage": "https://github.com/drewbolles/gotham",
+  "authors": [
+    "drewbolles <drewbolles@gmail.com>"
+  ],
+  "description": "Gotham base Drupal theme",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.5",
+    "sass-mq": "~3.2.2",
+    "google-material-color": "~1.2.2"
+  }
+}

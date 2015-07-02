@@ -1,0 +1,29 @@
+//
+// @file
+// Drupal tabs
+//
+// Styling of default drupal tabs.
+//
+
+.tabs { // the class on the ul
+  padding: 0 su(.5);
+	border-bottom: 1px solid #ccc;
+	
+	li {
+    border: 0 solid #ccc;
+    border-width: 1px 1px 0;
+    border-radius: 3px 3px 0 0;
+
+    @include mq(lap) { 
+      display: inline-block; 
+    }
+  }
+
+  a {
+    display: block;
+    padding: su(.25) su(.5);
+
+    &.active { background: #eee;}
+    &:hover  { background-color: #ccc; }
+  }
+}

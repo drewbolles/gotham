@@ -1,0 +1,15 @@
+//
+// @file
+// Helper classes
+//
+
+
+/* Drupal uses element-invisible */
+.element-invisible { 
+	@include visuallyhidden;
+}
+
+/* Clearfix */
+.clearfix {
+	@include clearfix;
+} 

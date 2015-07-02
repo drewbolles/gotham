@@ -1,0 +1,17 @@
+{
+  "name": "Gotham",
+  "version": "1.0.0",
+  "description": "Custom Drupal theme",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-svgmin": "^1.1.2",
+    "gulp-svgstore": "^5.0.1",
+    "gulp-watch": "^4.2.4",
+    "sassdoc": "~2.1.9"
+  }
+}

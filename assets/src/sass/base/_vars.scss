@@ -1,0 +1,125 @@
+//
+// @file
+// Theme Sass variables
+//
+
+// Layout
+// ==========================================================================
+
+/// Content width
+$site-content: 1200px;
+/// Site gutter, defined from material design specs
+$site-gutter: 24px;
+/// Small site gutter
+$site-gutter--small: 16px;
+/// Site width
+$site-width: $site-content + ($site-gutter * 2);
+
+/// Use the sticky footer component
+$use-sticky-footer: true;
+
+/// The height of the sticky footer, if used
+$footer-height: 100px;
+
+
+// Responsive
+// ==========================================================================
+
+/// Sass MQ variable
+$mq-responsive: true;
+
+/// Lap breakpoint size
+$bp-lap:   600px;
+/// Lap medium bp
+$bp-lap-m: 750px;
+/// Desktop breakpoint size
+$bp-desk:  900px;
+/// Wide breakpoint size
+$bp-wide:  1100px;
+/// Full breakpoint size
+$bp-full:  $site-width;
+
+/// MQ breakpoints map
+$mq-breakpoints: (
+  lap:   $bp-lap,
+  lap-m: $bp-lap-m, 
+  desk:  $bp-desk,
+  wide:  $bp-wide,
+  full:  $site-width,
+);
+
+
+// Typography
+// ==========================================================================
+
+/// Base font size
+$base-font-size: 16px;
+/// Base line height
+$base-line-height: 24px;
+/// Line height ratio
+$line-height-ratio: $base-line-height / $base-font-size;
+/// Defines vertical rhythm
+$base-spacing-unit: $base-line-height;
+
+/// H1 size
+$h1-size: 36px;
+/// H2 size
+$h2-size: 30px;
+/// H3 size
+$h3-size: 24px;
+/// H4 size
+$h4-size: 20px;
+/// H5 size
+$h5-size: $base-font-size;
+/// H6 size
+$h6-size: 12px;
+
+/// Light font weight
+$font-weight-light:    300;
+/// Normal font weight
+$font-weight-normal:   400;
+/// Bold font weight
+$font-weight-semibold: 600;
+
+/// Font map
+$fonts: (
+  roboto: (
+    regular: "\"Roboto\", Arial, sans-serif",
+    bold: "\"Roboto Bold\", Arial, sans-serif",
+  ),
+);
+
+/// Base web-safe font family
+$base-font-family: Arial, sans-serif;
+
+/// Map of theme colors
+$colors: (
+  // theme colors
+  primary: palette(Blue),
+  primary-hover: palette(Blue, 600),
+  primary-selected: palette(Blue, 700),
+
+  // misc colors
+  grey: #ccc,
+);
+
+
+
+// Susy
+// ==========================================================================
+
+/// Gutter math
+$susy-gutter: (30px/70px);
+
+/// Base Susy variables for theme
+$susy: (
+  columns: 12,
+  gutters: $susy-gutter,
+  container: $site-width,
+  use-custom: (
+    clearfix: true,
+  ),
+);
+
+/// The layout for the primary columns. Uses isolate to push / pull
+$main-layout: layout(12 $susy-gutter isolate);
