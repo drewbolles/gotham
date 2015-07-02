@@ -12,7 +12,7 @@ A modern Drupal 7 starter theme. Built with [Sass](http://sass-lang.com) and [Su
 ## Install
 
 1. Download Gotham, place in `sites/all/themes` of a Drupal 7 site
-2. Navigate to the asset folder `$ cd ~/path/to/drupal/sites/all/themes/gotham/assets`
+2. Navigate to the asset folder `$ cd ~/PATH/TO/DRUPAL/sites/all/themes/gotham/assets/src`
 3. Run NPM install for gulp packages `$ npm i`
 4. Run bower install for bower packages `$ bower install`
 5. Run Gulp to ensure process are working `$ gulp`
