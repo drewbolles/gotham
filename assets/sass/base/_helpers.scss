@@ -1,8 +1,7 @@
-//
-// @file
-// Helper classes
-//
-
+/**
+ * @file
+ * Helper classes
+ */
 
 /* Drupal uses element-invisible */
 .element-invisible { 
@@ -12,4 +11,4 @@
 /* Clearfix */
 .clearfix {
 	@include clearfix;
-} 
+}
