@@ -18,22 +18,22 @@ gulp.task('sass', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(prefix('last 2 versions', '> 1%', 'ie 8'))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('../css'));
+    .pipe(gulp.dest('./css'));
 });
 
 gulp.task('svg', function() {
   return gulp
-    .src(['icons/*.svg'])
+    .src(['images/icons/*.svg'])
     .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(gulp.dest('../images'));
+    .pipe(gulp.dest('./images'));
 });
 
 gulp.task('watch', function() {
   gulp.watch('sass/**/*.scss', ['sass']);
-  gulp.watch(['icons/*.svg'], ['svg']);
+  gulp.watch(['images/icons/*.svg'], ['svg']);
 });
 
 gulp.task('default', ['sass', 'svg', 'watch']);
