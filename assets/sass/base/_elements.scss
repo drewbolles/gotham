@@ -30,6 +30,7 @@ body {
   @include font;
   font-family: $base-font-family;
   font-size: $base-font-size;
+  font-weight: $font-weight-normal;
   line-height: $line-height-ratio;
 }
 

@@ -1,0 +1,41 @@
+/**
+ * @file
+ * Global content layout styles
+ */
+
+/* Site content + sidebar layout */
+@include with-layout($main-layout) {
+  @include mq(lap-m) {
+    .layout-main-content {
+      .sidebar-first & {
+        @include span(8 at 5);
+      }
+
+      .sidebar-second & {
+        @include span(8 first);
+      }
+
+      .two-sidebars & {
+        @include span(6 at 4);
+      }
+    }
+
+    .layout-sidebar-first {
+      .one-sidebar & {
+        @include span(4 first);
+      }
+      .two-sidebars & {
+        @include span (3 first);
+      }
+    }
+
+    .layout-sidebar-second {
+      .one-sidebar & {
+        @include span(4 last);
+      }
+      .two-sidebars & {
+        @include span(3 last);
+      }
+    }
+  }
+}

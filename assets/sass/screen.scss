@@ -12,7 +12,7 @@
 
 // Vendor
 // Susy: http://susydocs.oddbird.net/en/latest/
-// Sass MQ: http://sass-mq.github.io/sass-mq/
+// Sass mq: http://sass-mq.github.io/sass-mq/
 @import 
   "../bower_components/susy/sass/susy",
   "../bower_components/sass-mq/mq",
@@ -36,12 +36,15 @@
 // Layout
 @import 
   "layout/global",
+  "layout/header",
   "layout/nav",
+  "layout/content",
   "layout/footer"
 ;
 
 // Components
 @import 
+  "components/layouts",
   "components/tabs",
   "components/messages",
   "components/icons",

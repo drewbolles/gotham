@@ -30,7 +30,7 @@ p {}
  * primary font, but bolded.
  */ 
 strong {
-  font-weight: 700;
+  font-weight: $font-weight-bold;
 }
 
 p strong {

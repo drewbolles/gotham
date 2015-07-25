@@ -1,0 +1,60 @@
+/**
+ * @file
+ * Global header layout
+ */
+
+// config
+$logo-height: 370.93994;
+$logo-width: 931.48547;
+
+$logo-ratio: $logo-height/$logo-width;
+
+/**
+ * Site header
+ */
+.site-header {
+  @include vr;
+  background-color: palette(Grey, 900);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+
+  .container {
+    @include mq($until: lap) {
+      padding: 4px;
+    }
+  }
+
+  /**
+   * Logo
+   */
+  .icon-logo {
+    width: 24px * ($logo-width/$logo-height);
+    height: 24px;
+    fill: #fff;
+
+    @include mq(lap) {
+      width: 100px;
+      height: 100px * $logo-ratio;
+    }
+  }
+
+  /**
+   * Menu
+   */
+  .icon-menu {
+    fill: #fff;
+  } 
+}
+
+/* Site logo */
+.site-logo {
+  padding: 12px 0;
+  float: left;
+
+  @include mq(lap) {
+    padding: 15px 0;
+  }
+
+  a {
+    display: block;
+  }
+}

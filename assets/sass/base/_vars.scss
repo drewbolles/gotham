@@ -19,27 +19,27 @@ $site-width: $site-content + ($site-gutter * 2);
 $use-sticky-footer: true;
 
 /// The height of the sticky footer, if used
-$footer-height: 100px;
+$footer-height: 300px;
 
 
 // Responsive
 // ==========================================================================
 
-/// Sass MQ variable
+/// Sass mq
 $mq-responsive: true;
 
-/// Lap breakpoint size
+/// Lap breakpoint
 $bp-lap:   600px;
 /// Lap medium bp
 $bp-lap-m: 750px;
-/// Desktop breakpoint size
+/// Desktop breakpoint
 $bp-desk:  900px;
-/// Wide breakpoint size
+/// Wide breakpoint
 $bp-wide:  1100px;
-/// Full breakpoint size
+/// Full breakpoint
 $bp-full:  $site-width;
 
-/// MQ breakpoints map
+/// Sass mq breakpoints
 $mq-breakpoints: (
   lap:   $bp-lap,
   lap-m: $bp-lap-m, 
@@ -74,12 +74,16 @@ $h5-size: $base-font-size;
 /// H6 size
 $h6-size: 12px;
 
+/// Thin font weight
+$font-weight-thin:     100;
 /// Light font weight
 $font-weight-light:    300;
 /// Normal font weight
 $font-weight-normal:   400;
-/// Bold font weight
+/// Semibold font weight
 $font-weight-semibold: 600;
+/// Bold font weight
+$font-weight-bold:     700;
 
 /// Font map
 $fonts: (

@@ -3,12 +3,6 @@
 // Global layout
 //
 
-// config
-$logo-height: 370.93994;
-$logo-width: 931.48547;
-
-$logo-ratio: $logo-height/$logo-width;
-
 /* Site wrap */
 .site-wrap {
   position: relative;
@@ -27,93 +21,5 @@ $logo-ratio: $logo-height/$logo-width;
   @include mq(lap) {
     padding-right: $site-gutter;
     padding-left: $site-gutter;
-  }
-}
-
-/**
- * Site header
- */
-.site-header {
-  @include vr;
-  background-color: palette(Grey, 900);
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
-
-  .container {
-    @include mq($until: lap) {
-      padding: 4px;
-    }
-  }
-
-  /**
-   * Logo
-   */
-  .icon-logo {
-    width: 24px * ($logo-width/$logo-height);
-    height: 24px;
-    fill: #fff;
-
-    @include mq(lap) {
-      width: 100px;
-      height: 100px * $logo-ratio;
-    }
-  }
-
-  /**
-   * Menu
-   */
-  .icon-menu {
-    fill: #fff;
-  } 
-}
-
-/* Site logo */
-.site-logo {
-  padding: 12px 0;
-  float: left;
-
-  @include mq(lap) {
-    padding: 15px 0;
-  }
-
-  a {
-    display: block;
-  }
-}
-
-
-/* Site content + sidebar layout */
-@include with-layout($main-layout) {
-  @include mq(lap-m) {
-    .layout-main-content {
-      .sidebar-first & {
-        @include span(8 at 5);
-      }
-
-      .sidebar-second & {
-        @include span(8 first);
-      }
-
-      .two-sidebars & {
-        @include span(6 at 4);
-      }
-    }
-
-    .layout-sidebar-first {
-      .one-sidebar & {
-        @include span(4 first);
-      }
-      .two-sidebars & {
-        @include span (3 first);
-      }
-    }
-
-    .layout-sidebar-second {
-      .one-sidebar & {
-        @include span(4 last);
-      }
-      .two-sidebars & {
-        @include span(3 last);
-      }
-    }
   }
 }
