@@ -11,7 +11,7 @@ function gotham_css_alter(&$css) {
   $exclude = array(
     'modules/system/system.css' => FALSE,
     'modules/system/system.admin.css' => FALSE,
-    'modules/system/system.base.css' => FALSE,
+    // 'modules/system/system.base.css' => FALSE, // this one adds the autocomplete styles
     'modules/system/system.maintenance.css' => FALSE,
     'modules/system/system.menus.css' => FALSE,
     'modules/system/system.messages.css' => FALSE,
@@ -46,7 +46,7 @@ function gotham_preprocess_node(&$vars) {
   $vars['theme_hook_suggestions'][] = 'node__' . $vars['type'] . '__' . $vars['view_mode'];
 
   // Add css class "node-NODETYPE--VIEWMODE" to nodes
-  $vars['classes_array'][] = 'node-' . $vars['type'] . '--' . $vars['view_mode'];
+  $vars['classes_array'][] = 'node-' . $vars['type'] . '--' . drupal_html_class($vars['view_mode']);
 }
 
 /**
