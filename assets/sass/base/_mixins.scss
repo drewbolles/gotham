@@ -96,17 +96,17 @@
 /// @access public
 ///
 /// @content [Placeholder styles]
-@mixin placeholder() {
-  ::-webkit-input-placeholder {
+@mixin placeholder($el: 'input') {
+  #{$el}::-webkit-input-placeholder {
     @content;
   }
-  :-moz-placeholder { /* Firefox 18- */
+  #{$el}:-moz-placeholder { /* Firefox 18- */
     @content;
   }
-  ::-moz-placeholder {  /* Firefox 19+ */
+  #{$el}::-moz-placeholder {  /* Firefox 19+ */
     @content;
   }
-  :-ms-input-placeholder {  
+  #{$el}:-ms-input-placeholder {  
     @content;
   }
 }
