@@ -51,6 +51,7 @@ The Sass architecture has been commented to integreate with SassDocs. Once Gulp 
 These are the modules I recommend as an extended core for site development.
 
 * Views
+* View bulk operations
 * Entity
 * Entitycache
 * Entity Reference
@@ -69,5 +70,6 @@ These are the modules I recommend as an extended core for site development.
 * Globalredirect
 * Admin views
 * Imageapi Optimize
+* Module filter
 
-`drush dl views entity entitycache entityreference entity_view_mode inline_entity_form ds field_group token eck admin_menu ctools rules devel webform pathauto globalredirect admin_views imageapi_optimize`
+`drush dl views views_bulk_operations entity entitycache entityreference entity_view_mode inline_entity_form ds field_group token eck admin_menu ctools rules devel webform pathauto globalredirect admin_views imageapi_optimize module_filter`
