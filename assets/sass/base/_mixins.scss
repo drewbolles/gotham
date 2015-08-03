@@ -54,7 +54,6 @@
 }
 
 
-
 /// Applies micro clearfix to elements
 ///
 /// @access public
@@ -88,7 +87,6 @@
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
 }
-
 
 
 /// Style placeholder text in one swoop
@@ -137,6 +135,7 @@
   }
 }
 
+
 /// Apply different font families
 ///
 /// @param {String} $key [roboto] - Key value of the `$fonts` var
@@ -152,5 +151,17 @@
     }
   } @else {
     @warn "There is no font #{$key}";
+  }
+}
+
+/// Ouput a font weight from our Sass map
+/// 
+/// @param {String} $weight [light] - Key of our weight map
+@mixin font-weight($weight: light) {
+  @if map-has-key($font-weights, $weight) {
+    $output: map-get($font-weights, $weight);
+    font-weight: $output;
+  } @else {
+    @warn "There is no weight {$key}";
   }
 }

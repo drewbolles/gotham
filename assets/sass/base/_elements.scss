@@ -28,9 +28,9 @@ html, body {
 
 body {
   @include font;
+  @include font-size($base-font-size);
+  @include font-weight(normal);
   font-family: $base-font-family;
-  font-size: $base-font-size;
-  font-weight: $font-weight-normal;
   line-height: $line-height-ratio;
 }
 
@@ -38,12 +38,12 @@ body {
 /* Links */
 a {
   color: color(primary);
-	text-decoration: none;
+  text-decoration: none;
   transition: .2s ease background-color;
 
-	&:hover {
-		text-decoration: underline;
-	}
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 /**

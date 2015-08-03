@@ -85,6 +85,15 @@ $font-weight-semibold: 600;
 /// Bold font weight
 $font-weight-bold:     700;
 
+/// Map of font weights
+$font-weights: (
+  thin:     $font-weight-thin,
+  light:    $font-weight-light,
+  normal:   $font-weight-normal,
+  semibold: $font-weight-semibold,
+  bold:     $font-weight-bold,
+);
+
 /// Font map
 $fonts: (
   roboto: (
