@@ -29,7 +29,11 @@ function gotham_preprocess_html(&$vars) {}
 /**
  * Implements hook_preprocess_page().
  */
-function gotham_preprocess_page(&$vars) {
+function gotham_preprocess_page(&$vars) {  
+  // unset the 'page' class for the site-wrapper
+  unset($vars['classes_array'][0]);
+  $vars['classes_array'][] = 'site';
+  
   // make page--node--NODETYPE.tpl.php available
   if(isset($vars['node'])) {
     $vars['theme_hook_suggestions'][] = 'page__node__'.$vars['node']->type;

@@ -71,7 +71,7 @@
  */
 ?>
 <!-- BEGIN page.tpl.php -->
-<div class="site">
+<div class="<?php print $classes; ?>">
 
   <header id="site-header" class="site-header site-section">
     <div class="container">
