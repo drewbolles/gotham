@@ -33,7 +33,7 @@ gulp.task('imagemin', function() {
     .pipe(gulp.dest(imgDest));
 });
 
-gulp.task('svg', function() {
+gulp.task('icons', function() {
   return gulp
     .src(['images/icons/*.svg'])
     .pipe(svgmin())
@@ -45,7 +45,7 @@ gulp.task('svg', function() {
 
 gulp.task('watch', function() {
   gulp.watch('sass/**/*.scss', ['sass']);
-  gulp.watch(['images/icons/*.svg'], ['svg']);
+  gulp.watch(['images/icons/*.svg'], ['icons']);
 });
 
-gulp.task('default', ['sass', 'svg', 'watch']);
+gulp.task('default', ['sass', 'imagemin', 'icons', 'watch']);
