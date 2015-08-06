@@ -21,6 +21,18 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./css'));
 });
 
+gulp.task('imagemin', function() {
+  var imgSrc = 'images/src/*';
+  var imgDest = './images';
+  return gulp.src(imgSrc)
+    .pipe(newer(imgDest))
+    .pipe(imagemin({
+      progressive: true,
+      svgoPlugins: [{removeViewBox: false}],
+    }))
+    .pipe(gulp.dest(imgDest));
+});
+
 gulp.task('svg', function() {
   return gulp
     .src(['images/icons/*.svg'])

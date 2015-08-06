@@ -1,0 +1,1 @@
+Place un-compressed images here. Gulp will watch this file and compress the images for you.
