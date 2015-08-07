@@ -9,10 +9,12 @@ var prefix = require('gulp-autoprefixer');
 var watch = require('gulp-watch');
 var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
+var plumber = require('gulp-plumber');
 
 // Gulp Sass Task 
 gulp.task('sass', function() {
-  gulp.src('sass/**/*.scss')    
+  gulp.src('sass/**/*.scss')
+    .pipe(plumber())
     .pipe(sourcemaps.init()) // Initializes sourcemaps
     .pipe(sassdoc())
     .pipe(sass().on('error', sass.logError))
