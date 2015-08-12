@@ -15,7 +15,7 @@ $logo-ratio: $logo-height/$logo-width;
 .site-header {
   @include vr;
   background-color: palette(Grey, 900);
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 
   .container {
     @include mq($until: lap) {

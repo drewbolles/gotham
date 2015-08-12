@@ -8,9 +8,16 @@
 /// @access public
 ///
 /// @param {int} $size [$base-font-size] - Size of font being passed in
-@mixin font-size($size: $base-font-size) {
-  font-size: $size;
-  font-size: $size / $base-font-size * 1rem;
+@mixin font-size($size: $base-font-size, $bp: null) {
+  @if ($bp != null) {
+    @include mq($bp) {
+      font-size: $size;
+      font-size: $size / $base-font-size * 1rem;
+    }
+  } @else {
+    font-size: $size;
+    font-size: $size / $base-font-size * 1rem;
+  }
 }
 
 
@@ -49,8 +56,14 @@
 ///   .block-2 {
 ///     @include vr(2);
 ///   }
-@mixin vr($mult: 1) {
-  margin-bottom: su($mult);
+@mixin vr($mult: 1, $bp: null) {
+  @if ($bp != null) {
+    @include mq($bp) {
+      margin-bottom: su($mult);
+    }
+  } @else {
+    margin-bottom: su($mult);
+  }
 }
 
 
