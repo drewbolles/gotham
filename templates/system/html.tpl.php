@@ -59,8 +59,8 @@
   <?php print $head; ?>
   <?php print $styles; ?>
 
-  <!--[if let IE 9]>
-    <script src="<?php path_to_theme() . '/assets/js/vendor/respond.min.js'; ?>" type="text/javascript">
+  <!--[if lt IE 9]>
+    <script src="<?php print path_to_theme() . '/assets/js/vendor/respond.min.js'; ?>" type="text/javascript"></script>
   <![endif]-->
 
 </head>
