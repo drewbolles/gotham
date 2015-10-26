@@ -47,7 +47,7 @@
 ?>
 <?php print render($title_prefix); ?>
 <?php if ($block->subject): ?>
-  <h2<?php print $title_attributes; ?> class="block__title"><?php print $block->subject ?></h2>
+  <<?php print $title_wrapper; ?><?php print $title_attributes; ?>><?php print $block->subject ?></<?php print $title_wrapper; ?>>
 <?php endif;?>
 <?php print render($title_suffix); ?>
 

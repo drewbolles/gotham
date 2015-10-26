@@ -116,13 +116,14 @@
 
   <main id="site-main" class="site-main site-section" role="main">
     <div class="container">
+    
+      <?php if($title):?>
+        <h1 id="page-title" class="page-title"><?php print $title; ?></h1>
+      <?php endif;?>
 
       <?php if($messages):?><?php print render($messages); ?><?php endif; ?>
 
       <section id="main-content" class="layout-main-content">
-        <?php if($title):?>
-          <h1 id="page-title" class="page-title"><?php print $title; ?></h1>
-        <?php endif;?>
 
         <?php if($tabs = render($tabs)):?>
           <div id="tabs">

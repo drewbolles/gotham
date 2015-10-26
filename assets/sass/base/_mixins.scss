@@ -178,3 +178,15 @@
     @warn "There is no weight {$key}";
   }
 }
+
+/// Cover an area w/ absolute position. Requires a parent to have position relative
+/// @param {Percent} $width [100%]
+/// @param {Percent} $height [100%]
+@mixin cover($width: 100%, $height: 100%) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $width;
+  height: $height;
+}
+
