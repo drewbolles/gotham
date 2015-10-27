@@ -158,10 +158,8 @@
     $index: map-get($fonts, $key);
     $output: unquote(map-get($index, $type));
 
-    .fonts-loaded & {
-      font-family: $output;
-      font-weight: normal;
-    }
+    font-family: $output;
+    font-weight: normal;
   } @else {
     @warn "There is no font #{$key}";
   }
