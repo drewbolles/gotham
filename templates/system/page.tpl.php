@@ -71,15 +71,10 @@
  */
 ?>
 <!-- BEGIN page.tpl.php -->
-<div class="<?php print $classes; ?>">
+<div id="site" class="<?php print $classes; ?>">
 
   <header id="site-header" class="site-header site-section">
     <div class="container">
-      <a href="#main-nav" id="menu-toggle" class="menu-toggle">
-        <svg class="icon icon-menu">
-          <use xlink:href="#icon-menu"></use>
-        </svg>
-      </a>
 
       <?php if ($logo): ?>
         <div class="site-logo">
@@ -91,6 +86,22 @@
           </a>
         </div>
       <?php endif; ?>
+
+      <div class="menu-toggle">
+        <a href="#site-header" id="menu-toggle-open" class="menu-toggle-open js-menu-toggle-item">
+          <span class="menu-toggle-text">Menu</span>
+          <svg class="icon icon-menu">
+            <use xlink:href="#icon-menu"></use>
+          </svg>
+        </a>
+
+        <a href="#site" id="menu-toggle-close" class="menu-toggle-close js-menu-toggle-item">
+          <span class="menu-toggle-text">Menu</span>
+          <svg class="icon icon-menu">
+            <use xlink:href="#icon-menu"></use>
+          </svg>
+        </a>
+      </div>
         
       <nav id="site-nav" class="site-nav" role="navigation">
         <?php if($page['navigation']): ?>
@@ -116,7 +127,7 @@
 
   <main id="site-main" class="site-main site-section" role="main">
     <div class="container">
-    
+
       <?php if($title):?>
         <h1 id="page-title" class="page-title"><?php print $title; ?></h1>
       <?php endif;?>

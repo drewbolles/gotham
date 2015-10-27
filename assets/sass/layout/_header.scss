@@ -22,27 +22,6 @@ $logo-ratio: $logo-height/$logo-width;
       padding: 4px;
     }
   }
-
-  /**
-   * Logo
-   */
-  .icon-logo {
-    width: 24px * ($logo-width/$logo-height);
-    height: 24px;
-    fill: #fff;
-
-    @include mq(lap) {
-      width: 100px;
-      height: 100px * $logo-ratio;
-    }
-  }
-
-  /**
-   * Menu
-   */
-  .icon-menu {
-    fill: #fff;
-  } 
 }
 
 /* Site logo */
@@ -56,5 +35,16 @@ $logo-ratio: $logo-height/$logo-width;
 
   a {
     display: block;
+  }
+
+  .icon-logo {
+    width: 24px * ($logo-width/$logo-height);
+    height: 24px;
+    fill: #fff;
+
+    @include mq(lap) {
+      width: 100px;
+      height: 100px * $logo-ratio;
+    }
   }
 }

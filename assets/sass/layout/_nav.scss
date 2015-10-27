@@ -9,55 +9,38 @@
 
 /* Nav element */
 .site-nav {
-  clear: both;
+  position: absolute;
+  top: $header-height;
+  left: 0;
+  background-color: palette(Grey, 300);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.14), 2px 4px 8px rgba(0, 0, 0, 0.28);
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: 100ms ease transform;
 
   @include mq(lap) {
-    padding: 23px 0;
+    position: static;
+    width: auto;
     float: right;
-    clear: none;
+    padding: 23px 0;
     box-shadow: none;
+    background-color: transparent;
+    transform: scaleY(1);
   }
 
-  .js & {
-    position: absolute;
-    top: 56px;
-    bottom: 0;
-    right: 100%;
-    width: 82.5%;
-    width: calc(100% - 56px);
-    max-width: 320px;
-    background-color: palette(Grey, 300);
-    transition: .2s ease transform;
-
-    @include mq(lap) {
-      position: static;
-      width: auto;
-      max-width: none;
-      background-color: transparent;
-      transform: translate(0, 0);
-    }
-  }
-
-  .js .menu-open & {
-    transform: translate(100%, 0);
-
-    @include mq(lap) {
-      max-width: none;
-      transform: translate(0, 0); 
-    }
+  #site-header:target &,
+  .menu-open & {
+    transform: scaleY(1);
   }
 }
 
 /* menu toggle */
 .menu-toggle {
-  float: left;
-  width: 48px;
+  float: right;
   height: 48px;
-  margin-right: 20px;
   padding: 12px;
   text-align: center;
-  transition: .2s ease all;
+  transition: 100ms ease all;
 
   .menu-open & {
     transform: rotate(90deg);
@@ -65,6 +48,32 @@
 
   @include mq(lap) {
     display: none;
+  }
+
+  .icon-menu {
+    fill: #fff;
+  } 
+}
+
+.menu-toggle-text {
+  @include font-size(12px);
+  color: #fff;
+  line-height: 1;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.menu-toggle-open {
+  #site-header:target & {
+    display: none;
+  }
+}
+
+.menu-toggle-close {
+  display: none;
+
+  #site-header:target & {
+    display: block;
   }
 }
 

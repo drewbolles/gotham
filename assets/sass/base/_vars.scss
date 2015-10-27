@@ -15,6 +15,9 @@ $site-gutter--small: 16px;
 /// Site width
 $site-width: $site-content + ($site-gutter * 2);
 
+// Header height
+$header-height: 56px;
+
 /// Use the sticky footer component
 $use-sticky-footer: true;
 
