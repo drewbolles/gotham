@@ -10,6 +10,8 @@ var watch = require('gulp-watch');
 var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
 var plumber = require('gulp-plumber');
+var newer = require('gulp-newer');
+var imagemin = require('gulp-imagemin');
 
 // Gulp Sass Task 
 gulp.task('sass', function() {
