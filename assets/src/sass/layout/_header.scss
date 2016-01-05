@@ -129,20 +129,39 @@
 }
 
 .menu-toggle {
+  padding: 5px;
   float: right;
+  border-radius: 3px;
   color: #222;
 
   @include mq(desk) {
     display: none;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
   }
 } // .menu-toggle
 
 /* Primary menu */
 .region-primary-menu {
   display: none;
+  
 
   @include mq($until: desk) {
     clear: both;
+  }
+
+  @include mq(desk) {
+    @include span(9 last);
+    display: block;
+    text-align: right;
+  }
+
+  .menu-open & {
+    display: block;
   }
 
   a {
@@ -157,17 +176,8 @@
     }
   }
 
-  .menu-open & {
-    display: block;
-  }
-
-  @include mq(desk) {
-    @include span(9 last);
-    display: block;
-  }
-
   .menu-item {
-    margin-right: su(.5);
+    margin-right: su();
 
     &:last-child {
       margin-right: 0;
