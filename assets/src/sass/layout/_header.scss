@@ -11,7 +11,7 @@
   .menu {
     margin: 0;
   }
-}
+} // .site-top-bar
 
 .site-header {
   margin-bottom: su();
@@ -55,7 +55,7 @@
   @include mq(desk) {
     width: 150px;
   }
-}
+} // .site-logo
 
 /* Secondary menu */
 .region-secondary-menu {
@@ -143,6 +143,18 @@
 
   @include mq($until: desk) {
     clear: both;
+  }
+
+  a {
+    @include caps;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.is-active {
+      border-bottom: 2px solid #fff;
+    }
   }
 
   .menu-open & {

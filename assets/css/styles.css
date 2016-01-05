@@ -233,6 +233,13 @@ button {
   @media (max-width: 64.365em) {
     .region-primary-menu {
       clear: both; } }
+  .region-primary-menu a {
+    letter-spacing: 0.03em;
+    text-transform: uppercase; }
+    .region-primary-menu a:hover {
+      text-decoration: none; }
+    .region-primary-menu a.is-active {
+      border-bottom: 2px solid #fff; }
   .menu-open .region-primary-menu {
     display: block; }
   @media (min-width: 64.375em) {
