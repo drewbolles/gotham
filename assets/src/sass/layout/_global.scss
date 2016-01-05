@@ -2,10 +2,8 @@
  * @file
  * Global layout styles
  */
-.site {
-  @include mq($until: desk) {
-    margin-bottom: su();
-  }
+.site-main {
+  margin-bottom: su();
 }
 
 .layout-container {

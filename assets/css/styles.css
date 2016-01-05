@@ -22,6 +22,9 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote {
   margin-bottom: 12px;
   padding: 0; }
 
+img, audio, video, object {
+  max-width: 100%; }
+
 img {
   vertical-align: middle; }
 
@@ -42,6 +45,23 @@ a {
  */
 ul, ol {
   list-style: none; }
+
+.text-formatted p, .text-formatted ul, .text-formatted ol {
+  margin-bottom: 24px; }
+
+.text-formatted ul, .text-formatted ol {
+  margin-left: 24px; }
+
+.text-formatted ul {
+  list-style: disc; }
+
+.text-formatted ol {
+  list-style: decimal; }
+
+.text-formatted li {
+  margin-bottom: 10px; }
+  .text-formatted li:last-child {
+    margin-bottom: 0; }
 
 /**
  * Forms
@@ -72,9 +92,8 @@ button {
  * @file
  * Global layout styles
  */
-@media (max-width: 64.365em) {
-  .site {
-    margin-bottom: 24px; } }
+.site-main {
+  margin-bottom: 24px; }
 
 .layout-container {
   width: 90%;
@@ -305,5 +324,15 @@ button {
   text-transform: uppercase;
   font-size: 12px;
   font-size: 0.75rem; }
+
+/**
+ * @file
+ * Basic page node styles
+ */
+@media (min-width: 64.375em) {
+  .node--type-page .field--name-body {
+    width: 74.57627%;
+    float: left;
+    margin-right: 1.69492%; } }
 
 /*# sourceMappingURL=styles.css.map */

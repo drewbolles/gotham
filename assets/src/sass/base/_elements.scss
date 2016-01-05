@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote {
   padding: 0;
 }
 
+img, audio, video, object {
+  max-width: 100%;
+}
+
 img {
   vertical-align: middle;
 }
@@ -47,6 +51,32 @@ a {
 ul, ol {
   list-style: none;
 }
+
+.text-formatted {
+  p, ul, ol {
+    margin-bottom: su(1);
+  }
+
+  ul, ol {
+    margin-left: su();
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+} // .text-formatted
 
 /**
  * Forms

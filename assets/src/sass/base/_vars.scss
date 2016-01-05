@@ -65,7 +65,7 @@ $base-line-height: $base-spacing-unit !default;
 $line-height-ratio: $base-line-height / $base-font-size;
 
 /// Base font family
-$base-font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "\"San Francisco\", \"Helvetica Neue\", Helvetica, Arial, sans-serif";
 
 /// Fonts map, stores the family & the variations
 $fonts: (

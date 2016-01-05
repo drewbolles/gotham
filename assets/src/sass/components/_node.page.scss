@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Basic page node styles
+ */
+.node--type-page {
+  .field--name-body {
+    @include mq(desk) {
+      @include span(9);
+    }
+  }
+} // .node-type-page
