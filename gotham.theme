@@ -25,8 +25,8 @@ function gotham_preprocess_html(&$vars) {
 function gotham_preprocess_page(&$vars) {
   /* Add a button to the header region for mobile menu */
   $vars['page']['header']['gotham_mobile_menu_icon'] = array(
-    '#markup' => '<button id="menu-toggle" class="menu-toggle js-menu-toggle">Toggle</button>',
-    '#allowed_tags' => ['button'],
+    '#markup' => '<button id="menu-toggle" class="menu-toggle js-menu-toggle"><span>Menu</span> <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M6 36h36v-4H6v4zm0-10h36v-4H6v4zm0-14v4h36v-4H6z"/></svg></button>',
+    '#allowed_tags' => ['button', 'span', 'svg', 'path'],
     '#weight' => 10,
   );
 }
