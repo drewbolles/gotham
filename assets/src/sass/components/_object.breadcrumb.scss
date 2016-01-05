@@ -1,0 +1,10 @@
+/**
+ * @file
+ * Breadcrumb styles
+ */
+.breadcrumb {
+  a {
+    @include caps;
+    @include font-size(12px);
+  }
+}

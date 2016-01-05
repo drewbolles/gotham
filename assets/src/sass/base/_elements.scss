@@ -5,6 +5,7 @@
 
 /* General Reset */
 html {
+  @include font;
   @include font-size($base-font-size);
   line-height: $line-height-ratio;
 }

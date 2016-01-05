@@ -18,26 +18,36 @@ $use-sticky-footer: true;
 //
 // Grid
 // We use Susy as a layout tool
+
 /// The width of the gutter
 $gutter-width: .15;
 
+/// Default Susy settings
 $susy: (
   columns: 12,
   gutter: $gutter-width,
 );
 
+/// Custom layout for the main content & sidebars
 $main-layout: layout(12 .15 isolate);
 
 //
 // Responsive
 // We use Sass-MQ as a media query tool
+
+/// Lap breakpoint width
 $bp-lap: 630px;
+/// Desk breakpoint width
 $bp-desk: 1030px;
+/// Wide breakpoint width
 $bp-wide: 1200px;
+/// Full breakpoint width, the site width
 $bp-full: $site-width;
 
+/// Enable Sass MQ responsive
 $mq-responsive: true;
 
+/// Sass MQ breakpoint Map
 $mq-breakpoints: (
   lap: $bp-lap,
   desk: $bp-desk,
@@ -46,17 +56,33 @@ $mq-breakpoints: (
 
 //
 // Typography
+
+/// Base font size
 $base-font-size: 16px !default;
+/// Base light height
 $base-line-height: $base-spacing-unit !default;
+/// The default line height ratio
 $line-height-ratio: $base-line-height / $base-font-size;
+
+/// Base font family
+$base-font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/// Fonts map, stores the family & the variations
+$fonts: (
+  base: (
+    regular: $base-font-family,
+  ),
+);
 
 //
 // UI 
 
 /// Primary site color
 $color-primary: #2196f3;
+/// Secondary site color
 $color-secondary: #ffeb3b;
 
+/// Color map
 $colors: (
   primary: $color-primary,
   secondary: $color-secondary,

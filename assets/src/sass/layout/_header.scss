@@ -59,17 +59,17 @@
 
 /* Secondary menu */
 .region-secondary-menu {
-  text-align: right;
 
-  @include mq(desk) {
+  @include mq(lap)  {
     @include clearfix;
     /* Uses flexbox to align children horizontally */
     display: flex;
     align-items: center;
-    
-    /* In case unsupported browsers need fixes */
-    .no-flexbox & {}
+    text-align: right;
   }
+  
+  /* In case unsupported browsers need fixes */
+  .no-flexbox & {}
   
   a {
     @include font-size(12px);
@@ -86,9 +86,8 @@
   }
 
   .block {
-    @include mq(desk) {
+    @include mq(lap) {
       float: right;
-      margin-left: su();
     }
   }
 
@@ -99,6 +98,12 @@
 
   .block-menu {
     order: 1;
+    margin-bottom: su(.5);
+
+    @include mq(lap) {
+      margin-left: su();
+      margin-bottom: 0;
+    }
   }
 } // .region-secondary-menu
 
@@ -106,14 +111,14 @@
 .region-header {
   @include clearfix;
 
+  @include mq(desk) {
+    @include span(3);
+  }
+
   .menu-open & {
     @include mq($until: desk) {
       margin-bottom: su(.5);
     }
-  }
-
-  @include mq(desk) {
-    @include span(3);
   }
 } // .region-header
 

@@ -8,6 +8,8 @@
  */
 /* General Reset */
 html {
+  font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -133,8 +135,8 @@ button {
 
 /* Secondary menu */
 .region-secondary-menu {
-  text-align: right; }
-  @media (min-width: 64.375em) {
+  /* In case unsupported browsers need fixes */ }
+  @media (min-width: 39.375em) {
     .region-secondary-menu {
       /* Uses flexbox to align children horizontally */
       display: -webkit-flex;
@@ -143,7 +145,7 @@ button {
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center;
-      /* In case unsupported browsers need fixes */ }
+      text-align: right; }
       .region-secondary-menu:after, .region-secondary-menu:before {
         content: " ";
         display: table; }
@@ -159,10 +161,9 @@ button {
     margin-right: 12px; }
     .region-secondary-menu .menu-item:last-child {
       margin-right: 0; }
-  @media (min-width: 64.375em) {
+  @media (min-width: 39.375em) {
     .region-secondary-menu .block {
-      float: right;
-      margin-left: 24px; } }
+      float: right; } }
   .region-secondary-menu .block-search {
     -webkit-order: 0;
         -ms-flex-order: 0;
@@ -171,7 +172,12 @@ button {
   .region-secondary-menu .block-menu {
     -webkit-order: 1;
         -ms-flex-order: 1;
-            order: 1; }
+            order: 1;
+    margin-bottom: 12px; }
+    @media (min-width: 39.375em) {
+      .region-secondary-menu .block-menu {
+        margin-left: 24px;
+        margin-bottom: 0; } }
 
 /* Header */
 .region-header:after, .region-header:before {
@@ -181,15 +187,15 @@ button {
 .region-header:after {
   clear: both; }
 
-@media (max-width: 64.365em) {
-  .menu-open .region-header {
-    margin-bottom: 12px; } }
-
 @media (min-width: 64.375em) {
   .region-header {
     width: 23.72881%;
     float: left;
     margin-right: 1.69492%; } }
+
+@media (max-width: 64.365em) {
+  .menu-open .region-header {
+    margin-bottom: 12px; } }
 
 @media (max-width: 64.365em) {
   .block-system-branding-block {
@@ -289,5 +295,15 @@ button {
 .container-inline .form-actions {
   display: inline-block;
   vertical-align: middle; }
+
+/**
+ * @file
+ * Breadcrumb styles
+ */
+.breadcrumb a {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 0.75rem; }
 
 /*# sourceMappingURL=styles.css.map */

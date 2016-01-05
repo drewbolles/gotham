@@ -44,3 +44,19 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+
+/// Apply different font families
+///
+/// @param {String} $key [roboto] - Key value of the `$fonts` var
+/// @param {String} $type [regular] - The type of font, either regular, light, or bold
+@mixin font($key: base, $type: regular) {
+  @if map-has-key($fonts, $key) {
+    $index: map-get($fonts, $key);
+    $output: unquote(map-get($index, $type));
+
+    font-family: $output;
+    font-weight: normal;
+  } @else {
+    @warn "There is no font #{$key}";
+  }
+}
