@@ -1,0 +1,20 @@
+<?php
+/**
+ * Gotham theme functions
+ */
+function gotham_preprocess_html(&$vars) {
+  if (!empty($vars['page']['sidebar_first']) && !empty($vars['page']['sidebar_second'])) {
+    $vars['attributes']['class'][] = 'has-two-sidebars';
+  }
+  elseif (!empty($vars['page']['sidebar_first'])) {
+    $vars['attributes']['class'][] = 'has-one-sidebar';
+    $vars['attributes']['class'][] = 'has-sidebar-first';
+  }
+  elseif (!empty($vars['page']['sidebar_second'])) {
+    $vars['attributes']['class'][] = 'has-one-sidebar';
+    $vars['attributes']['class'][] = 'has-sidebar-second';
+  }
+  else {
+    $vars['attributes']['class'][] = 'has-no-sidebars';
+  }
+}

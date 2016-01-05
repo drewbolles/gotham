@@ -1,0 +1,37 @@
+/**
+ * @file
+ * Content layout styles
+ */
+@include with-layout($main-layout) {
+  .layout-content {
+    .has-one-sidebar & {
+      @include mq(desk) {
+        @include span(9 at 4);
+      }
+    }
+
+    .has-sidebar-second & {
+      @include mq(desk) {
+        @include span(9 first);
+      }
+    }
+
+    .has-two-sidebars & {
+      @include mq(desk) {
+        @include span(6 at 4);
+      }
+    }
+  }
+
+  .layout-sidebar-first {
+    @include mq(desk) {
+      @include span(3 first);
+    }
+  }
+
+  .layout-sidebar-second {
+    @include mq(desk) {
+      @include span(3 last);
+    }
+  }
+}

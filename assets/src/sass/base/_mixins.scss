@@ -1,0 +1,46 @@
+//
+// @file
+// Custom Sass mixins
+// 
+
+/// Spit out 'rem' and 'px' font size in one go
+///
+/// @access public
+///
+/// @param {int} $size [$base-font-size] - Size of font being passed in
+@mixin font-size($size: $base-font-size, $bp: null) {
+  @if ($bp != null) {
+    @include mq($bp) {
+      font-size: $size;
+      font-size: $size / $base-font-size * 1rem;
+    }
+  } @else {
+    font-size: $size;
+    font-size: $size / $base-font-size * 1rem;
+  }
+}
+
+/// Applies micro clearfix to elements
+///
+/// @access public
+///
+/// @example scss
+///   .block {
+///     @include clearfix;
+///   }
+@mixin clearfix() {
+  &:after,
+  &:before {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/// Capitalize and space out text
+@mixin caps() {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

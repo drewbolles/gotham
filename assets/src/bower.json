@@ -1,0 +1,22 @@
+{
+  "name": "gotham",
+  "description": "custom drupal 8 theme build process",
+  "main": "index.js",
+  "authors": [
+    "drewbolles@gmail.com"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "~2.2.9",
+    "sass-mq": "~3.2.5"
+  }
+}

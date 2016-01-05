@@ -1,0 +1,8 @@
+base:
+  version: VERSION
+  css:
+    theme: 
+      assets/css/styles.css: {}
+  js:
+    assets/js/tappy.js: {}
+    assets/js/scripts.js: {}

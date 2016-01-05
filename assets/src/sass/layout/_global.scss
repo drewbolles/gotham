@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Global layout styles
+ */
+.site {
+  @include mq($until: desk) {
+    margin-bottom: su();
+  }
+}
+
+.layout-container {
+  @include clearfix;
+  width: 90%;
+  max-width: $site-width;
+  margin-right: auto;
+  margin-left: auto;
+}

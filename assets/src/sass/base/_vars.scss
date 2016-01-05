@@ -1,0 +1,47 @@
+//
+// @file
+// Custom theme variables
+//
+
+//
+// Layout
+
+/// Site width
+$site-width: 1400px;
+$base-spacing-unit: 24px;
+$footer-height: 300px;
+$use-sticky-footer: true;
+
+//
+// Grid
+// We use Susy as a layout tool
+$gutter-width: 30px;
+
+$susy: (
+  columns: 12,
+  gutter: .15
+);
+
+$main-layout: layout(12 .15 isolate);
+
+//
+// Responsive
+// We use Sass-MQ as a media query tool
+$bp-lap: 630px;
+$bp-desk: 1030px;
+$bp-wide: 1200px;
+$bp-full: $site-width;
+
+$mq-responsive: true;
+
+$mq-breakpoints: (
+  lap: $bp-lap,
+  desk: $bp-desk,
+  wide: $bp-wide,
+);
+
+//
+// Typography
+$base-font-size: 16px !default;
+$base-line-height: $base-spacing-unit !default;
+$line-height-ratio: $base-line-height / $base-font-size;

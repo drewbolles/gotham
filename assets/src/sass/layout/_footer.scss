@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Footer layout styles
+ */
+.footer {
+  padding: su() 0;
+  background-color: #ccc;
+}
+
+@if $use-sticky-footer == true {
+  @include mq(desk) {
+    .site {
+      min-height: 100%;
+      margin-bottom: -$footer-height;
+
+      &:after {
+        content: "";
+        display: block;
+      }     
+    }
+    
+    .footer, .site:after { height: $footer-height; }
+  }
+}

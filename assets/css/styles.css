@@ -1,0 +1,195 @@
+/**
+ * @file
+ * Custom styles
+ */
+/**
+ * @file
+ * Base site elements
+ */
+/* General Reset */
+html {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+html, body {
+  height: 100%; }
+
+h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote {
+  margin: 0;
+  margin-bottom: 12px;
+  padding: 0; }
+
+img {
+  vertical-align: middle; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+/**
+ * Lists
+ * 
+ * Beacuse lists are used for menus and other abstractions, let's strip
+ * them down by default. When they are used in body fields, let's add back
+ * their styles.
+ */
+ul, ol {
+  list-style: none; }
+
+/**
+ * @file
+ * Global layout styles
+ */
+@media (max-width: 64.365em) {
+  .site {
+    margin-bottom: 24px; } }
+
+.layout-container {
+  width: 90%;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto; }
+  .layout-container:after, .layout-container:before {
+    content: " ";
+    display: table; }
+  .layout-container:after {
+    clear: both; }
+
+/**
+ * @file
+ * Header layout styles
+ */
+.site-header {
+  margin-bottom: 24px;
+  padding: 12px 0;
+  background: #222; }
+  .site-header, .site-header a {
+    color: #f1f1f1; }
+  .site-header .menu {
+    margin: 0; }
+
+.site-logo,
+.site-name {
+  display: inline-block; }
+
+.site-logo {
+  display: block;
+  width: 75px;
+  line-height: 1; }
+  @media (min-width: 64.375em) {
+    .site-logo {
+      width: 150px; } }
+
+/* Secondary menu */
+.region-secondary-menu {
+  margin-bottom: 12px;
+  text-align: right; }
+  .region-secondary-menu a {
+    font-size: 12px;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase; }
+  .region-secondary-menu .menu-item {
+    display: inline-block; }
+
+/* Header */
+.region-header {
+  float: left; }
+  @media (max-width: 64.365em) {
+    .menu-open .region-header {
+      margin-bottom: 12px; } }
+  @media (min-width: 64.375em) {
+    .region-header {
+      width: 23.72881%;
+      float: left;
+      margin-right: 1.69492%; } }
+
+.menu-toggle {
+  float: right;
+  color: #222; }
+  @media (min-width: 64.375em) {
+    .menu-toggle {
+      display: none; } }
+
+/* Primary menu */
+.region-primary-menu {
+  display: none; }
+  @media (max-width: 64.365em) {
+    .region-primary-menu {
+      clear: both; } }
+  .menu-open .region-primary-menu {
+    display: block; }
+  @media (min-width: 64.375em) {
+    .region-primary-menu {
+      width: 74.57627%;
+      float: right;
+      margin-right: 0;
+      display: block; } }
+  .region-primary-menu .menu-item {
+    margin-right: 12px; }
+    .region-primary-menu .menu-item:last-child {
+      margin-right: 0; }
+    @media (min-width: 64.375em) {
+      .region-primary-menu .menu-item {
+        display: inline-block; } }
+
+/**
+ * @file
+ * Content layout styles
+ */
+@media (min-width: 64.375em) {
+  .has-one-sidebar .layout-content {
+    width: 74.72527%;
+    float: left;
+    margin-left: 25.27473%;
+    margin-right: -100%; } }
+
+@media (min-width: 64.375em) {
+  .has-sidebar-second .layout-content {
+    width: 74.72527%;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%; } }
+
+@media (min-width: 64.375em) {
+  .has-two-sidebars .layout-content {
+    width: 49.45055%;
+    float: left;
+    margin-left: 25.27473%;
+    margin-right: -100%; } }
+
+@media (min-width: 64.375em) {
+  .layout-sidebar-first {
+    width: 24.17582%;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%; } }
+
+@media (min-width: 64.375em) {
+  .layout-sidebar-second {
+    width: 24.17582%;
+    float: left;
+    margin-left: 75.82418%;
+    margin-right: -100%; } }
+
+/**
+ * @file
+ * Footer layout styles
+ */
+.footer {
+  padding: 24px 0;
+  background-color: #ccc; }
+
+@media (min-width: 64.375em) {
+  .site {
+    min-height: 100%;
+    margin-bottom: -300px; }
+    .site:after {
+      content: "";
+      display: block; }
+  .footer, .site:after {
+    height: 300px; } }
+
+/*# sourceMappingURL=styles.css.map */

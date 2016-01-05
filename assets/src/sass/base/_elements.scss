@@ -1,0 +1,45 @@
+/**
+ * @file
+ * Base site elements
+ */
+
+/* General Reset */
+html {
+  @include font-size($base-font-size);
+  line-height: $line-height-ratio;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {}
+
+h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote {
+  margin: 0;
+  margin-bottom: su(.5);
+  padding: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Lists
+ * 
+ * Beacuse lists are used for menus and other abstractions, let's strip
+ * them down by default. When they are used in body fields, let's add back
+ * their styles.
+ */
+ul, ol {
+  list-style: none;
+}
