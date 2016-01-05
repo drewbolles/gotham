@@ -221,11 +221,17 @@ button {
     float: left; } }
 
 .menu-toggle {
+  padding: 5px;
   float: right;
+  border-radius: 3px;
   color: #222; }
   @media (min-width: 64.375em) {
     .menu-toggle {
       display: none; } }
+  .menu-toggle svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: top; }
 
 /* Primary menu */
 .region-primary-menu {
@@ -233,6 +239,15 @@ button {
   @media (max-width: 64.365em) {
     .region-primary-menu {
       clear: both; } }
+  @media (min-width: 64.375em) {
+    .region-primary-menu {
+      width: 74.57627%;
+      float: right;
+      margin-right: 0;
+      display: block;
+      text-align: right; } }
+  .menu-open .region-primary-menu {
+    display: block; }
   .region-primary-menu a {
     letter-spacing: 0.03em;
     text-transform: uppercase; }
@@ -240,16 +255,8 @@ button {
       text-decoration: none; }
     .region-primary-menu a.is-active {
       border-bottom: 2px solid #fff; }
-  .menu-open .region-primary-menu {
-    display: block; }
-  @media (min-width: 64.375em) {
-    .region-primary-menu {
-      width: 74.57627%;
-      float: right;
-      margin-right: 0;
-      display: block; } }
   .region-primary-menu .menu-item {
-    margin-right: 12px; }
+    margin-right: 24px; }
     .region-primary-menu .menu-item:last-child {
       margin-right: 0; }
     @media (min-width: 64.375em) {
