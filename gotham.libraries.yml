@@ -6,3 +6,9 @@ base:
   js:
     assets/js/tappy.js: {}
     assets/js/scripts.js: {}
+
+modernizr:
+  version: VERSION
+  header: true
+  js:
+    assets/js/modernizr.custom.min.js: {}

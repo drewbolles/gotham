@@ -44,11 +44,17 @@
  */
 #}
 <div class="site">
-  <header class="site-header" role="banner">
+  {% if page.secondary_menu %}
+  <div class="site-top-bar">
     <div class="layout-container">
       {{ page.secondary_menu }}
+    </div>
+  </div>
+  {% endif %}
+
+  <header class="site-header" role="banner">
+    <div class="layout-container">
       {{ page.header }}
-      <button id="menu-toggle" class="menu-toggle js-menu-toggle">Toggle</button>
       {{ page.primary_menu }}
     </div>
   </header>

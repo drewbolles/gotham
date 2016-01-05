@@ -18,3 +18,15 @@ function gotham_preprocess_html(&$vars) {
     $vars['attributes']['class'][] = 'has-no-sidebars';
   }
 }
+
+/**
+ * Implementation of hook_preprocess_HOOK().
+ */
+function gotham_preprocess_page(&$vars) {
+  /* Add a button to the header region for mobile menu */
+  $vars['page']['header']['gotham_mobile_menu_icon'] = array(
+    '#markup' => '<button id="menu-toggle" class="menu-toggle js-menu-toggle">Toggle</button>',
+    '#allowed_tags' => ['button'],
+    '#weight' => 10,
+  );
+}

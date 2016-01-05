@@ -24,8 +24,11 @@ img {
   vertical-align: middle; }
 
 a {
-  text-decoration: none; }
+  color: #2196f3;
+  text-decoration: none;
+  transition: 150ms ease color, 150ms ease background-color; }
   a:hover {
+    color: #0a6ebd;
     text-decoration: underline; }
 
 /**
@@ -37,6 +40,31 @@ a {
  */
 ul, ol {
   list-style: none; }
+
+/**
+ * Forms
+ *
+ * Base form styles
+ */
+/* Submits and buttons */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  line-height: 24px; }
+
+input[type="submit"],
+button {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-size: 0.75rem;
+  padding: 0 12px;
+  border: 0;
+  cursor: pointer;
+  line-height: 24px; }
 
 /**
  * @file
@@ -61,14 +89,35 @@ ul, ol {
  * @file
  * Header layout styles
  */
+.site-top-bar {
+  padding: 10px 0;
+  line-height: 1; }
+  .site-top-bar .menu {
+    margin: 0; }
+
 .site-header {
   margin-bottom: 24px;
   padding: 12px 0;
-  background: #222; }
+  background: #424242;
+  /**
+   * Center logo and menu using flexbox. This horizontally centers
+   * the elements in this container. The fallback is the menu hangs at the top, 
+   * can add padding to adjust this for unsupported browsers.
+   */ }
   .site-header, .site-header a {
     color: #f1f1f1; }
   .site-header .menu {
     margin: 0; }
+  .site-header > .layout-container {
+    /* If unsupported browsers need specific styles */ }
+    @media (min-width: 64.375em) {
+      .site-header > .layout-container {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; } }
 
 .site-logo,
 .site-name {
@@ -84,27 +133,67 @@ ul, ol {
 
 /* Secondary menu */
 .region-secondary-menu {
-  margin-bottom: 12px;
   text-align: right; }
+  @media (min-width: 64.375em) {
+    .region-secondary-menu {
+      /* Uses flexbox to align children horizontally */
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      /* In case unsupported browsers need fixes */ }
+      .region-secondary-menu:after, .region-secondary-menu:before {
+        content: " ";
+        display: table; }
+      .region-secondary-menu:after {
+        clear: both; } }
   .region-secondary-menu a {
     font-size: 12px;
     font-size: 0.75rem;
     letter-spacing: 0.03em;
     text-transform: uppercase; }
   .region-secondary-menu .menu-item {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 12px; }
+    .region-secondary-menu .menu-item:last-child {
+      margin-right: 0; }
+  @media (min-width: 64.375em) {
+    .region-secondary-menu .block {
+      float: right;
+      margin-left: 24px; } }
+  .region-secondary-menu .block-search {
+    -webkit-order: 0;
+        -ms-flex-order: 0;
+            order: 0;
+    margin-left: auto; }
+  .region-secondary-menu .block-menu {
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
 
 /* Header */
-.region-header {
-  float: left; }
-  @media (max-width: 64.365em) {
-    .menu-open .region-header {
-      margin-bottom: 12px; } }
-  @media (min-width: 64.375em) {
-    .region-header {
-      width: 23.72881%;
-      float: left;
-      margin-right: 1.69492%; } }
+.region-header:after, .region-header:before {
+  content: " ";
+  display: table; }
+
+.region-header:after {
+  clear: both; }
+
+@media (max-width: 64.365em) {
+  .menu-open .region-header {
+    margin-bottom: 12px; } }
+
+@media (min-width: 64.375em) {
+  .region-header {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%; } }
+
+@media (max-width: 64.365em) {
+  .block-system-branding-block {
+    float: left; } }
 
 .menu-toggle {
   float: right;
@@ -180,7 +269,7 @@ ul, ol {
  */
 .footer {
   padding: 24px 0;
-  background-color: #ccc; }
+  background-color: #eee; }
 
 @media (min-width: 64.375em) {
   .site {
@@ -191,5 +280,14 @@ ul, ol {
       display: block; }
   .footer, .site:after {
     height: 300px; } }
+
+/**
+ * @file
+ * Replacement for core's "container-inline" CSS
+ */
+.container-inline .form-item,
+.container-inline .form-actions {
+  display: inline-block;
+  vertical-align: middle; }
 
 /*# sourceMappingURL=styles.css.map */

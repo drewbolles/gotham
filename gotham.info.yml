@@ -5,8 +5,15 @@ description: 'A custom Drupal 8 Theme built by Drew Bolles'
 version: 8.0.0
 core: 8.x
 
+libraries-override:
+  core/modernizr: gotham/modernizr
+
 libraries:
+ - core/jquery
+ - core/drupal
  - gotham/base
 
 stylesheets-remove:
+  - @stable/css/system/components/container-inline.module.css
   - @classy/css/components/menu.css
+  - @classy/css/components/form.css

@@ -8,18 +8,22 @@
 
 /// Site width
 $site-width: 1400px;
+/// Base spacing unit
 $base-spacing-unit: 24px;
+/// The height of the footer
 $footer-height: 300px;
+/// Where to use sticky footer or not
 $use-sticky-footer: true;
 
 //
 // Grid
 // We use Susy as a layout tool
-$gutter-width: 30px;
+/// The width of the gutter
+$gutter-width: .15;
 
 $susy: (
   columns: 12,
-  gutter: .15
+  gutter: $gutter-width,
 );
 
 $main-layout: layout(12 .15 isolate);
@@ -45,3 +49,15 @@ $mq-breakpoints: (
 $base-font-size: 16px !default;
 $base-line-height: $base-spacing-unit !default;
 $line-height-ratio: $base-line-height / $base-font-size;
+
+//
+// UI 
+
+/// Primary site color
+$color-primary: #2196f3;
+$color-secondary: #ffeb3b;
+
+$colors: (
+  primary: $color-primary,
+  secondary: $color-secondary,
+);

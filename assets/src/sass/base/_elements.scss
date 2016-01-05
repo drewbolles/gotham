@@ -26,9 +26,12 @@ img {
 }
 
 a {
+  color: color(primary);
   text-decoration: none;
+  transition: 150ms ease color, 150ms ease background-color;
 
   &:hover {
+    color: darken(color(primary), 15%);
     text-decoration: underline;
   }
 }
@@ -42,4 +45,30 @@ a {
  */
 ul, ol {
   list-style: none;
+}
+
+/**
+ * Forms
+ *
+ * Base form styles
+ */
+
+/* Submits and buttons */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  line-height: su();
+}
+
+input[type="submit"],
+button {
+  @include caps;
+  @include font-size(12px);
+  padding: 0 su(.5);
+  border: 0;
+  cursor: pointer;
+  line-height: su();
 }

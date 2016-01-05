@@ -2,10 +2,21 @@
  * @file
  * Header layout styles
  */
+.site-top-bar {
+  padding: 10px 0;
+  line-height: 1;
+
+  li, a {}
+  
+  .menu {
+    margin: 0;
+  }
+}
+
 .site-header {
   margin-bottom: su();
   padding: su(.5) 0;
-  background: #222;
+  background: #424242;
 
   &, a {
     color: #f1f1f1;
@@ -14,7 +25,22 @@
   .menu {
     margin: 0;
   }
-}
+  
+  /**
+   * Center logo and menu using flexbox. This horizontally centers
+   * the elements in this container. The fallback is the menu hangs at the top, 
+   * can add padding to adjust this for unsupported browsers.
+   */
+  > .layout-container {
+    @include mq(desk) {
+      display: flex;
+      align-items: center;
+    }
+    
+    /* If unsupported browsers need specific styles */
+    .no-flexbox & {}
+  }
+} // .site-header
 
 .site-logo,
 .site-name {
@@ -33,8 +59,17 @@
 
 /* Secondary menu */
 .region-secondary-menu {
-  margin-bottom: su(.5);
   text-align: right;
+
+  @include mq(desk) {
+    @include clearfix;
+    /* Uses flexbox to align children horizontally */
+    display: flex;
+    align-items: center;
+    
+    /* In case unsupported browsers need fixes */
+    .no-flexbox & {}
+  }
   
   a {
     @include font-size(12px);
@@ -43,12 +78,33 @@
 
   .menu-item {
     display: inline-block;
+    margin-right: su(.5);
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
-}
+
+  .block {
+    @include mq(desk) {
+      float: right;
+      margin-left: su();
+    }
+  }
+
+  .block-search {
+    order: 0;
+    margin-left: auto;
+  }
+
+  .block-menu {
+    order: 1;
+  }
+} // .region-secondary-menu
 
 /* Header */
 .region-header {
-  float: left;
+  @include clearfix;
 
   .menu-open & {
     @include mq($until: desk) {
@@ -60,6 +116,12 @@
     @include span(3);
   }
 } // .region-header
+
+.block-system-branding-block {
+  @include mq($until: desk) {
+    float: left;
+  }
+}
 
 .menu-toggle {
   float: right;

@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Replacement for core's "container-inline" CSS
+ */
+.container-inline {
+  .form-item,
+  .form-actions {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

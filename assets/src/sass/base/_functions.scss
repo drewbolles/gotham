@@ -36,5 +36,27 @@
 /// 
 /// @param {string} $unit [base] - Name of mapped z-index
 @function z($unit: base) {
-  @return map-get($z-index, $unit);
+  @if map-has-key($z-index, $unit) {
+    @return map-get($z-index, $unit);  
+  } @else {
+    @warn "There is no z index #{$unit}";
+  }
+}
+
+/// Interact with the color map
+///
+/// @access public
+///
+/// @param {string} $key - Name of the color
+///
+/// @example scss
+///   .block {
+///     color: color(grey);
+///   }
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  } @else {
+    @warn "Error: There is no color #{$key} associated";
+  }
 }
