@@ -1,5 +1,5 @@
 # Gotham
-A simple starting theme for Drupal 8. Utilizes SMACSS, OOCSS, BEM methodologies.
+A simple starting theme for Drupal 8. Utilizes Classy as a base theme, SMACSS, OOCSS, and BEM methodologies.
 
 ## Requirements
 1. Drupal 8
