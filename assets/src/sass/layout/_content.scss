@@ -21,17 +21,17 @@
         @include span(6 at 4);
       }
     }
-  }
+  } // .layout-content
 
   .layout-sidebar-first {
     @include mq(desk) {
       @include span(3 first);
     }
-  }
+  } // .layout-sidebar-first
 
   .layout-sidebar-second {
     @include mq(desk) {
       @include span(3 last);
     }
-  }
+  } // .layout-sidebar-second
 }
