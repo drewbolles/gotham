@@ -43,7 +43,12 @@
  * @see html.html.twig
  */
 #}
-<div class="site">
+{%
+  set classes = [
+    'site'
+  ]
+%}
+<div {{ attributes.addClass(classes) }} >
   {% if page.secondary_menu %}
   <div class="site-top-bar">
     <div class="layout-container">
