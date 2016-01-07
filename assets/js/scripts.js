@@ -1,6 +1,6 @@
 /**
  * @file
- * Custom theme scripts
+ * Custom theme scripts.
  */
 (function($){
   Drupal.behaviors.Gotham = {
