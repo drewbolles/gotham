@@ -7,4 +7,4 @@ A simple starting theme for Drupal 8. Utilizes Classy as a base theme, SMACSS, O
 * Bower
 
 ## Install
-Navigate to `path/to/site/themes/gotham/assets/src` and run the commands `$ npm i` and `$ bower install`. Once everything installs run `$ gulp` from the same directory.
+Download Gotham and install as a contributed theme (`path/to/site/themes`). Navigate to `path/to/site/themes/gotham/assets/src` and run the commands `$ npm i` and `$ bower install`. Once everything installs run `$ gulp` from the same directory. Gulp will watch your Sass directory and compile your CSS for you.
