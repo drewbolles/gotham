@@ -3,18 +3,26 @@
  * Base site elements
  */
 
-/* General Reset */
+/**
+ * General Reset
+ * 1. Adjust the html & body elements to account for x-browser
+ *    scrollbar implementation.
+ */
 html {
   @include font;
   @include font-size($base-font-size);
   line-height: $line-height-ratio;
+  overflow: hidden; /* 1 */
 }
 
 html, body {
-  height: 100%;
+  height: 100%; /* 1 */
 }
 
-body {}
+body {
+  position: relative; /* 1 */
+  overflow-y: scroll; /* 1 */
+}
 
 h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote {
   margin: 0;
