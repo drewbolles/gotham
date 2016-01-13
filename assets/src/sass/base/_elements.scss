@@ -5,23 +5,30 @@
 
 /**
  * General Reset
- * 1. Adjust the html & body elements to account for x-browser
+ * 1. Box-sizing FTW
+ * 2. Adjust the html & body elements to account for x-browser
  *    scrollbar implementation.
  */
+* {
+  &, &:before, &:after {
+    box-sizing: border-box; /* 2 */
+  }
+}
+
 html {
   @include font;
   @include font-size($base-font-size);
   line-height: $line-height-ratio;
-  overflow: hidden; /* 1 */
+  overflow: hidden; /* 2 */
 }
 
 html, body {
-  height: 100%; /* 1 */
+  height: 100%; /* 2 */
 }
 
 body {
-  position: relative; /* 1 */
-  overflow-y: scroll; /* 1 */
+  position: relative; /* 2 */
+  overflow-y: scroll; /* 2 */
 }
 
 h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote {
