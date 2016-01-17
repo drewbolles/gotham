@@ -13,3 +13,34 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+/**
+ * Layout abstraction
+ * A simple grid system built from Susy using repeatable classes.
+ * Builds out gallery classes for however many columns are needed.
+ * The classes are human readable "layout-gallery-NUM-OF-COLS--BP".
+ */
+.layout-row {
+  @include clearfix;
+}
+
+.layout-col {
+  width: 100%;
+  float: left;
+}
+
+$layout-galleries: (2 3 4 6);
+$layout-bps: (lap desk);
+
+@each $bp in $layout-bps {
+  @each $gallery in $layout-galleries {
+    $cols: 12/$gallery;
+    .layout-gallery-#{$gallery}--#{$bp} {
+      .layout-col {
+        @include mq($bp) {
+          @include gallery($cols);
+        }
+      }
+    }
+  }
+}

@@ -6,16 +6,34 @@
  * @file
  * Base site elements
  */
-/* General Reset */
+/**
+ * General Reset
+ * 1. Box-sizing FTW
+ * 2. Adjust the html & body elements to account for x-browser
+ *    scrollbar implementation.
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+  /* 2 */ }
+
 html {
   font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.5;
+  overflow: hidden;
+  /* 2 */ }
 
 html, body {
-  height: 100%; }
+  height: 100%;
+  /* 2 */ }
+
+body {
+  position: relative;
+  /* 2 */
+  overflow-y: scroll;
+  /* 2 */ }
 
 h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote {
   margin: 0;
@@ -39,7 +57,7 @@ a {
 /**
  * Lists
  * 
- * Beacuse lists are used for menus and other abstractions, let's strip
+ * Because lists are used for menus and other abstractions, let's strip
  * them down by default. When they are used in body fields, let's add back
  * their styles.
  */
@@ -105,6 +123,191 @@ button {
     display: table; }
   .layout-container:after {
     clear: both; }
+
+/**
+ * Layout abstraction
+ * A simple grid system built from Susy using repeatable classes.
+ * Builds out gallery classes for however many columns are needed.
+ * The classes are human readable "layout-gallery-NUM-OF-COLS--BP".
+ */
+.layout-row:after, .layout-row:before {
+  content: " ";
+  display: table; }
+
+.layout-row:after {
+  clear: both; }
+
+.layout-col {
+  width: 100%;
+  float: left; }
+
+@media (min-width: 39.375em) {
+  .layout-gallery-2--lap .layout-col {
+    width: 49.15254%;
+    float: left; }
+    .layout-gallery-2--lap .layout-col:nth-child(2n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .layout-gallery-2--lap .layout-col:nth-child(2n + 2) {
+      margin-left: 50.84746%;
+      margin-right: -100%;
+      clear: none; } }
+
+@media (min-width: 39.375em) {
+  .layout-gallery-3--lap .layout-col {
+    width: 32.20339%;
+    float: left; }
+    .layout-gallery-3--lap .layout-col:nth-child(3n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .layout-gallery-3--lap .layout-col:nth-child(3n + 2) {
+      margin-left: 33.89831%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-3--lap .layout-col:nth-child(3n + 3) {
+      margin-left: 67.79661%;
+      margin-right: -100%;
+      clear: none; } }
+
+@media (min-width: 39.375em) {
+  .layout-gallery-4--lap .layout-col {
+    width: 23.72881%;
+    float: left; }
+    .layout-gallery-4--lap .layout-col:nth-child(4n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .layout-gallery-4--lap .layout-col:nth-child(4n + 2) {
+      margin-left: 25.42373%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-4--lap .layout-col:nth-child(4n + 3) {
+      margin-left: 50.84746%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-4--lap .layout-col:nth-child(4n + 4) {
+      margin-left: 76.27119%;
+      margin-right: -100%;
+      clear: none; } }
+
+@media (min-width: 39.375em) {
+  .layout-gallery-6--lap .layout-col {
+    width: 15.25424%;
+    float: left; }
+    .layout-gallery-6--lap .layout-col:nth-child(6n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .layout-gallery-6--lap .layout-col:nth-child(6n + 2) {
+      margin-left: 16.94915%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-6--lap .layout-col:nth-child(6n + 3) {
+      margin-left: 33.89831%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-6--lap .layout-col:nth-child(6n + 4) {
+      margin-left: 50.84746%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-6--lap .layout-col:nth-child(6n + 5) {
+      margin-left: 67.79661%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-6--lap .layout-col:nth-child(6n + 6) {
+      margin-left: 84.74576%;
+      margin-right: -100%;
+      clear: none; } }
+
+@media (min-width: 64.375em) {
+  .layout-gallery-2--desk .layout-col {
+    width: 49.15254%;
+    float: left; }
+    .layout-gallery-2--desk .layout-col:nth-child(2n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .layout-gallery-2--desk .layout-col:nth-child(2n + 2) {
+      margin-left: 50.84746%;
+      margin-right: -100%;
+      clear: none; } }
+
+@media (min-width: 64.375em) {
+  .layout-gallery-3--desk .layout-col {
+    width: 32.20339%;
+    float: left; }
+    .layout-gallery-3--desk .layout-col:nth-child(3n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .layout-gallery-3--desk .layout-col:nth-child(3n + 2) {
+      margin-left: 33.89831%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-3--desk .layout-col:nth-child(3n + 3) {
+      margin-left: 67.79661%;
+      margin-right: -100%;
+      clear: none; } }
+
+@media (min-width: 64.375em) {
+  .layout-gallery-4--desk .layout-col {
+    width: 23.72881%;
+    float: left; }
+    .layout-gallery-4--desk .layout-col:nth-child(4n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .layout-gallery-4--desk .layout-col:nth-child(4n + 2) {
+      margin-left: 25.42373%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-4--desk .layout-col:nth-child(4n + 3) {
+      margin-left: 50.84746%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-4--desk .layout-col:nth-child(4n + 4) {
+      margin-left: 76.27119%;
+      margin-right: -100%;
+      clear: none; } }
+
+@media (min-width: 64.375em) {
+  .layout-gallery-6--desk .layout-col {
+    width: 15.25424%;
+    float: left; }
+    .layout-gallery-6--desk .layout-col:nth-child(6n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .layout-gallery-6--desk .layout-col:nth-child(6n + 2) {
+      margin-left: 16.94915%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-6--desk .layout-col:nth-child(6n + 3) {
+      margin-left: 33.89831%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-6--desk .layout-col:nth-child(6n + 4) {
+      margin-left: 50.84746%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-6--desk .layout-col:nth-child(6n + 5) {
+      margin-left: 67.79661%;
+      margin-right: -100%;
+      clear: none; }
+    .layout-gallery-6--desk .layout-col:nth-child(6n + 6) {
+      margin-left: 84.74576%;
+      margin-right: -100%;
+      clear: none; } }
 
 /**
  * @file
