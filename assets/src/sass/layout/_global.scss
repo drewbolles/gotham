@@ -25,11 +25,10 @@
 }
 
 .layout-col {
-  width: 100%;
-  float: left;
+  @include span(12);
 }
 
-$layout-galleries: (2 3 4 6);
+$layout-galleries: (2 3 4);
 $layout-bps: (lap desk);
 
 @each $bp in $layout-bps {
