@@ -490,7 +490,7 @@ button {
  * Basic page node styles
  */
 @media (min-width: 64.375em) {
-  .node--type-page .field--name-body {
+  .has-no-sidebars .node--type-page .field--name-body {
     width: 74.57627%;
     float: left;
     margin-right: 1.69492%; } }

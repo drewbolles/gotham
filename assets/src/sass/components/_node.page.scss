@@ -4,8 +4,10 @@
  */
 .node--type-page {
   .field--name-body {
-    @include mq(desk) {
-      @include span(9);
-    }
-  }
+    .has-no-sidebars & {
+      @include mq(desk) {
+        @include span(9);
+      }
+    } // .has-no-sidebars &
+  } // .field--name-body
 } // .node-type-page
