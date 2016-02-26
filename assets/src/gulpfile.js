@@ -20,7 +20,7 @@ gulp.task('sass', function() {
     .pipe(sass().on('error', sass.logError))
     .pipe(prefix('last 2 versions', '> 1%', 'ie 8'))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./../css'));
+    .pipe(gulp.dest('../css'));
 });
 
 gulp.task('watch', function() {

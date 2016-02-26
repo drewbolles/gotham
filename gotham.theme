@@ -2,25 +2,7 @@
 /**
  * Gotham theme functions
  */
-function gotham_preprocess_html(&$vars) {
-  $classes = &$vars['attributes']['class'];
-  
-  // Add classes to body for visible sidebars
-  if (!empty($vars['page']['sidebar_first']) && !empty($vars['page']['sidebar_second'])) {
-    $classes[] = 'has-two-sidebars';
-  }
-  elseif (!empty($vars['page']['sidebar_first'])) {
-    $classes[] = 'has-one-sidebar';
-    $classes[] = 'has-sidebar-first';
-  }
-  elseif (!empty($vars['page']['sidebar_second'])) {
-    $classes[] = 'has-one-sidebar';
-    $classes[] = 'has-sidebar-second';
-  }
-  else {
-    $classes[] = 'has-no-sidebars';
-  }
-}
+function gotham_preprocess_html(&$vars) {}
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
