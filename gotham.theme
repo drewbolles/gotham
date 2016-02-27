@@ -1,10 +1,5 @@
 <?php
 /**
- * Gotham theme functions
- */
-function gotham_preprocess_html(&$vars) {}
-
-/**
  * Implements hook_theme_suggestions_HOOK_alter() for form templates.
  */
 function gotham_theme_suggestions_page_alter(&$suggestions, &$vars) {
@@ -24,11 +19,4 @@ function gotham_preprocess_page(&$vars) {
     '#allowed_tags' => ['button', 'span', 'svg', 'path'],
     '#weight' => 10,
   );
-}
-
-/**
- * Implementation of hook_preprocess_HOOK().
- */
-function gotham_preprocess_block(&$vars) {
-  $vars['attributes']['class'][] = $vars['attributes']['id'];
 }
