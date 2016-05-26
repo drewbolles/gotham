@@ -11,6 +11,7 @@ const prefix = require('gulp-autoprefixer');
 const watch = require('gulp-watch');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 
 // Gulp Sass Task
 gulp.task('sass', () => {
@@ -27,6 +28,7 @@ gulp.task('scripts', () => {
   return gulp
     .src('js/**/*.js')
     .pipe(babel())
+    .pipe(uglify())
     .pipe(gulp.dest('../js'));
 });
 
