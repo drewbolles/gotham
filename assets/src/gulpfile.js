@@ -12,6 +12,9 @@ const watch = require('gulp-watch');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const svgmin = require('gulp-svgmin');
+const svgstore = require('gulp-svgstore');
+const rename = require('gulp-rename');
 
 // Gulp Sass Task
 gulp.task('sass', () => {
@@ -32,9 +35,19 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest('../js'));
 });
 
+gulp.task('icons', () => {
+  return gulp
+    .src('icons/**/*.svg')
+    .pipe(rename({ prefix: 'icon-' }))
+    .pipe(svgmin())
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(gulp.dest('../'));
+});
+
 gulp.task('watch', () => {
   gulp.watch('sass/**/*.scss', ['sass']);
   gulp.watch('js/**/*.js', ['scripts']);
+  gulp.watch('icons/**/*.svg', ['icons']);
 });
 
-gulp.task('default', ['sass', 'scripts', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'icons', 'watch']);

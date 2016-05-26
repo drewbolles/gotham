@@ -1,0 +1,1 @@
+Add individual SVG files to this folder. They will be watched, and compiled into `icons.svg` in the main assets directory.
