@@ -1,13 +1,11 @@
-'use strict';
-
 /**
  * @file
  * Custom theme scripts.
  */
-(function ($) {
+(function($) {
   Drupal.behaviors.Gotham = {
-    attach: function attach(context, settings) {
-      $('#menu-toggle', context).bind('tap', function (e) {
+    attach(context, settings) {
+      $('#menu-toggle', context).bind('tap', (e) => {
         $('body').toggleClass('menu-open');
         e.preventDefault();
       });
