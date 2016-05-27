@@ -4,11 +4,11 @@
  */
 ($ => {
   Drupal.behaviors.Gotham = {
-    attach(context, settings) {
+    attach(context) {
       $('#menu-toggle', context).bind('tap', e => {
         $('body').toggleClass('menu-open');
         e.preventDefault();
       });
-    }
+    },
   };
 })(jQuery);
