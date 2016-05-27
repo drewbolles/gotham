@@ -15,11 +15,17 @@ const uglify = require('gulp-uglify');
 const svgmin = require('gulp-svgmin');
 const svgstore = require('gulp-svgstore');
 const rename = require('gulp-rename');
+const sassLint = require('gulp-sass-lint');
 
 // Gulp Sass Task
 gulp.task('sass', () => {
   gulp.src('sass/**/*.scss')
     .pipe(plumber())
+    .pipe(sassLint({
+      config: '.sass-lint.yml',
+    }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(prefix('last 2 versions', '> 1%', 'ie 8'))

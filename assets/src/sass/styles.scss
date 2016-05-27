@@ -4,38 +4,38 @@
  */
 
 // Toolkits
-@import 
-  "../bower_components/susy/sass/susy",
-  "../bower_components/sass-mq/mq"
+@import
+'../bower_components/susy/sass/susy',
+'../bower_components/sass-mq/mq'
 ;
 
 // Base styles
-@import 
-  "base/vars",
-  "base/functions",
-  "base/mixins",
-  "base/elements"
+@import
+'base/vars',
+'base/functions',
+'base/mixins',
+'base/elements'
 ;
 
 // Layout styles
 @import
- "layout/global",
- "layout/header",
- "layout/content",
- "layout/footer"
+'layout/global',
+'layout/header',
+'layout/content',
+'layout/footer'
 ;
 
 // Component styles
 @import
-  // objects
-  "components/object.container-inline",
-  "components/object.breadcrumb",
+// objects
+'components/object.container-inline',
+'components/object.breadcrumb',
 
-  // nodes
-  "components/node.page"
+// nodes
+'components/node.page'
 ;
 
 // // Page styles
 // @import 
-//   "page/"
+//   'page/'
 // ;

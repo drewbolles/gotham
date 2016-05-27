@@ -6,8 +6,6 @@
   padding: 10px 0;
   line-height: 1;
 
-  li, a {}
-  
   .menu {
     margin: 0;
   }
@@ -16,16 +14,17 @@
 .site-header {
   margin-bottom: su();
   padding: su(.5) 0;
-  background: #424242;
+  background: color(dark-grey);
 
-  &, a {
-    color: #f1f1f1;
+  &,
+  a {
+    color: color(light-grey);
   }
 
   .menu {
     margin: 0;
   }
-  
+
   /**
    * Center logo and menu using flexbox. This horizontally centers
    * the elements in this container. The fallback is the menu hangs at the top, 
@@ -36,9 +35,6 @@
       display: flex;
       align-items: center;
     }
-    
-    /* If unsupported browsers need specific styles */
-    .no-flexbox & {}
   }
 } // .site-header
 
@@ -67,13 +63,10 @@
     align-items: center;
     text-align: right;
   }
-  
-  /* In case unsupported browsers need fixes */
-  .no-flexbox & {}
-  
+
   a {
     @include font-size(12px);
-    @include caps; 
+    @include caps;
   }
 
   .menu-item {
@@ -101,8 +94,8 @@
     margin-bottom: su(.5);
 
     @include mq(lap) {
-      margin-left: su();
       margin-bottom: 0;
+      margin-left: su;
     }
   }
 } // .region-secondary-menu
@@ -132,7 +125,7 @@
   padding: 5px;
   float: right;
   border-radius: 3px;
-  color: #222;
+  color: color(darker-grey);
 
   @include mq(desk) {
     display: none;
@@ -148,7 +141,6 @@
 /* Primary menu */
 .region-primary-menu {
   display: none;
-  
 
   @include mq($until: desk) {
     clear: both;
@@ -172,7 +164,7 @@
     }
 
     &.is-active {
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid color(wht);
     }
   }
 

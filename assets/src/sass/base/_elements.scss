@@ -10,7 +10,9 @@
  *    scrollbar implementation.
  */
 * {
-  &, &:before, &:after {
+  &,
+  &:before,
+  &:after {
     box-sizing: border-box; /* 2 */
   }
 }
@@ -22,7 +24,8 @@ html {
   overflow: hidden; /* 2 */
 }
 
-html, body {
+html,
+body {
   height: 100%; /* 2 */
 }
 
@@ -31,25 +34,37 @@ body {
   overflow-y: scroll; /* 2 */
 }
 
-h1, h2, h3, h4, h5, h6, p, ol, ul, blockquote {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+blockquote {
   margin: 0;
   margin-bottom: su(.5);
   padding: 0;
 }
 
-img, audio, video, object {
+img,
+audio,
+video,
+object {
   max-width: 100%;
 }
 
 img {
-  vertical-align: middle;
   height: auto;
+  vertical-align: middle;
 }
 
 a {
+  transition: 150ms ease color, 150ms ease background-color;
   color: color(primary);
   text-decoration: none;
-  transition: 150ms ease color, 150ms ease background-color;
 
   &:hover {
     color: darken(color(primary), 15%);
@@ -64,16 +79,20 @@ a {
  * them down by default. When they are used in body fields, let's add back
  * their styles.
  */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 .text-formatted {
-  p, ul, ol {
+  p,
+  ul,
+  ol {
     margin-bottom: su(1);
   }
 
-  ul, ol {
+  ul,
+  ol {
     margin-left: su();
   }
 
@@ -101,21 +120,21 @@ ul, ol {
  */
 
 /* Submits and buttons */
-input[type="text"],
-input[type="email"],
-input[type="password"],
+[type='text'],
+[type='email'],
+[type='password'],
 textarea {
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid color(light-grey);
   line-height: su();
 }
 
-input[type="submit"],
+[type='submit'],
 button {
   @include caps;
   @include font-size(12px);
   padding: 0 su(.5);
   border: 0;
-  cursor: pointer;
   line-height: su();
+  cursor: pointer;
 }

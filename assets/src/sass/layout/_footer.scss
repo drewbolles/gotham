@@ -4,7 +4,7 @@
  */
 .footer {
   padding: su() 0;
-  background-color: #eee;
+  background-color: color(med-grey);
 }
 
 @if $use-sticky-footer == true {
@@ -14,11 +14,14 @@
       margin-bottom: -$footer-height;
 
       &:after {
-        content: "";
         display: block;
-      }     
+        content: '';
+      }
     }
-    
-    .footer, .site:after { height: $footer-height; }
+
+    .footer,
+    .site:after {
+      height: $footer-height;
+    }
   }
 }

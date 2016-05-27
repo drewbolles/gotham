@@ -33,7 +33,8 @@ $layout-bps: (lap desk);
 
 @each $bp in $layout-bps {
   @each $gallery in $layout-galleries {
-    $cols: 12/$gallery;
+    $cols: 12 / $gallery;
+
     .layout-gallery-#{$gallery}--#{$bp} {
       > .layout-col {
         @include mq($bp) {

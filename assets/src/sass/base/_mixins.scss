@@ -28,20 +28,21 @@
 ///   .block {
 ///     @include clearfix;
 ///   }
-@mixin clearfix() {
+@mixin clearfix {
   &:after,
   &:before {
-    content: " ";
     display: table;
+    content: ' ';
   }
+
   &:after {
     clear: both;
   }
 }
 
 /// Capitalize and space out text
-@mixin caps() {
-  letter-spacing: 0.03em;
+@mixin caps {
+  letter-spacing: .03em;
   text-transform: uppercase;
 }
 
@@ -57,7 +58,7 @@
     font-family: $output;
     font-weight: normal;
   } @else {
-    @warn "There is no font #{$key}";
+    @error 'There is no font #{$key}';
   }
 }
 

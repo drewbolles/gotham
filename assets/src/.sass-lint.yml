@@ -1,0 +1,15 @@
+rules:
+  property-sort-order:
+    - 1
+    - order: 'smacss'
+  no-css-comments:
+    - 0
+  force-pseudo-nesting:
+    - 0
+  no-duplicate-properties:
+    - 1
+    - exclude:
+        - display
+        - font-size
+  force-attribute-nesting:
+    - 0

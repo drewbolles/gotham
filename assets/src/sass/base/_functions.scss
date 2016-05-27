@@ -21,7 +21,7 @@
   @if unitless($mult) {
     @return $mult * $base-spacing-unit;
   } @else {
-    @warn "Error: must pass a unitless value, was #{$mult}";
+    @error 'Error: must pass a unitless value, was #{$mult}';
   }
 }
 
@@ -37,9 +37,9 @@
 /// @param {string} $unit [base] - Name of mapped z-index
 @function z($unit: base) {
   @if map-has-key($z-index, $unit) {
-    @return map-get($z-index, $unit);  
+    @return map-get($z-index, $unit);
   } @else {
-    @warn "There is no z index #{$unit}";
+    @error 'There is no z index #{$unit}';
   }
 }
 
@@ -57,6 +57,6 @@
   @if map-has-key($colors, $key) {
     @return map-get($colors, $key);
   } @else {
-    @warn "Error: There is no color #{$key} associated";
+    @error 'Error: There is no color #{$key} associated';
   }
 }

@@ -73,7 +73,7 @@ $base-line-height: $base-spacing-unit !default;
 $line-height-ratio: $base-line-height / $base-font-size;
 
 /// Base font family
-$base-font-family: "\"San Francisco\", \"Helvetica Neue\", Helvetica, Arial, sans-serif";
+$base-font-family: '\"San Francisco\", \"Helvetica Neue\", Helvetica, Arial, sans-serif';
 
 /// Fonts map, stores the family & the variations
 $fonts: (
@@ -94,4 +94,10 @@ $color-secondary: #ffeb3b;
 $colors: (
   primary: $color-primary,
   secondary: $color-secondary,
+  wht: #fff,
+  blk: #000,
+  med-grey: #eee,
+  darker-grey: #222,
+  dark-grey: #424242,
+  light-grey: #f1f1f1,
 );
