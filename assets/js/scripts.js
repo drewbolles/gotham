@@ -1,1 +1,1 @@
-"use strict";!function(t){Drupal.behaviors.Gotham={attach:function(e){var n=document.documentElement,u=t("#menu-toggle",e);u.bind("tap",function(t){n.classList.toggle("menu-open"),t.preventDefault()})}}}(jQuery);
+"use strict";!function(t){Drupal.behaviors.Gotham={attach:function(e){var n=e.documentElement,u=t("#menu-toggle",e);u.bind("tap",function(t){n.classList.toggle("menu-open"),t.preventDefault()})}}}(jQuery);

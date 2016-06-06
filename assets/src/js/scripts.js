@@ -5,7 +5,7 @@
 ($ => {
   Drupal.behaviors.Gotham = {
     attach(context) {
-      const docEl = document.documentElement;
+      const docEl = context.documentElement;
       const $menuToggle = $('#menu-toggle', context);
 
       $menuToggle.bind('tap', e => {
