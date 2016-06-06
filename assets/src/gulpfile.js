@@ -27,7 +27,7 @@ gulp.task('sass', () => {
     .pipe(sassLint.failOnError())
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(prefix({ browsers: ['last 2 versions', '> 1%', 'ie 8'] }))
+    .pipe(prefix({ browsers: ['last 2 versions', '> 10%'] }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('../css'));
 });
