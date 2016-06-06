@@ -5,8 +5,11 @@
 ($ => {
   Drupal.behaviors.Gotham = {
     attach(context) {
-      $('#menu-toggle', context).bind('tap', e => {
-        $('body').toggleClass('menu-open');
+      const docEl = document.documentElement;
+      const $menuToggle = $('#menu-toggle', context);
+
+      $menuToggle.bind('tap', e => {
+        docEl.classList.toggle('menu-open');
         e.preventDefault();
       });
     },
