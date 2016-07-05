@@ -53,7 +53,7 @@
 @mixin font($key: base, $type: regular) {
   @if map-has-key($fonts, $key) {
     $index: map-get($fonts, $key);
-    $output: unquote(map-get($index, $type));
+    $output: map-get($index, $type);
 
     font-family: $output;
     font-weight: normal;
