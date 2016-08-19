@@ -2,8 +2,6 @@
  * @file
  * Gulp script to run build process.
  */
-
-// Require Gulp
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
@@ -18,9 +16,8 @@ const rename = require('gulp-rename');
 const sassLint = require('gulp-sass-lint');
 const eslint = require('gulp-eslint');
 
-// Gulp Sass Task
 gulp.task('sass', () => {
-  gulp.src('sass/**/*.scss')
+  return gulp.src('sass/**/*.scss')
     .pipe(plumber())
     .pipe(sassLint())
     .pipe(sassLint.format())
@@ -33,8 +30,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('scripts', () => {
-  return gulp
-    .src('js/**/*.js')
+  return gulp.src('js/**/*.js')
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
@@ -44,8 +40,7 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('icons', () => {
-  return gulp
-    .src('icons/**/*.svg')
+  return gulp.src('icons/**/*.svg')
     .pipe(rename({ prefix: 'icon-' }))
     .pipe(svgmin())
     .pipe(svgstore({ inlineSvg: true }))
