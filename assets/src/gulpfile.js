@@ -5,7 +5,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const prefix = require('gulp-autoprefixer');
+const postcss = require('gulp-postcss');
+const prefix = require('autoprefixer');
 const watch = require('gulp-watch');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
@@ -17,6 +18,9 @@ const sassLint = require('gulp-sass-lint');
 const eslint = require('gulp-eslint');
 
 gulp.task('sass', () => {
+  const processors = [
+    prefix({ browsers: ['last 2 versions', '> 10%'] }),
+  ];
   return gulp.src('sass/**/*.scss')
     .pipe(plumber())
     .pipe(sassLint())
@@ -24,7 +28,7 @@ gulp.task('sass', () => {
     .pipe(sassLint.failOnError())
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-    .pipe(prefix({ browsers: ['last 2 versions', '> 10%'] }))
+    .pipe(postcss(processors))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('../css'));
 });
