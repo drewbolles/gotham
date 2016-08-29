@@ -19,7 +19,7 @@ const eslint = require('gulp-eslint');
 
 gulp.task('sass', () => {
   const processors = [
-    prefix({ browsers: ['last 2 versions', '> 10%'] }),
+    prefix({ browsers: ['last 2 versions', 'Safari >= 8'] }),
   ];
   return gulp.src('sass/**/*.scss')
     .pipe(plumber())
